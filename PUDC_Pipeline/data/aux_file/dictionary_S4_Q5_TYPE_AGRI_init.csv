@@ -1,0 +1,6 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+interview__key,interview__key,Interview key (identifier in XX-XX-XX-XX format),NA,,no,Interview key (identifier in XX-XX-XX-XX format),character
+interview__id,interview__id,Unique 32-character long identifier of the interview,NA,,no,Unique 32-character long identifier of the interview,character
+S4_Q5_TYPE_AGRI__id,S4_Q5_TYPE_AGRI__id,Id in S4_Q5_TYPE_AGRI,1=Agriculture sous pluie de plateau | 2=Agriculture sous pluie de Bas fond | 3=Agriculture irriguée | 4=Maraîchage d’hivernage,,no,Id in S4_Q5_TYPE_AGRI,"haven_labelled, vctrs_vctr, double"
+S4_Q5a,S4_Q5a,IV5.a Le ménage pratique-t-il  %rostertitle%  pendant la campagne 2019/2020?,1=Oui | 2=Non,,no,IV5.a Le ménage pratique-t-il  %rostertitle%  pendant la campagne 2019/2020?,"haven_labelled, vctrs_vctr, double"
+S4_Q5b,S4_Q5b,IV5.b Préciser si  %rostertitle%  est pratiqué uniquement par le ménage ou en gr,1=Par le chef du  ménage | 2=Au sein d’un groupement de production | 3=Les deux (Par le chef du  ménage et Au sein d’un groupement de production ) | 4=Par un membre du ménage autre que le chef de ménage,,no,IV5.b Préciser si  %rostertitle%  est pratiqué uniquement par le ménage ou en gr,"haven_labelled, vctrs_vctr, double"

@@ -1,0 +1,24 @@
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+.RDataTmp
+
+# User-specific files
+.Ruserdata
+
+# Example top-level program stdout/stderr writes
+*-ex.R
+
+# RStudio files
+.Rproj.user/
+
+# Temporary files and logs
+*.log
+run_all_log.txt
+
+# OS generated files
+.DS_Store
+Thumbs.db

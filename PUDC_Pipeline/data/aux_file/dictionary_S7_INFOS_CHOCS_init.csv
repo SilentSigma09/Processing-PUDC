@@ -1,0 +1,20 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+interview__key,interview__key,Interview key (identifier in XX-XX-XX-XX format),NA,,no,Interview key (identifier in XX-XX-XX-XX format),character
+interview__id,interview__id,Unique 32-character long identifier of the interview,NA,,no,Unique 32-character long identifier of the interview,character
+S7_INFOS_CHOCS__id,S7_INFOS_CHOCS__id,Id in S7_INFOS_CHOCS,"0=Il n'y a Pas d’autre choc | 1=Pluies tardives, manque de pluie | 2=Invasions de nuisibles | 3=Invasions de mauvaises herbes | 4=Inondations | 5=Incendies | 6=Forte hausse des prix de denrées alimentaires | 7=Important déficit de pâturage | 8=Maladies animales | 9=Violence/conflits/insécurité | 10=Maladie/accident d'un membre du ménage | 11=Décès d'un soutien de la famille | 12=Perte d’emploi | 13=Pandémie de la covid",,no,Id in S7_INFOS_CHOCS,"haven_labelled, vctrs_vctr, double"
+S7_Q2b,S7_Q2b,VII.2b Le choc  %rostertitle%  a-t-il eu un impact négatif sur la capacité du mé,1=Oui | 2=Non,,no,VII.2b Le choc  %rostertitle%  a-t-il eu un impact négatif sur la capacité du mé,"haven_labelled, vctrs_vctr, double"
+S7_Q2c,S7_Q2c,VII.2c Le ménage a-t-il pu se relever du choc  %rostertitle% ?,1=Oui | 2=Non,,no,VII.2c Le ménage a-t-il pu se relever du choc  %rostertitle% ?,"haven_labelled, vctrs_vctr, double"
+S7_Q2d__1,S7_Q2d__1,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric
+S7_Q2d__2,S7_Q2d__2,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric
+S7_Q2d__3,S7_Q2d__3,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric
+S7_Q2d__4,S7_Q2d__4,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric
+S7_Q2d__5,S7_Q2d__5,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric
+S7_Q2d__6,S7_Q2d__6,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric
+S7_Q2d__7,S7_Q2d__7,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric
+S7_Q2d__8,S7_Q2d__8,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric
+S7_Q2d__9,S7_Q2d__9,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric
+S7_Q2d__10,S7_Q2d__10,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric
+S7_Q2d__11,S7_Q2d__11,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric
+S7_Q2d__12,S7_Q2d__12,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric
+S7_Q2d__13,S7_Q2d__13,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric
+S7_Q2d__98,S7_Q2d__98,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,NA,,no,VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour,numeric

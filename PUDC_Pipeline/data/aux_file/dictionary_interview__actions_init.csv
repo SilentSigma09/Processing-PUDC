@@ -1,0 +1,10 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+interview__key,interview__key,Interview key (identifier in XX-XX-XX-XX format),NA,,no,Interview key (identifier in XX-XX-XX-XX format),character
+interview__id,interview__id,Unique 32-character long identifier of the interview,NA,,no,Unique 32-character long identifier of the interview,character
+date,date,Date when the action was taken,NA,,no,Date when the action was taken,character
+time,time,Time when the action was taken,NA,,no,Time when the action was taken,character
+action,action,Type of action taken,0=SupervisorAssigned | 1=InterviewerAssigned | 2=FirstAnswerSet | 3=Completed | 4=Restarted | 5=ApprovedBySupervisor | 6=ApprovedByHeadquarter | 7=RejectedBySupervisor | 8=RejectedByHeadquarter | 9=Deleted | 10=Restored | 11=UnapprovedByHeadquarter | 12=Created | 13=InterviewReceivedByTablet | 14=Resumed | 15=Paused | 16=TranslationSwitched | 17=OpenedBySupervisor | 18=ClosedBySupervisor,,no,Type of action taken,"haven_labelled, vctrs_vctr, double"
+originator,originator,Login name of the person performing the action,NA,,no,Login name of the person performing the action,character
+role,role,System role of the person performing the action,0=<UNKNOWN ROLE> | 1=Interviewer | 2=Supervisor | 3=Headquarter | 4=Administrator | 5=API User,,no,System role of the person performing the action,"haven_labelled, vctrs_vctr, double"
+responsible__name,responsible__name,Login name of the person now responsible for the interview,NA,,no,Login name of the person now responsible for the interview,character
+responsible__role,responsible__role,System role of the person now responsible for the interview,0=<UNKNOWN ROLE> | 1=Interviewer | 2=Supervisor | 3=Headquarter | 4=Administrator | 5=API User,,no,System role of the person now responsible for the interview,"haven_labelled, vctrs_vctr, double"

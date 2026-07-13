@@ -1,0 +1,12 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+interview__key,interview__key,Interview key (identifier in XX-XX-XX-XX format),NA,,no,Interview key (identifier in XX-XX-XX-XX format),character
+interview__id,interview__id,Unique 32-character long identifier of the interview,NA,,no,Unique 32-character long identifier of the interview,character
+interview__status,interview__status,Last status of interview,-1=Deleted | 0=Restored | 20=Created | 40=SupervisorAssigned | 60=InterviewerAssigned | 65=RejectedBySupervisor | 80=ReadyForInterview | 85=SentToCapi | 95=Restarted | 100=Completed | 120=ApprovedBySupervisor | 125=RejectedByHeadquarters | 130=ApprovedByHeadquarters,,no,Last status of interview,"haven_labelled, vctrs_vctr, double"
+responsible,responsible,Last responsible person,NA,,no,Last responsible person,character
+interviewers,interviewers,Number of interviewers who worked on this interview,NA,,no,Number of interviewers who worked on this interview,numeric
+rejections__sup,rejections__sup,How many times this interview was rejected by supervisors,NA,,no,How many times this interview was rejected by supervisors,numeric
+rejections__hq,rejections__hq,How many times this interview was rejected by HQ,NA,,no,How many times this interview was rejected by HQ,numeric
+entities__errors,entities__errors,Number of questions and static texts with errors,NA,,no,Number of questions and static texts with errors,numeric
+questions__comments,questions__comments,Number of questions with comments,NA,,no,Number of questions with comments,numeric
+interview__duration,interview__duration,"Active time it took to complete the interview, DD.HH:MM:SS",NA,,no,"Active time it took to complete the interview, DD.HH:MM:SS",character
+n_questions_unanswered,n_questions_unanswered,Number of unanswered questions,NA,,no,Number of unanswered questions,numeric

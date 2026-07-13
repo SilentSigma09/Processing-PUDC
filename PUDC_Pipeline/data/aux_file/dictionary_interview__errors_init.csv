@@ -1,0 +1,9 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+interview__key,interview__key,Interview key (identifier in XX-XX-XX-XX format),NA,,no,Interview key (identifier in XX-XX-XX-XX format),character
+interview__id,interview__id,Unique 32-character long identifier of the interview,NA,,no,Unique 32-character long identifier of the interview,character
+roster,roster,Name of the roster containing the variable,NA,,no,Name of the roster containing the variable,character
+id1,id1,Roster ID of the 1st level of nesting,NA,,no,Roster ID of the 1st level of nesting,numeric
+variable,variable,"Variable name for the question, where validation error occurred",NA,,no,"Variable name for the question, where validation error occurred",character
+type,type,Type of the variable where the validation error occurred,1=Section | 2=Question | 3=StaticText | 4=Variable,,no,Type of the variable where the validation error occurred,"haven_labelled, vctrs_vctr, double"
+message__number,message__number,Numeric index of the validation rule that has fired,NA,,no,Numeric index of the validation rule that has fired,numeric
+message,message,Text of the error message,NA,,no,Text of the error message,character

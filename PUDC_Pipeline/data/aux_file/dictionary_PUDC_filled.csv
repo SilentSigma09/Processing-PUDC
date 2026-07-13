@@ -1,0 +1,267 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+interview__key,interview__key,Clé unique ménage,NA,NA,yes,Interview key (identifier in XX-XX-XX-XX format),character
+interview__id,interview__id,Unique 32-character long identifier of the interview,NA,NA,no,Unique 32-character long identifier of the interview,character
+S0_01,S0_01,0.1 N° du Questionnaire,NA,NA,no,0.1 N° du Questionnaire,numeric
+S0_02,region,Région,NA,NA,yes,0.2 Région,character
+S0_03,departement,Département,NA,NA,yes,0.3 Département,character
+S0_04,S0_04,0.4 Arrondissement,NA,NA,no,0.4 Arrondissement,character
+S0_05,S0_05,0.5 Collectivités territoriales,NA,NA,no,0.5 Collectivités territoriales,character
+S0_06,S0_06,0.6 Village/Quartier,NA,NA,no,0.6 Village/Quartier,character
+S0_07,S0_07,0.7 Numéro du DR,NA,NA,no,0.7 Numéro du DR,character
+S0_08,milieu,"Milieu de résidence (1=Rural, 2=Urbain)",1=Rural | 2=Urbain,NA,yes,0.8 Milieu de résidence,"haven_labelled, vctrs_vctr, double"
+S0_9_conc,S0_9_conc,Numero Concession,NA,NA,no,Numero Concession,character
+S0_9,S0_9,0.9 Numéro de ménage (dans l’échantillon),NA,NA,no,0.9 Numéro de ménage (dans l’échantillon),character
+S0_9_men_dr,S0_9_men_dr,Numero menage dans DR,NA,NA,no,Numero menage dans DR,character
+S0_16,S0_16,0.16 Nom et prénom du chef de ménage,NA,NA,no,0.16 Nom et prénom du chef de ménage,character
+coord_gps__Latitude,coord_gps__Latitude,Lieu de l'interview: Latitude,NA,NA,no,Lieu de l'interview: Latitude,numeric
+coord_gps__Longitude,coord_gps__Longitude,Lieu de l'interview: Longitude,NA,NA,no,Lieu de l'interview: Longitude,numeric
+coord_gps__Accuracy,coord_gps__Accuracy,Lieu de l'interview: Accuracy,NA,NA,no,Lieu de l'interview: Accuracy,numeric
+coord_gps__Altitude,coord_gps__Altitude,Lieu de l'interview: Altitude,NA,NA,no,Lieu de l'interview: Altitude,numeric
+coord_gps__Timestamp,coord_gps__Timestamp,Lieu de l'interview: Timestamp,NA,NA,no,Lieu de l'interview: Timestamp,character
+S0_13,S0_13,0.13 Date et heure de début de l'interview,NA,NA,no,0.13 Date et heure de début de l'interview,character
+S0_17,S0_17,0.17 Numéro de téléphone (CM si possible),NA,NA,no,0.17 Numéro de téléphone (CM si possible),character
+S0_18,S0_18,0.18 Numéro de téléphone 2 (Femme si possible),NA,NA,no,0.18 Numéro de téléphone 2 (Femme si possible),character
+S0_19,S0_19,0.19 Numéro de téléphone 3,NA,NA,no,0.19 Numéro de téléphone 3,character
+s13_14,s13_14,« Le répondant est-il le chef de ménage,1=OUI | 2=NON,NA,no,« Le répondant est-il le chef de ménage,"haven_labelled, vctrs_vctr, double"
+S1_Q1__0,S1_Q1__0,I.1. Nom et prénom des membres du ménage:0,NA,NA,no,I.1. Nom et prénom des membres du ménage:0,character
+S1_Q1__1,S1_Q1__1,I.1. Nom et prénom des membres du ménage:1,NA,NA,no,I.1. Nom et prénom des membres du ménage:1,character
+S1_Q1__2,S1_Q1__2,I.1. Nom et prénom des membres du ménage:2,NA,NA,no,I.1. Nom et prénom des membres du ménage:2,character
+S1_Q1__3,S1_Q1__3,I.1. Nom et prénom des membres du ménage:3,NA,NA,no,I.1. Nom et prénom des membres du ménage:3,character
+S1_Q1__4,S1_Q1__4,I.1. Nom et prénom des membres du ménage:4,NA,NA,no,I.1. Nom et prénom des membres du ménage:4,character
+S1_Q1__5,S1_Q1__5,I.1. Nom et prénom des membres du ménage:5,NA,NA,no,I.1. Nom et prénom des membres du ménage:5,character
+S1_Q1__6,S1_Q1__6,I.1. Nom et prénom des membres du ménage:6,NA,NA,no,I.1. Nom et prénom des membres du ménage:6,character
+S1_Q1__7,S1_Q1__7,I.1. Nom et prénom des membres du ménage:7,NA,NA,no,I.1. Nom et prénom des membres du ménage:7,character
+S1_Q1__8,S1_Q1__8,I.1. Nom et prénom des membres du ménage:8,NA,NA,no,I.1. Nom et prénom des membres du ménage:8,character
+S1_Q1__9,S1_Q1__9,I.1. Nom et prénom des membres du ménage:9,NA,NA,no,I.1. Nom et prénom des membres du ménage:9,character
+S1_Q1__10,S1_Q1__10,I.1. Nom et prénom des membres du ménage:10,NA,NA,no,I.1. Nom et prénom des membres du ménage:10,character
+S1_Q1__11,S1_Q1__11,I.1. Nom et prénom des membres du ménage:11,NA,NA,no,I.1. Nom et prénom des membres du ménage:11,character
+S1_Q1__12,S1_Q1__12,I.1. Nom et prénom des membres du ménage:12,NA,NA,no,I.1. Nom et prénom des membres du ménage:12,character
+S1_Q1__13,S1_Q1__13,I.1. Nom et prénom des membres du ménage:13,NA,NA,no,I.1. Nom et prénom des membres du ménage:13,character
+S1_Q1__14,S1_Q1__14,I.1. Nom et prénom des membres du ménage:14,NA,NA,no,I.1. Nom et prénom des membres du ménage:14,character
+S1_Q1__15,S1_Q1__15,I.1. Nom et prénom des membres du ménage:15,NA,NA,no,I.1. Nom et prénom des membres du ménage:15,character
+S1_Q1__16,S1_Q1__16,I.1. Nom et prénom des membres du ménage:16,NA,NA,no,I.1. Nom et prénom des membres du ménage:16,character
+S1_Q1__17,S1_Q1__17,I.1. Nom et prénom des membres du ménage:17,NA,NA,no,I.1. Nom et prénom des membres du ménage:17,character
+S1_Q1__18,S1_Q1__18,I.1. Nom et prénom des membres du ménage:18,NA,NA,no,I.1. Nom et prénom des membres du ménage:18,character
+S1_Q1__19,S1_Q1__19,I.1. Nom et prénom des membres du ménage:19,NA,NA,no,I.1. Nom et prénom des membres du ménage:19,character
+S1_Q1__20,S1_Q1__20,I.1. Nom et prénom des membres du ménage:20,NA,NA,no,I.1. Nom et prénom des membres du ménage:20,character
+S1_Q1__21,S1_Q1__21,I.1. Nom et prénom des membres du ménage:21,NA,NA,no,I.1. Nom et prénom des membres du ménage:21,character
+S1_Q1__22,S1_Q1__22,I.1. Nom et prénom des membres du ménage:22,NA,NA,no,I.1. Nom et prénom des membres du ménage:22,character
+S1_Q1__23,S1_Q1__23,I.1. Nom et prénom des membres du ménage:23,NA,NA,no,I.1. Nom et prénom des membres du ménage:23,character
+S1_Q1__24,S1_Q1__24,I.1. Nom et prénom des membres du ménage:24,NA,NA,no,I.1. Nom et prénom des membres du ménage:24,character
+S1_Q1__25,S1_Q1__25,I.1. Nom et prénom des membres du ménage:25,NA,NA,no,I.1. Nom et prénom des membres du ménage:25,character
+S1_Q1__26,S1_Q1__26,I.1. Nom et prénom des membres du ménage:26,NA,NA,no,I.1. Nom et prénom des membres du ménage:26,character
+S1_Q1__27,S1_Q1__27,I.1. Nom et prénom des membres du ménage:27,NA,NA,no,I.1. Nom et prénom des membres du ménage:27,character
+S1_Q1__28,S1_Q1__28,I.1. Nom et prénom des membres du ménage:28,NA,NA,no,I.1. Nom et prénom des membres du ménage:28,character
+S1_Q1__29,S1_Q1__29,I.1. Nom et prénom des membres du ménage:29,NA,NA,no,I.1. Nom et prénom des membres du ménage:29,character
+S1_Q1__30,S1_Q1__30,I.1. Nom et prénom des membres du ménage:30,NA,NA,no,I.1. Nom et prénom des membres du ménage:30,character
+S1_Q1__31,S1_Q1__31,I.1. Nom et prénom des membres du ménage:31,NA,NA,no,I.1. Nom et prénom des membres du ménage:31,character
+S1_Q1__32,S1_Q1__32,I.1. Nom et prénom des membres du ménage:32,NA,NA,no,I.1. Nom et prénom des membres du ménage:32,character
+S1_Q1__33,S1_Q1__33,I.1. Nom et prénom des membres du ménage:33,NA,NA,no,I.1. Nom et prénom des membres du ménage:33,character
+S1_Q1__34,S1_Q1__34,I.1. Nom et prénom des membres du ménage:34,NA,NA,no,I.1. Nom et prénom des membres du ménage:34,character
+S1_Q1__35,S1_Q1__35,I.1. Nom et prénom des membres du ménage:35,NA,NA,no,I.1. Nom et prénom des membres du ménage:35,character
+S1_Q1__36,S1_Q1__36,I.1. Nom et prénom des membres du ménage:36,NA,NA,no,I.1. Nom et prénom des membres du ménage:36,character
+S1_Q1__37,S1_Q1__37,I.1. Nom et prénom des membres du ménage:37,NA,NA,no,I.1. Nom et prénom des membres du ménage:37,character
+S1_Q1__38,S1_Q1__38,I.1. Nom et prénom des membres du ménage:38,NA,NA,no,I.1. Nom et prénom des membres du ménage:38,character
+S1_Q1__39,S1_Q1__39,I.1. Nom et prénom des membres du ménage:39,NA,NA,no,I.1. Nom et prénom des membres du ménage:39,character
+S1_Q1__40,S1_Q1__40,I.1. Nom et prénom des membres du ménage:40,NA,NA,no,I.1. Nom et prénom des membres du ménage:40,character
+S1_Q1__41,S1_Q1__41,I.1. Nom et prénom des membres du ménage:41,NA,NA,no,I.1. Nom et prénom des membres du ménage:41,character
+S1_Q1__42,S1_Q1__42,I.1. Nom et prénom des membres du ménage:42,NA,NA,no,I.1. Nom et prénom des membres du ménage:42,character
+S1_Q1__43,S1_Q1__43,I.1. Nom et prénom des membres du ménage:43,NA,NA,no,I.1. Nom et prénom des membres du ménage:43,character
+S1_Q1__44,S1_Q1__44,I.1. Nom et prénom des membres du ménage:44,NA,NA,no,I.1. Nom et prénom des membres du ménage:44,character
+S1_Q1__45,S1_Q1__45,I.1. Nom et prénom des membres du ménage:45,NA,NA,no,I.1. Nom et prénom des membres du ménage:45,character
+S1_Q1__46,S1_Q1__46,I.1. Nom et prénom des membres du ménage:46,NA,NA,no,I.1. Nom et prénom des membres du ménage:46,character
+S1_Q1__47,S1_Q1__47,I.1. Nom et prénom des membres du ménage:47,NA,NA,no,I.1. Nom et prénom des membres du ménage:47,character
+S1_Q1__48,S1_Q1__48,I.1. Nom et prénom des membres du ménage:48,NA,NA,no,I.1. Nom et prénom des membres du ménage:48,character
+S1_Q1__49,S1_Q1__49,I.1. Nom et prénom des membres du ménage:49,NA,NA,no,I.1. Nom et prénom des membres du ménage:49,character
+S1_Q1__50,S1_Q1__50,I.1. Nom et prénom des membres du ménage:50,NA,NA,no,I.1. Nom et prénom des membres du ménage:50,character
+S1_Q1__51,S1_Q1__51,I.1. Nom et prénom des membres du ménage:51,NA,NA,no,I.1. Nom et prénom des membres du ménage:51,character
+S1_Q1__52,S1_Q1__52,I.1. Nom et prénom des membres du ménage:52,NA,NA,no,I.1. Nom et prénom des membres du ménage:52,character
+S1_Q1__53,S1_Q1__53,I.1. Nom et prénom des membres du ménage:53,NA,NA,no,I.1. Nom et prénom des membres du ménage:53,character
+S1_Q1__54,S1_Q1__54,I.1. Nom et prénom des membres du ménage:54,NA,NA,no,I.1. Nom et prénom des membres du ménage:54,character
+S1_Q1__55,S1_Q1__55,I.1. Nom et prénom des membres du ménage:55,NA,NA,no,I.1. Nom et prénom des membres du ménage:55,character
+S1_Q1__56,S1_Q1__56,I.1. Nom et prénom des membres du ménage:56,NA,NA,no,I.1. Nom et prénom des membres du ménage:56,character
+S1_Q1__57,S1_Q1__57,I.1. Nom et prénom des membres du ménage:57,NA,NA,no,I.1. Nom et prénom des membres du ménage:57,character
+S1_Q1__58,S1_Q1__58,I.1. Nom et prénom des membres du ménage:58,NA,NA,no,I.1. Nom et prénom des membres du ménage:58,character
+S1_Q1__59,S1_Q1__59,I.1. Nom et prénom des membres du ménage:59,NA,NA,no,I.1. Nom et prénom des membres du ménage:59,character
+S2_Q1,materiau_toit,Matériau dominant du toit,1=Béton/Ciment | 2=Tuile/Ardoise | 3=Tôle en métal | 4=Chaume/Paille | 5=Autre (à préciser),NA,yes,II.1 Quel est le matériau dominant du toit du logement principal du ménage ?,"haven_labelled, vctrs_vctr, double"
+S2_Q1_autre,S2_Q1_autre,II.1 Précisez le matériau dominant,NA,NA,no,II.1 Précisez le matériau dominant,character
+S2_Q2,materiau_murs,Matériau dominant des murs,1=Briques en ciment | 2=Banco stabilisé | 3=Brique en banco | 4=Bois | 5=Tôle en métal | 6=Paille/Tige | 7=Autres (à préciser),NA,yes,II.2 Quel est le matériau dominant des murs/clôtures du logement principal du mé,"haven_labelled, vctrs_vctr, double"
+S2_Q2_autre,S2_Q2_autre,II.2 Précisez le matériau dominant des murs,NA,NA,no,II.2 Précisez le matériau dominant des murs,character
+S2_Q3,S2_Q3,"II.3 Combien de pièces, à usage d’habitation, votre ménage occupe-t-il?",NA,NA,no,"II.3 Combien de pièces, à usage d’habitation, votre ménage occupe-t-il?",character
+S2_Q3_conv,nb_pieces,Nombre de pièces habitées,NA,NA,yes,Nombre de pieces,numeric
+S2_Q4,statut_occup,Statut d'occupation du logement,1=Propriétaire | 2=Copropriétaire | 3=Locataire | 4=Colocataire | 5=Logé gratuitement | 6=Autre (à préciser),NA,yes,II.4 Quel est le statut d’occupation du logement de votre ménage ?,"haven_labelled, vctrs_vctr, double"
+S2_Q4_autre,S2_Q4_autre,II.4 Précisez le statut d'occupation ?,NA,NA,no,II.4 Précisez le statut d'occupation ?,character
+S2_Q5__1,S2_Q5__1,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,NA,NA,no,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,numeric
+S2_Q5__2,S2_Q5__2,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,NA,NA,no,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,numeric
+S2_Q5__3,S2_Q5__3,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,NA,NA,no,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,numeric
+S2_Q5__4,S2_Q5__4,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,NA,NA,no,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,numeric
+S2_Q5__5,S2_Q5__5,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,NA,NA,no,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,numeric
+S2_Q5__6,S2_Q5__6,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,NA,NA,no,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,numeric
+S2_Q5__7,S2_Q5__7,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,NA,NA,no,II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par,numeric
+S2_Q5_autre,S2_Q5_autre,II.5 Précisez la source d'énergie la plus utilisée par votre ménage,NA,NA,no,II.5 Précisez la source d'énergie la plus utilisée par votre ménage,character
+S2_Q6__1,S2_Q6__1,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,NA,NA,no,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,numeric
+S2_Q6__2,S2_Q6__2,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,NA,NA,no,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,numeric
+S2_Q6__3,S2_Q6__3,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,NA,NA,no,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,numeric
+S2_Q6__4,S2_Q6__4,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,NA,NA,no,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,numeric
+S2_Q6__5,S2_Q6__5,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,NA,NA,no,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,numeric
+S2_Q6__6,S2_Q6__6,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,NA,NA,no,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,numeric
+S2_Q6__7,S2_Q6__7,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,NA,NA,no,II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour,numeric
+S2_Q6_autre,S2_Q6_autre,II.6 Précisez la source d'énergie la plus utilisée pour l'élcairage,NA,NA,no,II.6 Précisez la source d'énergie la plus utilisée pour l'élcairage,character
+S2_Q7__1,possede_bien_1,Possède équipement type 1,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Ordinateur fi,numeric
+S2_Q7__2,possede_bien_2,Possède équipement type 2,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Internet,numeric
+S2_Q7__3,possede_bien_3,Possède équipement type 3,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Ventilateur,numeric
+S2_Q7__4,possede_bien_4,Possède équipement type 4,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Climatiseur,numeric
+S2_Q7__5,possede_bien_5,Possède équipement type 5,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Télévision,numeric
+S2_Q7__6,possede_bien_6,Possède équipement type 6,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Vidéo/VCD/DVD,numeric
+S2_Q7__7,possede_bien_7,Possède équipement type 7,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Radio/Radioca,numeric
+S2_Q7__8,possede_bien_8,Possède équipement type 8,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Téléphone fix,numeric
+S2_Q7__9,possede_bien_9,Possède équipement type 9,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Téléphone por,numeric
+S2_Q7__10,possede_bien_10,Possède équipement type 10,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Cuisinière mo,numeric
+S2_Q7__11,possede_bien_11,Possède équipement type 11,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Foyer amélior,numeric
+S2_Q7__12,possede_bien_12,Possède équipement type 12,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Réfrigérateur,numeric
+S2_Q7__13,possede_bien_13,Possède équipement type 13,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Bicyclette,numeric
+S2_Q7__14,possede_bien_14,Possède équipement type 14,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Motocyclette,numeric
+S2_Q7__15,possede_bien_15,Possède équipement type 15,NA,NA,yes,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Voiture,numeric
+S2_Q7__16,S2_Q7__16,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Autres biens,NA,NA,no,II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Autres biens,numeric
+S2_Q8__1,S2_Q8__1,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Houe/Charru,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Houe/Charru,numeric
+S2_Q8__2,S2_Q8__2,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Calèche/Cha,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Calèche/Cha,numeric
+S2_Q8__3,S2_Q8__3,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Animaux de,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Animaux de,numeric
+S2_Q8__4,S2_Q8__4,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Tracteur,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Tracteur,numeric
+S2_Q8__5,S2_Q8__5,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Voiture/cam,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Voiture/cam,numeric
+S2_Q8__6,S2_Q8__6,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Mobylette/m,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Mobylette/m,numeric
+S2_Q8__7,S2_Q8__7,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Pirogue,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Pirogue,numeric
+S2_Q8__8,S2_Q8__8,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Réfrig/cong,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Réfrig/cong,numeric
+S2_Q8__9,S2_Q8__9,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Machine à c,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Machine à c,numeric
+S2_Q8__10,S2_Q8__10,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Matériel de,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Matériel de,numeric
+S2_Q8__11,S2_Q8__11,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Chaises/Bâc,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Chaises/Bâc,numeric
+S2_Q8__12,S2_Q8__12,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Téléphone/F,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Téléphone/F,numeric
+S2_Q8__13,S2_Q8__13,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Photocopieu,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Photocopieu,numeric
+S2_Q8__14,S2_Q8__14,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Ordinateur/,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Ordinateur/,numeric
+S2_Q8__15,S2_Q8__15,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Moulin/déco,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Moulin/déco,numeric
+S2_Q8__16,S2_Q8__16,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Appareil ph,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Appareil ph,numeric
+S2_Q8__17,S2_Q8__17,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Motopompe,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Motopompe,numeric
+S2_Q8__18,S2_Q8__18,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Presse à hu,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Presse à hu,numeric
+S2_Q8__19,S2_Q8__19,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Groupe élec,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Groupe élec,numeric
+S2_Q8__20,S2_Q8__20,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Autres moye,NA,NA,no,II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Autres moye,numeric
+S3_Q1,source_eau,Principale source d'eau potable,1=Robinet intérieur | 2=Robinet public | 3=Robinet du voisin | 4=Puits protégé | 5=Puits non protégé | 6=Forage motorisé | 7=Forage à pompe manuel | 8=Service de camion-citerne | 9=Eau minérale / Filtrée | 10=Vendeur d’eau | 11=Source/cour d’eau | 12=Autre à préciser,NA,yes,III.1 Quelle est la principale source de l’eau que boivent les membres de votre,"haven_labelled, vctrs_vctr, double"
+S3_Q1_autre,S3_Q1_autre,III.1 Précisez la principale source de l’eau que boivent les membres de votre mé,NA,NA,no,III.1 Précisez la principale source de l’eau que boivent les membres de votre mé,character
+S3_Q2,S3_Q2,III.2 Où est située cette source d'approvisionnement de l'eau ?,1=Dans votre logement | 2=Dans votre cour | 3=Ailleurs,NA,no,III.2 Où est située cette source d'approvisionnement de l'eau ?,"haven_labelled, vctrs_vctr, double"
+S3_Q3,S3_Q3,III.3 Faites-vous quelque chose pour rendre l'eau plus saine à boire ?,1=Oui | 2=Non | 3=NSP,NA,no,III.3 Faites-vous quelque chose pour rendre l'eau plus saine à boire ?,"haven_labelled, vctrs_vctr, double"
+S3_Q4,S3_Q4,"III.4 Habituellement, que faites-vous pour rendre l'eau que vous buvez plus sain","1=Eau de javel/chlore | 2=Filtrer à travers un linge | 3=Utiliser un filtre (céramique, sable, composite, …) | 4=Bouillir | 5=Laisser reposer | 6=Autre à préciser",NA,no,"III.4 Habituellement, que faites-vous pour rendre l'eau que vous buvez plus sain","haven_labelled, vctrs_vctr, double"
+S3_Q4_autre,S3_Q4_autre,III.4 Précisez ce que vous faites pour rendre l'eau que vous buvez plus saine ?,NA,NA,no,III.4 Précisez ce que vous faites pour rendre l'eau que vous buvez plus saine ?,character
+S3_Q5,S3_Q5,III.5 Quelle est la principale source de l’eau utilisée par les membres de votre,1=Robinet intérieur | 2=Robinet public | 3=Robinet du voisin | 4=Puits protégé | 5=Puits non protégé | 6=Forage motorisé | 7=Forage à pompe manuel | 8=Service de camion-citerne | 9=Eau minérale / Filtrée | 10=Vendeur d’eau | 11=Source/cour d’eau | 12=Autre à préciser,NA,no,III.5 Quelle est la principale source de l’eau utilisée par les membres de votre,"haven_labelled, vctrs_vctr, double"
+S3_Q5_autre,S3_Q5_autre,III.5 Précisez la principale source de l’eau utilisée par les membres de votre m,NA,NA,no,III.5 Précisez la principale source de l’eau utilisée par les membres de votre m,character
+S3_Q6,type_toilettes,Type de toilettes principales,1=Chasse d’eau avec égout | 2=Chasse d’eau avec fosse septique | 3=Latrines couvertes | 4=Latrines ventilées améliorées | 5=Latrines non couvertes | 6=Cuvette/seau | 7=Edicule public | 8=Chez le voisin | 9=Dans la nature | 10=Autre à préciser,NA,yes,III.6 Quel type de toilettes les membres de votre ménage utilisent-t-ils princip,"haven_labelled, vctrs_vctr, double"
+S3_Q6_autre,S3_Q6_autre,III.6 Précisez le type de toilettes que les membres de votre ménage utilisent pr,NA,NA,no,III.6 Précisez le type de toilettes que les membres de votre ménage utilisent pr,character
+S3_Q7,S3_Q7,III.7 Comment votre ménage se débarrasse-t-il principalement de ses ordures ména,1=Camion de ramassage | 2=Charretier/Pousse-pousse | 3=Dépotoir sauvage | 4=Dépôt autorisé | 5=Enfouissement | 6=Incinération | 7=Autres (à préciser),NA,no,III.7 Comment votre ménage se débarrasse-t-il principalement de ses ordures ména,"haven_labelled, vctrs_vctr, double"
+S3_Q7_autre,S3_Q7_autre,III.7 Précisez comment votre ménage se débarrasse-t-il principalement de ses ord,NA,NA,no,III.7 Précisez comment votre ménage se débarrasse-t-il principalement de ses ord,character
+S3_Q8,S3_Q8,III.8 Y a-t-il un (des) membre (s) du ménage souffrant de maladies chroniques ?,1=Oui | 2=Non,NA,no,III.8 Y a-t-il un (des) membre (s) du ménage souffrant de maladies chroniques ?,"haven_labelled, vctrs_vctr, double"
+S3_Q9,S3_Q9,III.9 Y a-t-il eu des cas de maladie non chroniques dans votre ménage au cours d,1=Oui | 2=Non,NA,no,III.9 Y a-t-il eu des cas de maladie non chroniques dans votre ménage au cours d,"haven_labelled, vctrs_vctr, double"
+S3_Q10__1,S3_Q10__1,III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 de,NA,NA,no,III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 de,numeric
+S3_Q10__2,S3_Q10__2,III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 de,NA,NA,no,III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 de,numeric
+S3_Q10__3,S3_Q10__3,III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 de,NA,NA,no,III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 de,numeric
+S3_Q10__4,S3_Q10__4,III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 de,NA,NA,no,III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 de,numeric
+S3_Q10__5,S3_Q10__5,III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 de,NA,NA,no,III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 de,numeric
+S3_Q10__6,S3_Q10__6,III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 de,NA,NA,no,III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 de,numeric
+S3_Q11,S3_Q11,"III.11 Si des membres du ménage n’ont pas été traités du tout, quelle est la pri",1=Manque de moyens financiers | 2=Mauvaise qualité de l’accueil dans la structure / Compétence limitée du personnel médical | 3=Manque de moyen de transport | 4=Absence de structures de santé | 5=Accès difficile à la structure de santé | 6=Autre raison (à préciser) | 9=Ne sait pas,NA,no,"III.11 Si des membres du ménage n’ont pas été traités du tout, quelle est la pri","haven_labelled, vctrs_vctr, double"
+S3_Q11_autre,S3_Q11_autre,III.11 Précisez la principale raison ?,NA,NA,no,III.11 Précisez la principale raison ?,character
+S3_Q12,S3_Q12,"III.12 Au cours des 6 derniers mois, avez-vous eu à payer des prestations sanita",1=Oui | 2=Non,NA,no,"III.12 Au cours des 6 derniers mois, avez-vous eu à payer des prestations sanita","haven_labelled, vctrs_vctr, double"
+S3_Q13__1,S3_Q13__1,"III.13 Si Oui, de quelle façon ?:Au comptant",NA,NA,no,"III.13 Si Oui, de quelle façon ?:Au comptant",numeric
+S3_Q13__2,S3_Q13__2,"III.13 Si Oui, de quelle façon ?:Emprunt chez des parents, amis ou voisins",NA,NA,no,"III.13 Si Oui, de quelle façon ?:Emprunt chez des parents, amis ou voisins",numeric
+S3_Q13__3,S3_Q13__3,"III.13 Si Oui, de quelle façon ?:Mutuelle de santé",NA,NA,no,"III.13 Si Oui, de quelle façon ?:Mutuelle de santé",numeric
+S3_Q13__4,S3_Q13__4,"III.13 Si Oui, de quelle façon ?:Emprunt auprès des comités de santé",NA,NA,no,"III.13 Si Oui, de quelle façon ?:Emprunt auprès des comités de santé",numeric
+S3_Q13__5,S3_Q13__5,"III.13 Si Oui, de quelle façon ?:Autre (à préciser)",NA,NA,no,"III.13 Si Oui, de quelle façon ?:Autre (à préciser)",numeric
+S3_Q13_autre,S3_Q13_autre,III.13 Précisez de quelle façon ?,NA,NA,no,III.13 Précisez de quelle façon ?,character
+S4_Q1,S4_Q1,IV.1 Votre ménage pratique-t-il de l’agriculture ?,1=Oui | 2=Non,NA,no,IV.1 Votre ménage pratique-t-il de l’agriculture ?,"haven_labelled, vctrs_vctr, double"
+S4_Q2,S4_Q2,IV.2 Quelle est la superficie totale (en ha) des parcelles disponibles pour le m,NA,NA,no,IV.2 Quelle est la superficie totale (en ha) des parcelles disponibles pour le m,numeric
+S4_Q3,S4_Q3,IV.3 Y a-t-il une ou des parcelles qui sont exploitées uniquement par les femmes,1=Oui | 2=Non,NA,no,IV.3 Y a-t-il une ou des parcelles qui sont exploitées uniquement par les femmes,"haven_labelled, vctrs_vctr, double"
+S4_Q4,S4_Q4,IV.4 Quel est le principal mode d’accès de votre ménage à la terre ?,1=Propriété/Copropriété | 2=Location | 3=Métayage | 4=Emprunt | 5=Autres (à préciser),NA,no,IV.4 Quel est le principal mode d’accès de votre ménage à la terre ?,"haven_labelled, vctrs_vctr, double"
+S4_Q4_autre,S4_Q4_autre,IV.4 Précisez l'autre mode d’accès de votre ménage à la terre ?,NA,NA,no,IV.4 Précisez l'autre mode d’accès de votre ménage à la terre ?,character
+S4_Q6__1,S4_Q6__1,IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantation,NA,NA,no,IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantation,numeric
+S4_Q6__2,S4_Q6__2,IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantation,NA,NA,no,IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantation,numeric
+S4_Q6__3,S4_Q6__3,IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantation,NA,NA,no,IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantation,numeric
+S4_Q6__4,S4_Q6__4,IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantation,NA,NA,no,IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantation,numeric
+S4_Q6__5,S4_Q6__5,IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantation,NA,NA,no,IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantation,numeric
+S4_Q6_autre,S4_Q6_autre,IV.6 Précisez les autres prestataires,NA,NA,no,IV.6 Précisez les autres prestataires,character
+S4_Q7,S4_Q7,IV.7 Votre ménage a-t-il pratiqué l’agriculture pendant la  période agricole 201,1=Oui | 2=Non,NA,no,IV.7 Votre ménage a-t-il pratiqué l’agriculture pendant la  période agricole 201,"haven_labelled, vctrs_vctr, double"
+S4_Q8,S4_Q8,IV.8 Quelle est la superficie totale (en hectare) cultivée et/ou plantée par le,NA,NA,no,IV.8 Quelle est la superficie totale (en hectare) cultivée et/ou plantée par le,numeric
+S4_Q9__1,S4_Q9__1,"IV.9 Quels sont les animaux possédés par votre ménage ?:Bovins (Bœufs, Vaches)",NA,NA,no,"IV.9 Quels sont les animaux possédés par votre ménage ?:Bovins (Bœufs, Vaches)",numeric
+S4_Q9__2,S4_Q9__2,IV.9 Quels sont les animaux possédés par votre ménage ?:Caprins (Chèvres),NA,NA,no,IV.9 Quels sont les animaux possédés par votre ménage ?:Caprins (Chèvres),numeric
+S4_Q9__3,S4_Q9__3,"IV.9 Quels sont les animaux possédés par votre ménage ?:Ovins (Moutons, brebis,",NA,NA,no,"IV.9 Quels sont les animaux possédés par votre ménage ?:Ovins (Moutons, brebis,",numeric
+S4_Q9__4,S4_Q9__4,"IV.9 Quels sont les animaux possédés par votre ménage ?:Volailles (poulet, canar",NA,NA,no,"IV.9 Quels sont les animaux possédés par votre ménage ?:Volailles (poulet, canar",numeric
+S4_Q9__5,S4_Q9__5,IV.9 Quels sont les animaux possédés par votre ménage ?:Porcins (Porcs),NA,NA,no,IV.9 Quels sont les animaux possédés par votre ménage ?:Porcins (Porcs),numeric
+S4_Q9__6,S4_Q9__6,IV.9 Quels sont les animaux possédés par votre ménage ?:Chevaux/Juments,NA,NA,no,IV.9 Quels sont les animaux possédés par votre ménage ?:Chevaux/Juments,numeric
+S4_Q9__7,S4_Q9__7,IV.9 Quels sont les animaux possédés par votre ménage ?:Anes,NA,NA,no,IV.9 Quels sont les animaux possédés par votre ménage ?:Anes,numeric
+S4_Q9__8,S4_Q9__8,IV.9 Quels sont les animaux possédés par votre ménage ?:Autre à préciser,NA,NA,no,IV.9 Quels sont les animaux possédés par votre ménage ?:Autre à préciser,numeric
+S5_Q1__0,source_revenu_0,Revenu issu de la source 0,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__1,source_revenu_1,Revenu issu de la source 1,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__2,source_revenu_2,Revenu issu de la source 2,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__3,source_revenu_3,Revenu issu de la source 3,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__4,source_revenu_4,Revenu issu de la source 4,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__5,source_revenu_5,Revenu issu de la source 5,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__6,source_revenu_6,Revenu issu de la source 6,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__7,source_revenu_7,Revenu issu de la source 7,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__8,source_revenu_8,Revenu issu de la source 8,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__9,source_revenu_9,Revenu issu de la source 9,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__10,source_revenu_10,Revenu issu de la source 10,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__11,source_revenu_11,Revenu issu de la source 11,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__12,source_revenu_12,Revenu issu de la source 12,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__13,source_revenu_13,Revenu issu de la source 13,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1__14,source_revenu_14,Revenu issu de la source 14,NA,NA,yes,V.1 Quelles sont les trois principales sources de revenus du ménage au cours de,numeric
+S5_Q1_autre,S5_Q1_autre,V.1 Précisez l'autre source de revenus,NA,NA,no,V.1 Précisez l'autre source de revenus,character
+S5_Q1_ALL,S5_Q1_ALL,Concatenation des sources selectionnées,NA,NA,no,Concatenation des sources selectionnées,character
+S5_Q5,S5_Q5,"V.5 Par rapport à la question V.1, Existe-il des sources provenant de l’activité",1=Oui | 2=Non,NA,no,"V.5 Par rapport à la question V.1, Existe-il des sources provenant de l’activité","haven_labelled, vctrs_vctr, double"
+S5_Q6__1,S5_Q6__1,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S5_Q6__2,S5_Q6__2,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S5_Q6__3,S5_Q6__3,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S5_Q6__4,S5_Q6__4,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S5_Q6__5,S5_Q6__5,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S5_Q6__6,S5_Q6__6,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S5_Q6__7,S5_Q6__7,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S5_Q6__8,S5_Q6__8,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S5_Q6__9,S5_Q6__9,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S5_Q6__10,S5_Q6__10,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S5_Q6__11,S5_Q6__11,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S5_Q6__12,S5_Q6__12,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S5_Q6__13,S5_Q6__13,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S5_Q6__14,S5_Q6__14,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,NA,NA,no,V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des fem,numeric
+S6_Q1,S6_Q1,"VI.1 AU COURS DES CINQ DERNIERES ANNEES, PENSEZ-VOUS QUE DANS VOTRE COMMUNAUTE,",1=A BEAUCOUP DIMINUÉ | 2=A UN PEU DIMINUE | 3=EST RESTEE STABLE | 4=S’EST UN PEU AGGRAVEE | 5=S’EST BEAUCOUP AGGRAVEE | 6=NE SAIT PAS,NA,no,"VI.1 AU COURS DES CINQ DERNIERES ANNEES, PENSEZ-VOUS QUE DANS VOTRE COMMUNAUTE,","haven_labelled, vctrs_vctr, double"
+S6_Q2,S6_Q2,"VI.2 DANS LES CINQ PROCHAINES ANNEES, PENSEZ VOUS QUE DANS VOTRE COMMUNAUTE, LA",1=VA BEAUCOUP DIMINUER | 2=VA UN PEU DIMINUER | 3=VA RESTER STABLE | 4=VA UN PEU S'AGGRAVER | 5=VA BEAUCOUP S'AGGRAVER | 6=NE SAIT PAS,NA,no,"VI.2 DANS LES CINQ PROCHAINES ANNEES, PENSEZ VOUS QUE DANS VOTRE COMMUNAUTE, LA","haven_labelled, vctrs_vctr, double"
+S6_Q3,S6_Q3,"VI.3 VOUS MEME, A QUELLE CATEGORIE PENSEZ VOUS APPARTENIR ?",1=TRES RICHE | 2=UN PEU RICHE | 3=MOYENNE | 4=UN PEU PAUVRE | 5=TRES PAUVRE,NA,no,"VI.3 VOUS MEME, A QUELLE CATEGORIE PENSEZ VOUS APPARTENIR ?","haven_labelled, vctrs_vctr, double"
+S7_Q1,choc_subi,"Ménage confronté à un choc (1=Oui, 2=Non)",1=Oui | 2=Non,NA,yes,"VII.1 Au cours des douze derniers mois, le ménage s’est-il confronté à un ou plu","haven_labelled, vctrs_vctr, double"
+S7_Q2__0,S7_Q2__0,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2__1,S7_Q2__1,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2__2,S7_Q2__2,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2__3,S7_Q2__3,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2__4,S7_Q2__4,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2__5,S7_Q2__5,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2__6,S7_Q2__6,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2__7,S7_Q2__7,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2__8,S7_Q2__8,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2__9,S7_Q2__9,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2__10,S7_Q2__10,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2__11,S7_Q2__11,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2__12,S7_Q2__12,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2__13,S7_Q2__13,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,NA,NA,no,VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté,numeric
+S7_Q2_a__0,S7_Q2_a__0,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Il n',NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Il n',numeric
+S7_Q2_a__1,S7_Q2_a__1,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Pluie,NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Pluie,numeric
+S7_Q2_a__2,S7_Q2_a__2,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Invas,NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Invas,numeric
+S7_Q2_a__3,S7_Q2_a__3,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Invas,NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Invas,numeric
+S7_Q2_a__4,S7_Q2_a__4,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Inond,NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Inond,numeric
+S7_Q2_a__5,S7_Q2_a__5,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Incen,NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Incen,numeric
+S7_Q2_a__6,S7_Q2_a__6,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Forte,NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Forte,numeric
+S7_Q2_a__7,S7_Q2_a__7,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Impor,NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Impor,numeric
+S7_Q2_a__8,S7_Q2_a__8,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Malad,NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Malad,numeric
+S7_Q2_a__9,S7_Q2_a__9,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Viole,NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Viole,numeric
+S7_Q2_a__10,S7_Q2_a__10,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Malad,NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Malad,numeric
+S7_Q2_a__11,S7_Q2_a__11,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Décès,NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Décès,numeric
+S7_Q2_a__12,S7_Q2_a__12,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Perte,NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Perte,numeric
+S7_Q2_a__13,S7_Q2_a__13,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Pandé,NA,NA,no,VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Pandé,numeric
+S7_Q3,S7_Q3,"VII.3 Au cours des douze derniers mois, le ménage a-t-il reçu une assistance gra",1=Oui | 2=Non,NA,no,"VII.3 Au cours des douze derniers mois, le ménage a-t-il reçu une assistance gra","haven_labelled, vctrs_vctr, double"
+S9B_Q1,S9B_Q1,IX.B.1. Y - a -t-il eu décès dans le ménage au cours des douze derniers mois?,1=Oui | 2=Non,NA,no,IX.B.1. Y - a -t-il eu décès dans le ménage au cours des douze derniers mois?,"haven_labelled, vctrs_vctr, double"
+S9B_Q2,S9B_Q2,IX.B.2. Quel est le nombre de femmes décédées ?,NA,NA,no,IX.B.2. Quel est le nombre de femmes décédées ?,numeric
+date_fin,date_fin,Date et heure de fin de l'interview,NA,NA,no,Date et heure de fin de l'interview,character
+sssys_irnd,sssys_irnd,Random number in the range 0..1 associated with interview,NA,NA,no,Random number in the range 0..1 associated with interview,numeric
+has__errors,has__errors,Errors count in the interview,NA,NA,no,Errors count in the interview,numeric
+interview__status,interview__status,Status of the interview,-1=Deleted | 0=Restored | 20=Created | 40=SupervisorAssigned | 60=InterviewerAssigned | 65=RejectedBySupervisor | 80=ReadyForInterview | 85=SentToCapi | 95=Restarted | 100=Completed | 120=ApprovedBySupervisor | 125=RejectedByHeadquarters | 130=ApprovedByHeadquarters,NA,no,Status of the interview,"haven_labelled, vctrs_vctr, double"
+assignment__id,assignment__id,NA,NA,NA,no,NA,numeric

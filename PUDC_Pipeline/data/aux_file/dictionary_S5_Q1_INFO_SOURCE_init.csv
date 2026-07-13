@@ -1,0 +1,7 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+interview__key,interview__key,Interview key (identifier in XX-XX-XX-XX format),NA,,no,Interview key (identifier in XX-XX-XX-XX format),character
+interview__id,interview__id,Unique 32-character long identifier of the interview,NA,,no,Unique 32-character long identifier of the interview,character
+S5_Q1_INFO_SOURCE__id,S5_Q1_INFO_SOURCE__id,Id in S5_Q1_INFO_SOURCE,0=Pas d'autre source de revenu | 1=Vente de produits agricoles | 2=Vente de produits miniers | 3=Vente de bétail ou produits d’élevage | 4=Vente des produits de la pêche | 5=Vente des produits de la chasse/cueillette | 6=commerce | 7=salaire du public | 8=salaire du privé | 9=Artisanat | 10=Transport | 11=Transfert d’argent | 12=Etat Sénégal (bourse familiale) | 13=Revenu de rente | 14=Autres (préciser),,no,Id in S5_Q1_INFO_SOURCE,"haven_labelled, vctrs_vctr, double"
+S5_Q2,S5_Q2,V.2 Origine,NA,,no,V.2 Origine,numeric
+S5_Q3,S5_Q3,V.3 Montant en FCFA -  %rostertitle% - %S5_Q1_autre%,NA,,no,V.3 Montant en FCFA -  %rostertitle% - %S5_Q1_autre%,numeric
+S5_Q4,S5_Q4,V.4 Périodicité -  %rostertitle% - %S5_Q1_autre%,1=Journalière | 2=Hebdomadaire | 3=Mensuelle | 4=Bimestrielle | 5=Annuelle,,no,V.4 Périodicité -  %rostertitle% - %S5_Q1_autre%,"haven_labelled, vctrs_vctr, double"

@@ -1,0 +1,6 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+interview__key,interview__key,Interview key (identifier in XX-XX-XX-XX format),NA,,no,Interview key (identifier in XX-XX-XX-XX format),character
+interview__id,interview__id,Unique 32-character long identifier of the interview,NA,,no,Unique 32-character long identifier of the interview,character
+S3_Q14_INFOS__id,S3_Q14_INFOS__id,Id in S3_Q14_INFOS,1=Ecole primaire | 2=Ecole secondaire | 3=Dispensaire/Centre de santé | 4=Maternité/Poste de santé | 5=Case de santé | 6=Marché de produits alimentaires | 7=Source d’eau utilisée pour boire | 8=Un service financier | 9=Route praticable/Pistes | 10=Forage,,no,Id in S3_Q14_INFOS,"haven_labelled, vctrs_vctr, double"
+S3_Q14a,S3_Q14a,III.14a. Quelle distance (en km) de votre logement se trouve  %rostertitle% ?,1=[0-500m[ | 2=[500m-1km [ | 3=[1km-2km [ | 4=[2km-5km [ | 5=[5km-10km [ | 6=[10km et plus[ | 7=Ne sait pas,,no,III.14a. Quelle distance (en km) de votre logement se trouve  %rostertitle% ?,"haven_labelled, vctrs_vctr, double"
+S3_Q14b,S3_Q14b,III.14b. En moyenne combien de temps (en minute) faut-il pour y aller -  %roster,1=[0-15mn[ | 2=[15mn-30mn [ | 3=[30mn-60mn [ | 4=[60mn et plus[ | 5=Ne sait pas,,no,III.14b. En moyenne combien de temps (en minute) faut-il pour y aller -  %roster,"haven_labelled, vctrs_vctr, double"

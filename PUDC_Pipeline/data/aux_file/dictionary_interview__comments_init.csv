@@ -1,0 +1,12 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+interview__key,interview__key,Interview key (identifier in XX-XX-XX-XX format),NA,,no,Interview key (identifier in XX-XX-XX-XX format),character
+interview__id,interview__id,Unique 32-character long identifier of the interview,NA,,no,Unique 32-character long identifier of the interview,character
+roster,roster,Name of the roster containing the variable,NA,,no,Name of the roster containing the variable,character
+id1,id1,Roster ID of the 1st level of nesting,NA,,no,Roster ID of the 1st level of nesting,numeric
+variable,variable,Variable name for the commented question,NA,,no,Variable name for the commented question,character
+order,order,Sequential order of the comment,NA,,no,Sequential order of the comment,numeric
+date,date,Date when the comment was left,NA,,no,Date when the comment was left,character
+time,time,Time when the comment was left,NA,,no,Time when the comment was left,character
+originator,originator,Login name of the person leaving the comment,NA,,no,Login name of the person leaving the comment,character
+role,role,System role of the person leaving the comment,0=<UNKNOWN ROLE> | 1=Interviewer | 2=Supervisor | 3=Headquarter | 4=Administrator | 5=API User,,no,System role of the person leaving the comment,"haven_labelled, vctrs_vctr, double"
+comment,comment,Text of the comment,NA,,no,Text of the comment,character

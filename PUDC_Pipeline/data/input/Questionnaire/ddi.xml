@@ -1,0 +1,4103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<codeBook version="1.2.2" ID="QIDANDREV" xml-lang="en" xmlns="http://www.icpsr.umich.edu/DDI" xsi:SchemaLocation="http://www.icpsr.umich.edu/DDI http://www.icpsr.umich.edu/DDI/Version1-2-2.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <docDscr>
+    <citation>
+      <titlStmt>
+        <titl>PUDC - Etablissement de la situation de référence dans les zones d intervention - Phase 2</titl>
+      </titlStmt>
+      <prodStmt>
+        <copyright>
+        </copyright>
+        <software version="1.0.0" date="2015-07-08">StatDDI</software>
+      </prodStmt>
+    </citation>
+    <notes>
+    </notes>
+  </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>PUDC - Etablissement de la situation de référence dans les zones d intervention - Phase 2</titl>
+        <IDNO>QUEST</IDNO>
+      </titlStmt>
+      <prodStmt>
+        <software version="1.0.0" date="2015-07-08">StatDDI</software>
+      </prodStmt>
+    </citation>
+  </stdyDscr>
+  <dataDscr>
+    <var ID="V1" name="interview__id" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Unique 32-character long identifier of the interview]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V2" name="interview__key" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Interview key (identifier in XX-XX-XX-XX format)]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V3" name="sssys_irnd" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Random number in the range 0..1 associated with interview]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V4" name="has__errors" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Errors count in the interview]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V5" name="interview__status" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Status of the interview]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V6" name="S0_01" files="F1" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[0.1 N° du Questionnaire]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.1 N° du Questionnaire]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V7" name="S0_02" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[0.2 Région]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.2 Région]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V8" name="S0_03" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[0.3 Département]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.3 Département]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V9" name="S0_04" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[0.4 Arrondissement]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.4 Arrondissement]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V10" name="S0_05" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[0.5 Collectivités territoriales]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.5 Collectivités territoriales]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V11" name="S0_06" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[0.6 Village/Quartier]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.6 Village/Quartier]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V12" name="S0_07" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[0.7 Numéro du DR]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.7 Numéro du DR]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V13" name="S0_08" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[0.8 Milieu de résidence]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.8 Milieu de résidence]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Rural]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Urbain]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V14" name="S0_9_conc" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Numero Concession]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[Numero Concession]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V15" name="S0_9" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[0.9 Numéro de ménage (dans l’échantillon)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.9 Numéro de ménage (dans l’échantillon)]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V16" name="S0_9_men_dr" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Numero menage dans DR]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[Numero menage dans DR]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V17" name="S0_16" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[0.16 Nom et prénom du chef de ménage]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.16 Nom et prénom du chef de ménage]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V18" name="coord_gps__Latitude" files="F1" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[Lieu de l'interview: Latitude]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[Lieu de l'interview]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V19" name="coord_gps__Longitude" files="F1" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[Lieu de l'interview: Longitude]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[Lieu de l'interview]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V20" name="coord_gps__Accuracy" files="F1" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[Lieu de l'interview: Accuracy]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[Lieu de l'interview]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V21" name="coord_gps__Altitude" files="F1" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[Lieu de l'interview: Altitude]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[Lieu de l'interview]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V22" name="coord_gps__Timestamp" files="F1" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[Lieu de l'interview: Timestamp]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[Lieu de l'interview]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V23" name="S0_13" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[0.13 Date et heure de début de l'interview]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.13 Date et heure de début de l'interview]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V24" name="S0_17" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[0.17 Numéro de téléphone (CM si possible)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.17 Numéro de téléphone (CM si possible)]]></qstnLit>
+        <ivuInstr><![CDATA[Veuillez insister pour avoir au moins un numéro.
+S'il n y a pas de numéro, inscrire 99-999-99-99]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V25" name="S0_18" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[0.18 Numéro de téléphone 2 (Femme si possible)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.18 Numéro de téléphone 2 (Femme si possible)]]></qstnLit>
+        <ivuInstr><![CDATA[S'il n y a pas de numéro, inscrire 99-999-99-99]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V26" name="S0_19" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[0.19 Numéro de téléphone 3]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[0.19 Numéro de téléphone 3]]></qstnLit>
+        <ivuInstr><![CDATA[S'il n y a pas de numéro, inscrire 99-999-99-99]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V27" name="s13_14" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[« Le répondant est-il le chef de ménage]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[« Le répondant est-il le chef de ménage]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[OUI]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[NON]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V28" name="S1_Q1__0" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:0]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V29" name="S1_Q1__1" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:1]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V30" name="S1_Q1__2" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:2]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V31" name="S1_Q1__3" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:3]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V32" name="S1_Q1__4" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:4]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V33" name="S1_Q1__5" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:5]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V34" name="S1_Q1__6" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:6]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V35" name="S1_Q1__7" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:7]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V36" name="S1_Q1__8" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:8]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V37" name="S1_Q1__9" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:9]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V38" name="S1_Q1__10" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:10]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V39" name="S1_Q1__11" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:11]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V40" name="S1_Q1__12" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:12]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V41" name="S1_Q1__13" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:13]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V42" name="S1_Q1__14" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:14]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V43" name="S1_Q1__15" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:15]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V44" name="S1_Q1__16" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:16]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V45" name="S1_Q1__17" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:17]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V46" name="S1_Q1__18" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:18]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V47" name="S1_Q1__19" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:19]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V48" name="S1_Q1__20" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:20]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V49" name="S1_Q1__21" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:21]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V50" name="S1_Q1__22" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:22]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V51" name="S1_Q1__23" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:23]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V52" name="S1_Q1__24" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:24]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V53" name="S1_Q1__25" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:25]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V54" name="S1_Q1__26" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:26]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V55" name="S1_Q1__27" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:27]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V56" name="S1_Q1__28" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:28]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V57" name="S1_Q1__29" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:29]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V58" name="S1_Q1__30" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:30]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V59" name="S1_Q1__31" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:31]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V60" name="S1_Q1__32" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:32]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V61" name="S1_Q1__33" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:33]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V62" name="S1_Q1__34" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:34]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V63" name="S1_Q1__35" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:35]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V64" name="S1_Q1__36" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:36]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V65" name="S1_Q1__37" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:37]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V66" name="S1_Q1__38" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:38]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V67" name="S1_Q1__39" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:39]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V68" name="S1_Q1__40" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:40]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V69" name="S1_Q1__41" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:41]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V70" name="S1_Q1__42" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:42]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V71" name="S1_Q1__43" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:43]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V72" name="S1_Q1__44" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:44]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V73" name="S1_Q1__45" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:45]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V74" name="S1_Q1__46" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:46]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V75" name="S1_Q1__47" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:47]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V76" name="S1_Q1__48" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:48]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V77" name="S1_Q1__49" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:49]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V78" name="S1_Q1__50" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:50]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V79" name="S1_Q1__51" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:51]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V80" name="S1_Q1__52" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:52]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V81" name="S1_Q1__53" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:53]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V82" name="S1_Q1__54" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:54]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V83" name="S1_Q1__55" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:55]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V84" name="S1_Q1__56" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:56]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V85" name="S1_Q1__57" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:57]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V86" name="S1_Q1__58" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:58]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V87" name="S1_Q1__59" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.1. Nom et prénom des membres du ménage:59]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.1. Nom et prénom des membres du ménage]]></qstnLit>
+        <ivuInstr><![CDATA[Demandez la liste des membres agés de 5 ans et plus.
+
+Entrez un membre par ligne]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V88" name="S2_Q1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.1 Quel est le matériau dominant du toit du logement principal du ménage ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.1 Quel est le matériau dominant du toit du logement principal du ménage ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Béton/Ciment]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Tuile/Ardoise]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Tôle en métal]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Chaume/Paille]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Autre (à préciser)]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V89" name="S2_Q1_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[II.1 Précisez le matériau dominant]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.1 Précisez le matériau dominant]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V90" name="S2_Q2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.2 Quel est le matériau dominant des murs/clôtures du logement principal du ménage ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.2 Quel est le matériau dominant des murs/clôtures du logement principal du ménage ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Briques en ciment]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Banco stabilisé]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Brique en banco]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Bois]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Tôle en métal]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[Paille/Tige]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl><![CDATA[Autres (à préciser)]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V91" name="S2_Q2_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[II.2 Précisez le matériau dominant des murs]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.2 Précisez le matériau dominant des murs]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V92" name="S2_Q3" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[II.3 Combien de pièces, à usage d’habitation, votre ménage occupe-t-il?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.3 Combien de pièces, à usage d’habitation, votre ménage occupe-t-il?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V93" name="S2_Q3_conv" files="F1" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[S2_Q3_conv]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[Convert.ToInt32(S2_Q3)]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V94" name="S2_Q4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.4 Quel est le statut d’occupation du logement de votre ménage ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.4 Quel est le statut d’occupation du logement de votre ménage ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Propriétaire]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Copropriétaire]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Locataire]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Colocataire]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Logé gratuitement]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[Autre (à préciser)]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V95" name="S2_Q4_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[II.4 Précisez le statut d'occupation ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.4 Précisez le statut d'occupation ?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V96" name="S2_Q5__1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?:Électricité (réseau electrique)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V97" name="S2_Q5__2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?:Gaz]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V98" name="S2_Q5__3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?:Charbon de bois]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V99" name="S2_Q5__4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?:Bois]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V100" name="S2_Q5__5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?:Paille/ Débris végétaux]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V101" name="S2_Q5__6" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?:Bouse animale]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V102" name="S2_Q5__7" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?:Autre (à préciser)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.5 Quelles sont les deux principales sources d’énergie les plus utilisées par votre ménage pour la cuisson des aliments ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V103" name="S2_Q5_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[II.5 Précisez la source d'énergie la plus utilisée par votre ménage]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.5 Précisez la source d'énergie la plus utilisée par votre ménage]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V104" name="S2_Q6__1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?:Panneaux solaires]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V105" name="S2_Q6__2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?:Électricité (réseau electrique)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V106" name="S2_Q6__3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?:Lampe à gaz]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V107" name="S2_Q6__4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?:Lampe torche]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V108" name="S2_Q6__5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?:Lampe tempête (à pétrole)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V109" name="S2_Q6__6" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?:Bougie]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V110" name="S2_Q6__7" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?:Autre (à préciser)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.6 Quelles sont les deux principales sources d’énergie les plus utilisées pour l’éclairage de votre ménage ?]]></qstnLit>
+        <ivuInstr><![CDATA[(Si plusieurs sources, choisir les deux plus utilisées par le ménage)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V111" name="S2_Q6_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[II.6 Précisez la source d'énergie la plus utilisée pour l'élcairage]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.6 Précisez la source d'énergie la plus utilisée pour l'élcairage]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V112" name="S2_Q7__1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Ordinateur fixe/portable]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V113" name="S2_Q7__2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Internet]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V114" name="S2_Q7__3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Ventilateur]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V115" name="S2_Q7__4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Climatiseur]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V116" name="S2_Q7__5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Télévision]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V117" name="S2_Q7__6" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Vidéo/VCD/DVD]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V118" name="S2_Q7__7" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Radio/Radiocassette]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V119" name="S2_Q7__8" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Téléphone fixe]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V120" name="S2_Q7__9" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Téléphone portable]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V121" name="S2_Q7__10" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Cuisinière moderne]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V122" name="S2_Q7__11" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Foyer amélioré]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V123" name="S2_Q7__12" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Réfrigérateur/Congélateur]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V124" name="S2_Q7__13" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Bicyclette]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V125" name="S2_Q7__14" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Motocyclette]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V126" name="S2_Q7__15" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Voiture]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V127" name="S2_Q7__16" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?:Autres biens]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.7 Votre ménage possède-t-il les biens et équipements suivants ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V128" name="S2_Q8__1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Houe/Charrue/Semoir]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V129" name="S2_Q8__2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Calèche/Charrette]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V130" name="S2_Q8__3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Animaux de trait]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V131" name="S2_Q8__4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Tracteur]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V132" name="S2_Q8__5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Voiture/camion]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V133" name="S2_Q8__6" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Mobylette/motocyclette]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V134" name="S2_Q8__7" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Pirogue]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V135" name="S2_Q8__8" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Réfrig/congélat]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V136" name="S2_Q8__9" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Machine à coudre]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V137" name="S2_Q8__10" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Matériel de musique]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V138" name="S2_Q8__11" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Chaises/Bâches]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V139" name="S2_Q8__12" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Téléphone/Fax]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V140" name="S2_Q8__13" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Photocopieuse]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V141" name="S2_Q8__14" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Ordinateur/wifi]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V142" name="S2_Q8__15" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Moulin/décortiqueuse]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V143" name="S2_Q8__16" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Appareil photo/caméra]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V144" name="S2_Q8__17" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Motopompe]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V145" name="S2_Q8__18" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Presse à huile]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V146" name="S2_Q8__19" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Groupe électrogène]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V147" name="S2_Q8__20" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?:Autres moyens]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[II.8 Votre ménage possède-t-il les moyens de productions suivantes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V148" name="S3_Q1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.1 Quelle est la principale source de l’eau que boivent les membres de votre ménage?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.1 Quelle est la principale source de l’eau que boivent les membres de votre ménage?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Robinet intérieur]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Robinet public]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Robinet du voisin]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Puits protégé]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Puits non protégé]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[Forage motorisé]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl><![CDATA[Forage à pompe manuel]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl><![CDATA[Service de camion-citerne]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl><![CDATA[Eau minérale / Filtrée]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>10</catValu>
+        <labl><![CDATA[Vendeur d’eau]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>11</catValu>
+        <labl><![CDATA[Source/cour d’eau]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>12</catValu>
+        <labl><![CDATA[Autre à préciser]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V149" name="S3_Q1_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[III.1 Précisez la principale source de l’eau que boivent les membres de votre ménage]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.1 Précisez la principale source de l’eau que boivent les membres de votre ménage]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V150" name="S3_Q2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.2 Où est située cette source d'approvisionnement de l'eau ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.2 Où est située cette source d'approvisionnement de l'eau ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Dans votre logement]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Dans votre cour]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Ailleurs]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V151" name="S3_Q3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.3 Faites-vous quelque chose pour rendre l'eau plus saine à boire ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.3 Faites-vous quelque chose pour rendre l'eau plus saine à boire ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[NSP]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V152" name="S3_Q4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.4 Habituellement, que faites-vous pour rendre l'eau que vous buvez plus saine ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.4 Habituellement, que faites-vous pour rendre l'eau que vous buvez plus saine ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Eau de javel/chlore]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Filtrer à travers un linge]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Utiliser un filtre (céramique, sable, composite, …)]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Bouillir]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Laisser reposer]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[Autre à préciser]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V153" name="S3_Q4_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[III.4 Précisez ce que vous faites pour rendre l'eau que vous buvez plus saine ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.4 Précisez ce que vous faites pour rendre l'eau que vous buvez plus saine ?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V154" name="S3_Q5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.5 Quelle est la principale source de l’eau utilisée par les membres de votre ménage pour  la cuisson et d’autres usages?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.5 Quelle est la principale source de l’eau utilisée par les membres de votre ménage pour  la cuisson et d’autres usages?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Robinet intérieur]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Robinet public]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Robinet du voisin]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Puits protégé]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Puits non protégé]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[Forage motorisé]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl><![CDATA[Forage à pompe manuel]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl><![CDATA[Service de camion-citerne]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl><![CDATA[Eau minérale / Filtrée]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>10</catValu>
+        <labl><![CDATA[Vendeur d’eau]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>11</catValu>
+        <labl><![CDATA[Source/cour d’eau]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>12</catValu>
+        <labl><![CDATA[Autre à préciser]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V155" name="S3_Q5_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[III.5 Précisez la principale source de l’eau utilisée par les membres de votre ménage pour  la cuisson et d’autres usages?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.5 Précisez la principale source de l’eau utilisée par les membres de votre ménage pour  la cuisson et d’autres usages?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V156" name="S3_Q6" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.6 Quel type de toilettes les membres de votre ménage utilisent-t-ils principalement ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.6 Quel type de toilettes les membres de votre ménage utilisent-t-ils principalement ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Chasse d’eau avec égout]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Chasse d’eau avec fosse septique]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Latrines couvertes]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Latrines ventilées améliorées]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Latrines non couvertes]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[Cuvette/seau]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl><![CDATA[Edicule public]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl><![CDATA[Chez le voisin]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl><![CDATA[Dans la nature]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>10</catValu>
+        <labl><![CDATA[Autre à préciser]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V157" name="S3_Q6_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[III.6 Précisez le type de toilettes que les membres de votre ménage utilisent principalement ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.6 Précisez le type de toilettes que les membres de votre ménage utilisent principalement ?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V158" name="S3_Q7" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.7 Comment votre ménage se débarrasse-t-il principalement de ses ordures ménagères ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.7 Comment votre ménage se débarrasse-t-il principalement de ses ordures ménagères ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Camion de ramassage]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Charretier/Pousse-pousse]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Dépotoir sauvage]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Dépôt autorisé]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Enfouissement]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[Incinération]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl><![CDATA[Autres (à préciser)]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V159" name="S3_Q7_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[III.7 Précisez comment votre ménage se débarrasse-t-il principalement de ses ordures ménagères ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.7 Précisez comment votre ménage se débarrasse-t-il principalement de ses ordures ménagères ?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V160" name="S3_Q8" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.8 Y a-t-il un (des) membre (s) du ménage souffrant de maladies chroniques ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.8 Y a-t-il un (des) membre (s) du ménage souffrant de maladies chroniques ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V161" name="S3_Q9" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.9 Y a-t-il eu des cas de maladie non chroniques dans votre ménage au cours des 12 derniers mois ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.9 Y a-t-il eu des cas de maladie non chroniques dans votre ménage au cours des 12 derniers mois ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V162" name="S3_Q10__1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 derniers mois ont-elles été traitées ?:Structures officielles de santé (hôpital, centre de santé, case de santé, poste de santé, etc.)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 derniers mois ont-elles été traitées ?]]></qstnLit>
+        <ivuInstr><![CDATA[JUSQU’A QUATRE REPONSES POSSIBLES (les 4 modes de traitement les plus fréquentes)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V163" name="S3_Q10__2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 derniers mois ont-elles été traitées ?:Guérisseurs/Tradi-praticiens]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 derniers mois ont-elles été traitées ?]]></qstnLit>
+        <ivuInstr><![CDATA[JUSQU’A QUATRE REPONSES POSSIBLES (les 4 modes de traitement les plus fréquentes)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V164" name="S3_Q10__3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 derniers mois ont-elles été traitées ?:Automédication avec des produits achetés en pharmacie]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 derniers mois ont-elles été traitées ?]]></qstnLit>
+        <ivuInstr><![CDATA[JUSQU’A QUATRE REPONSES POSSIBLES (les 4 modes de traitement les plus fréquentes)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V165" name="S3_Q10__4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 derniers mois ont-elles été traitées ?:Médicament hors pharmacie]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 derniers mois ont-elles été traitées ?]]></qstnLit>
+        <ivuInstr><![CDATA[JUSQU’A QUATRE REPONSES POSSIBLES (les 4 modes de traitement les plus fréquentes)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V166" name="S3_Q10__5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 derniers mois ont-elles été traitées ?:Automédication traditionnelle (plantes, poudre, argile)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 derniers mois ont-elles été traitées ?]]></qstnLit>
+        <ivuInstr><![CDATA[JUSQU’A QUATRE REPONSES POSSIBLES (les 4 modes de traitement les plus fréquentes)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V167" name="S3_Q10__6" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 derniers mois ont-elles été traitées ?:Cas non traité]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.10 De quelle façon ces personnes qui sont tombées malades au cours des 12 derniers mois ont-elles été traitées ?]]></qstnLit>
+        <ivuInstr><![CDATA[JUSQU’A QUATRE REPONSES POSSIBLES (les 4 modes de traitement les plus fréquentes)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V168" name="S3_Q11" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.11 Si des membres du ménage n’ont pas été traités du tout, quelle est la principale raison ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.11 Si des membres du ménage n’ont pas été traités du tout, quelle est la principale raison ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Manque de moyens financiers]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Mauvaise qualité de l’accueil dans la structure / Compétence limitée du personnel médical]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Manque de moyen de transport]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Absence de structures de santé]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Accès difficile à la structure de santé]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[Autre raison (à préciser)]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl><![CDATA[Ne sait pas]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V169" name="S3_Q11_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[III.11 Précisez la principale raison ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.11 Précisez la principale raison ?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V170" name="S3_Q12" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.12 Au cours des 6 derniers mois, avez-vous eu à payer des prestations sanitaires dans une structure officielle de sante ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.12 Au cours des 6 derniers mois, avez-vous eu à payer des prestations sanitaires dans une structure officielle de sante ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V171" name="S3_Q13__1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.13 Si Oui, de quelle façon ?:Au comptant]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.13 Si Oui, de quelle façon ?]]></qstnLit>
+        <ivuInstr><![CDATA[(plusieurs réponses possibles - lister les modalités ci-dessous)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V172" name="S3_Q13__2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.13 Si Oui, de quelle façon ?:Emprunt chez des parents, amis ou voisins]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.13 Si Oui, de quelle façon ?]]></qstnLit>
+        <ivuInstr><![CDATA[(plusieurs réponses possibles - lister les modalités ci-dessous)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V173" name="S3_Q13__3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.13 Si Oui, de quelle façon ?:Mutuelle de santé]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.13 Si Oui, de quelle façon ?]]></qstnLit>
+        <ivuInstr><![CDATA[(plusieurs réponses possibles - lister les modalités ci-dessous)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V174" name="S3_Q13__4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.13 Si Oui, de quelle façon ?:Emprunt auprès des comités de santé]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.13 Si Oui, de quelle façon ?]]></qstnLit>
+        <ivuInstr><![CDATA[(plusieurs réponses possibles - lister les modalités ci-dessous)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V175" name="S3_Q13__5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.13 Si Oui, de quelle façon ?:Autre (à préciser)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.13 Si Oui, de quelle façon ?]]></qstnLit>
+        <ivuInstr><![CDATA[(plusieurs réponses possibles - lister les modalités ci-dessous)]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V176" name="S3_Q13_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[III.13 Précisez de quelle façon ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.13 Précisez de quelle façon ?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V177" name="S4_Q1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.1 Votre ménage pratique-t-il de l’agriculture ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.1 Votre ménage pratique-t-il de l’agriculture ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V178" name="S4_Q2" files="F1" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.2 Quelle est la superficie totale (en ha) des parcelles disponibles pour le ménage ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.2 Quelle est la superficie totale (en ha) des parcelles disponibles pour le ménage ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V179" name="S4_Q3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.3 Y a-t-il une ou des parcelles qui sont exploitées uniquement par les femmes ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.3 Y a-t-il une ou des parcelles qui sont exploitées uniquement par les femmes ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V180" name="S4_Q4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.4 Quel est le principal mode d’accès de votre ménage à la terre ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.4 Quel est le principal mode d’accès de votre ménage à la terre ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Propriété/Copropriété]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Location]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Métayage]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Emprunt]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Autres (à préciser)]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V181" name="S4_Q4_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[IV.4 Précisez l'autre mode d’accès de votre ménage à la terre ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.4 Précisez l'autre mode d’accès de votre ménage à la terre ?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V182" name="S4_Q6__1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantations de votre ménage pour la campagne 2019/2020?:Main d’œuvre familiale]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantations de votre ménage pour la campagne 2019/2020?]]></qstnLit>
+        <ivuInstr><![CDATA[JUSQU’ A TROIS REPONSES POSSIBLES]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V183" name="S4_Q6__2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantations de votre ménage pour la campagne 2019/2020?:Les ouvriers agricoles temporaires (Sourgha)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantations de votre ménage pour la campagne 2019/2020?]]></qstnLit>
+        <ivuInstr><![CDATA[JUSQU’ A TROIS REPONSES POSSIBLES]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V184" name="S4_Q6__3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantations de votre ménage pour la campagne 2019/2020?:Les ouvriers agricoles permanents]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantations de votre ménage pour la campagne 2019/2020?]]></qstnLit>
+        <ivuInstr><![CDATA[JUSQU’ A TROIS REPONSES POSSIBLES]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V185" name="S4_Q6__4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantations de votre ménage pour la campagne 2019/2020?:L’entraide villageoise]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantations de votre ménage pour la campagne 2019/2020?]]></qstnLit>
+        <ivuInstr><![CDATA[JUSQU’ A TROIS REPONSES POSSIBLES]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V186" name="S4_Q6__5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantations de votre ménage pour la campagne 2019/2020?:Autres prestataires (à préciser)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.6 Quelle est la main d'oeuvre que vous utilisez dans les champs ou plantations de votre ménage pour la campagne 2019/2020?]]></qstnLit>
+        <ivuInstr><![CDATA[JUSQU’ A TROIS REPONSES POSSIBLES]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V187" name="S4_Q6_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[IV.6 Précisez les autres prestataires]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.6 Précisez les autres prestataires]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V188" name="S4_Q7" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.7 Votre ménage a-t-il pratiqué l’agriculture pendant la  période agricole 2019?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.7 Votre ménage a-t-il pratiqué l’agriculture pendant la  période agricole 2019?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V189" name="S4_Q8" files="F1" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.8 Quelle est la superficie totale (en hectare) cultivée et/ou plantée par le ménage au cours de la période 2019?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.8 Quelle est la superficie totale (en hectare) cultivée et/ou plantée par le ménage au cours de la période 2019?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V190" name="S4_Q9__1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?:Bovins (Bœufs, Vaches)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V191" name="S4_Q9__2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?:Caprins (Chèvres)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V192" name="S4_Q9__3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?:Ovins (Moutons, brebis, etc.)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V193" name="S4_Q9__4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?:Volailles (poulet, canard, etc.)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V194" name="S4_Q9__5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?:Porcins (Porcs)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V195" name="S4_Q9__6" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?:Chevaux/Juments]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V196" name="S4_Q9__7" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?:Anes]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V197" name="S4_Q9__8" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?:Autre à préciser]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.9 Quels sont les animaux possédés par votre ménage ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V198" name="S5_Q1__0" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:Pas d'autre source de revenu]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V199" name="S5_Q1__1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:Vente de produits agricoles]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V200" name="S5_Q1__2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:Vente de produits miniers]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V201" name="S5_Q1__3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:Vente de bétail ou produits d’élevage]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V202" name="S5_Q1__4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:Vente des produits de la pêche]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V203" name="S5_Q1__5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:Vente des produits de la chasse/cueillette]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V204" name="S5_Q1__6" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:commerce]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V205" name="S5_Q1__7" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:salaire du public]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V206" name="S5_Q1__8" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:salaire du privé]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V207" name="S5_Q1__9" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:Artisanat]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V208" name="S5_Q1__10" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:Transport]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V209" name="S5_Q1__11" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:Transfert d’argent]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V210" name="S5_Q1__12" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:Etat Sénégal (bourse familiale)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V211" name="S5_Q1__13" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:Revenu de rente]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V212" name="S5_Q1__14" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?:Autres (préciser)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Quelles sont les trois principales sources de revenus du ménage au cours de la période 2019 (par ordre d’importance) ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V213" name="S5_Q1_autre" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[V.1 Précisez l'autre source de revenus]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.1 Précisez l'autre source de revenus]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V214" name="S5_Q1_ALL" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[S5_Q1_ALL]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[String.Join(" ",S5_Q1)]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V215" name="S5_Q5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.5 Par rapport à la question V.1, Existe-il des sources provenant de l’activité des femmes ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.5 Par rapport à la question V.1, Existe-il des sources provenant de l’activité des femmes ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V216" name="S5_Q6__1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:Vente de produits agricoles]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V217" name="S5_Q6__2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:Vente de produits miniers]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V218" name="S5_Q6__3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:Vente de bétail ou produits d’élevage]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V219" name="S5_Q6__4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:Vente des produits de la pêche]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V220" name="S5_Q6__5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:Vente des produits de la chasse/cueillette]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V221" name="S5_Q6__6" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:commerce]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V222" name="S5_Q6__7" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:salaire du public]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V223" name="S5_Q6__8" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:salaire du privé]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V224" name="S5_Q6__9" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:Artisanat]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V225" name="S5_Q6__10" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:Transport]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V226" name="S5_Q6__11" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:Transfert d’argent]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V227" name="S5_Q6__12" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:Etat Sénégal (bourse familiale)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V228" name="S5_Q6__13" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:Revenu de rente]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V229" name="S5_Q6__14" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?:Autres (préciser)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.6. Donnez le numéro d’ordre des sources de revenu provenant uniquement des femmes ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V230" name="S6_Q1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VI.1 AU COURS DES CINQ DERNIERES ANNEES, PENSEZ-VOUS QUE DANS VOTRE COMMUNAUTE, LA PAUVRETE … ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VI.1 AU COURS DES CINQ DERNIERES ANNEES, PENSEZ-VOUS QUE DANS VOTRE COMMUNAUTE, LA PAUVRETE … ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[A BEAUCOUP DIMINUÉ]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[A UN PEU DIMINUE]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[EST RESTEE STABLE]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[S’EST UN PEU AGGRAVEE]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[S’EST BEAUCOUP AGGRAVEE]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[NE SAIT PAS]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V231" name="S6_Q2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VI.2 DANS LES CINQ PROCHAINES ANNEES, PENSEZ VOUS QUE DANS VOTRE COMMUNAUTE, LA PAUVRETE…. ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VI.2 DANS LES CINQ PROCHAINES ANNEES, PENSEZ VOUS QUE DANS VOTRE COMMUNAUTE, LA PAUVRETE…. ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[VA BEAUCOUP DIMINUER]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[VA UN PEU DIMINUER]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[VA RESTER STABLE]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[VA UN PEU S'AGGRAVER]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[VA BEAUCOUP S'AGGRAVER]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[NE SAIT PAS]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V232" name="S6_Q3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VI.3 VOUS MEME, A QUELLE CATEGORIE PENSEZ VOUS APPARTENIR ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VI.3 VOUS MEME, A QUELLE CATEGORIE PENSEZ VOUS APPARTENIR ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[TRES RICHE]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[UN PEU RICHE]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[MOYENNE]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[UN PEU PAUVRE]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[TRES PAUVRE]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V233" name="S7_Q1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.1 Au cours des douze derniers mois, le ménage s’est-il confronté à un ou plusieurs chocs ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.1 Au cours des douze derniers mois, le ménage s’est-il confronté à un ou plusieurs chocs ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V234" name="S7_Q2__0" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Il n'y a Pas d’autre choc]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V235" name="S7_Q2__1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Pluies tardives, manque de pluie]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V236" name="S7_Q2__2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Invasions de nuisibles]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V237" name="S7_Q2__3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Invasions de mauvaises herbes]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V238" name="S7_Q2__4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Inondations]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V239" name="S7_Q2__5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Incendies]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V240" name="S7_Q2__6" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Forte hausse des prix de denrées alimentaires]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V241" name="S7_Q2__7" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Important déficit de pâturage]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V242" name="S7_Q2__8" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Maladies animales]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V243" name="S7_Q2__9" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Violence/conflits/insécurité]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V244" name="S7_Q2__10" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Maladie/accident d'un membre du ménage]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V245" name="S7_Q2__11" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Décès d'un soutien de la famille]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V246" name="S7_Q2__12" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Perte d’emploi]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V247" name="S7_Q2__13" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?:Pandémie de la covid]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2. Quels sont les trois principaux chocs auxquels le ménage s'est confronté durant les douze derniers mois ?]]></qstnLit>
+        <ivuInstr><![CDATA[Ne pas lister les chocs. Laisser le répondant citer les trois principaux chocs]]></ivuInstr>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V248" name="S7_Q2_a__0" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Il n'y a Pas d’autre choc]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V249" name="S7_Q2_a__1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Pluies tardives, manque de pluie]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V250" name="S7_Q2_a__2" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Invasions de nuisibles]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V251" name="S7_Q2_a__3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Invasions de mauvaises herbes]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V252" name="S7_Q2_a__4" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Inondations]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V253" name="S7_Q2_a__5" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Incendies]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V254" name="S7_Q2_a__6" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Forte hausse des prix de denrées alimentaires]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V255" name="S7_Q2_a__7" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Important déficit de pâturage]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V256" name="S7_Q2_a__8" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Maladies animales]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V257" name="S7_Q2_a__9" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Violence/conflits/insécurité]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V258" name="S7_Q2_a__10" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Maladie/accident d'un membre du ménage]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V259" name="S7_Q2_a__11" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Décès d'un soutien de la famille]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V260" name="S7_Q2_a__12" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Perte d’emploi]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V261" name="S7_Q2_a__13" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité:Pandémie de la covid]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2a. Demander ensuite au répondant de les classer par ordre de sévérité]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V262" name="S7_Q3" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.3 Au cours des douze derniers mois, le ménage a-t-il reçu une assistance gratuite?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.3 Au cours des douze derniers mois, le ménage a-t-il reçu une assistance gratuite?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V263" name="S9B_Q1" files="F1" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IX.B.1. Y - a -t-il eu décès dans le ménage au cours des douze derniers mois?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IX.B.1. Y - a -t-il eu décès dans le ménage au cours des douze derniers mois?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V264" name="S9B_Q2" files="F1" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IX.B.2. Quel est le nombre de femmes décédées ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IX.B.2. Quel est le nombre de femmes décédées ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V265" name="date_fin" files="F1" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Date et heure de fin de l'interview]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[Date et heure de fin de l'interview]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V266" name="S1_INFOS_MEMBRES__id" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Id in S1_INFOS_MEMBRES]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V267" name="interview__key" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Interview key (identifier in XX-XX-XX-XX format)]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V268" name="numero_ind" files="F2" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[numero_ind]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[@rowcode]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V269" name="S1_Q2" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I.2 Sexe de  %rostertitle% ]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.2 Sexe de  %rostertitle% ]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Masculin]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Féminin]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V270" name="S1_Q3" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.3 Age de  %rostertitle%  en année révolue]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.3 Age de  %rostertitle%  en année révolue]]></qstnLit>
+        <ivuInstr><![CDATA[Sur deux positions]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V271" name="AgeMembre" files="F2" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[AgeMembre]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[Convert.ToInt64(S1_Q3)]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V272" name="S1_Q4" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I.4 Lien de parenté de  %rostertitle%  avec le chef du ménage]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.4 Lien de parenté de  %rostertitle%  avec le chef du ménage]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Chef de ménage]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Époux/épouse]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Fils/fille]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Père/mère]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Frère/Sœur]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[Neveu/nièce]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl><![CDATA[Grands-parents]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl><![CDATA[Beaux-parents]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl><![CDATA[Beau-fils/Belle-fille]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>10</catValu>
+        <labl><![CDATA[Petits-enfants]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>11</catValu>
+        <labl><![CDATA[Autre parent]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>12</catValu>
+        <labl><![CDATA[Domestique]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>13</catValu>
+        <labl><![CDATA[Non apparentée]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V273" name="S1_Q5" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I.5 Statut matrimonial de  %rostertitle% ]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.5 Statut matrimonial de  %rostertitle% ]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Marié (e)/Monogame,]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Marié (e)/Polygame,]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Divorcé (e)/Veuf (ve)]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Célibataire]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Autres à préciser]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V274" name="S1_Q5_autre" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.5 Préciser la situation matrimoniale]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.5 Préciser la situation matrimoniale]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V275" name="S1_Q6" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I.6 Avez-vous fréquenté à l’école,  %rostertitle%  ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.6 Avez-vous fréquenté à l’école,  %rostertitle%  ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V276" name="S1_Q7" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I.7 Quel est la classe la plus élevée que vous avez achevée,  %rostertitle%  ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.7 Quel est la classe la plus élevée que vous avez achevée,  %rostertitle%  ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Primaire]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Secondaire premier cycle]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Secondaire second cycle]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Supérieur]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Formation professionnelle]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V277" name="S1_Q8" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I.8 Nationalité de  %rostertitle% ]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.8 Nationalité de  %rostertitle% ]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Sénégalaise]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Nationalité autre que sénégalaise (à préciser)]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V278" name="S1_Q8_autre" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.8 Préciser la nationalité]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.8 Préciser la nationalité]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V279" name="S1_Q9" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I.9 Quelle est l'ethnie du répondant  %rostertitle% ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.9 Quelle est l'ethnie du répondant  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Wolof/Lébou]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Sérère]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Peulh/Toucouleur]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Soninké]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Manjack/Mankagne]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[Manding/Socé]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl><![CDATA[Bambara]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl><![CDATA[Maure/Arabe]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>10</catValu>
+        <labl><![CDATA[Diola]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl><![CDATA[Autres à préciser]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V280" name="S1_Q9_autre" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.9 Préciser l'ethnie]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.9 Préciser l'ethnie]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V281" name="S1_Q10__0" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?:Aucun]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V282" name="S1_Q10__1" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap visuel (aveugle, malvoyant)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V283" name="S1_Q10__2" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap de la parole (bègue, muet)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V284" name="S1_Q10__3" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap auditif (sourd, malentendant)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V285" name="S1_Q10__4" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap mental (insensé, aliéné, fou)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V286" name="S1_Q10__5" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap moteur (infirme, paralytique,)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V287" name="S1_Q10__6" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap auditif et de la parole (Sourd-muet)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V288" name="S1_Q10__7" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?:Autre handicap (à préciser)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I10. Est-ce que  %rostertitle%  a des handicaps ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V289" name="S1_Q10_autre" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.10 Préciser l'autre handicap]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.10 Préciser l'autre handicap]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V290" name="S1_Q11" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[I.11 Durant les 12 derniers mois que faisait  %rostertitle%  comme occupation la plupart du temps ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.11 Durant les 12 derniers mois que faisait  %rostertitle%  comme occupation la plupart du temps ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>0</catValu>
+        <labl><![CDATA[Inactif]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[A la recherche d'un emploi]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Cadre supérieur, ingénieur et assimile]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Cadre moyen, agent de maitrise]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Employé/ouvrier qualifie]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Employé/ouvrier semi qualifie]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[Manœuvre]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl><![CDATA[Employeur]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl><![CDATA[Indépendant agricole]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl><![CDATA[Indépendant non agricole]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>10</catValu>
+        <labl><![CDATA[Aide-familial]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>11</catValu>
+        <labl><![CDATA[Apprenti rémunéré ou non]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>12</catValu>
+        <labl><![CDATA[Autre (à préciser)]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V291" name="S1_Q11_autre" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[I.11 Préciser l'occupation]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[I.11 Préciser l'occupation]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V292" name="S8_Q3" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[VIII.3 Age de  %rostertitle%  en mois révolus]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VIII.3 Age de  %rostertitle%  en mois révolus]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V293" name="AgeEnfant" files="F2" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[AgeEnfant]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[Convert.ToInt64(S8_Q3)]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V294" name="S8_Q4" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[VIII.4. Date de naissance de  %rostertitle% ]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VIII.4. Date de naissance de  %rostertitle% ]]></qstnLit>
+        <ivuInstr><![CDATA[format JJ / MM / AAAA]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V295" name="S8_Q5" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VIII.5 Poids à la naissance de  %rostertitle% ]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VIII.5 Poids à la naissance de  %rostertitle% ]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[2500g et plus]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Moins de 2500g]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Perdu]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V296" name="S8_Q6" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[VIII.6 Poids de  %rostertitle%  (en kg) ± 0,1 kg]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VIII.6 Poids de  %rostertitle%  (en kg) ± 0,1 kg]]></qstnLit>
+        <ivuInstr><![CDATA[Seuls les chiffres sont acceptés]]></ivuInstr>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V297" name="S8_Q7" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[VIII.7 Taille de  %rostertitle%  (en cm) ± 0,1cm]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VIII.7 Taille de  %rostertitle%  (en cm) ± 0,1cm]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V298" name="S8_Q8" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VIII.8 Taille debout ou couché -  %rostertitle% ]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VIII.8 Taille debout ou couché -  %rostertitle% ]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Debout]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Couchée]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V299" name="S8_Q9" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[VIII.9 Périmètre brachial de  %rostertitle%  (en mm)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VIII.9 Périmètre brachial de  %rostertitle%  (en mm)]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V300" name="S8_Q10" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VIII.10 Présence d’œdèmes -  %rostertitle% ]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VIII.10 Présence d’œdèmes -  %rostertitle% ]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V301" name="S9A_Q1" files="F2" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IX.A.1  %rostertitle% , avez-vous déjà donné naissance à des enfants ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IX.A.1  %rostertitle% , avez-vous déjà donné naissance à des enfants ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V302" name="S9A_Q2" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[IX.A.2 Combien de naissances vivantes masculines a eues  %rostertitle% ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IX.A.2 Combien de naissances vivantes masculines a eues  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V303" name="S9A_Q3" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[IX.A.3 Combien de naissances vivantes féminines a eues  %rostertitle% ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IX.A.3 Combien de naissances vivantes féminines a eues  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V304" name="S9A_Q4" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[IX.A.4 Parmi les  %S9A_Q2% naissances vivantes masculines  déclarées combien sont-elles encore en vie?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IX.A.4 Parmi les  %S9A_Q2% naissances vivantes masculines  déclarées combien sont-elles encore en vie?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V305" name="S9A_Q5" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[IX.A.5 Parmi les  %S9A_Q3% naissances vivantes féminines  déclarées combien sont-elles encore en vie?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IX.A.5 Parmi les  %S9A_Q3% naissances vivantes féminines  déclarées combien sont-elles encore en vie?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V306" name="S9A_Q6" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[IX.A.6 Combien d'enfants masculins  de  %rostertitle%  sont nés vivants au cours des 12 derniers mois?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IX.A.6 Combien d'enfants masculins  de  %rostertitle%  sont nés vivants au cours des 12 derniers mois?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V307" name="S9A_Q7" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[IX.A.7 Combien d'enfants féminins  de  %rostertitle%  sont nés vivants au cours des 12 derniers mois?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IX.A.7 Combien d'enfants féminins  de  %rostertitle%  sont nés vivants au cours des 12 derniers mois?]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V308" name="S1_Q1" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Roster list question]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V309" name="interview__id" files="F2" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Unique 32-character long identifier of the interview]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V310" name="S4_Q9_NBR_TETE__id" files="F3" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Id in S4_Q9_NBR_TETE]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V311" name="interview__key" files="F3" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Interview key (identifier in XX-XX-XX-XX format)]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V312" name="S4_Q9_autre" files="F3" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[IV.9. Précisez l'autre ESPECE]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.9. Précisez l'autre ESPECE]]></qstnLit>
+      </qstn>
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V313" name="S4_Q9_nbTETE" files="F3" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.9. Combien de têtes de  %rostertitle% - %S4_Q9_autre%  votre ménage possède-t-il actuellement ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.9. Combien de têtes de  %rostertitle% - %S4_Q9_autre%  votre ménage possède-t-il actuellement ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V314" name="S4_Q10" files="F3" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV.10 Est-ce que les femmes du ménage possèdent- %rostertitle% - %S4_Q9_autre% ]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV.10 Est-ce que les femmes du ménage possèdent- %rostertitle% - %S4_Q9_autre% ]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V315" name="interview__id" files="F3" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Unique 32-character long identifier of the interview]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V316" name="S5_Q1_INFO_SOURCE__id" files="F4" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Id in S5_Q1_INFO_SOURCE]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V317" name="interview__key" files="F4" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Interview key (identifier in XX-XX-XX-XX format)]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V318" name="S5_Q2" files="F4" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[S5_Q2]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[@rowcode]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V319" name="S5_Q3" files="F4" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.3 Montant en FCFA -  %rostertitle% - %S5_Q1_autre% ]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.3 Montant en FCFA -  %rostertitle% - %S5_Q1_autre% ]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V320" name="S5_Q4" files="F4" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[V.4 Périodicité -  %rostertitle% - %S5_Q1_autre% ]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[V.4 Périodicité -  %rostertitle% - %S5_Q1_autre% ]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Journalière]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Hebdomadaire]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Mensuelle]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Bimestrielle]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Annuelle]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V321" name="interview__id" files="F4" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Unique 32-character long identifier of the interview]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V322" name="S7_INFOS_CHOCS__id" files="F5" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Id in S7_INFOS_CHOCS]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V323" name="interview__key" files="F5" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Interview key (identifier in XX-XX-XX-XX format)]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V324" name="S7_Q2b" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2b Le choc  %rostertitle%  a-t-il eu un impact négatif sur la capacité du ménage à se nourrir ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2b Le choc  %rostertitle%  a-t-il eu un impact négatif sur la capacité du ménage à se nourrir ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V325" name="S7_Q2c" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2c Le ménage a-t-il pu se relever du choc  %rostertitle% ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2c Le ménage a-t-il pu se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V326" name="S7_Q2d__1" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:Aide de l'État]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V327" name="S7_Q2d__2" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:Aide de ONG, association, communauté]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V328" name="S7_Q2d__3" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:Vente de biens non productifs]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V329" name="S7_Q2d__4" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:Utilisation de son épargne]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V330" name="S7_Q2d__5" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:Emprunt]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V331" name="S7_Q2d__6" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:Aide de parents vivant dans le pays]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V332" name="S7_Q2d__7" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:Aide de parents vivant à l'étranger]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V333" name="S7_Q2d__8" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:Aide d'un ami]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V334" name="S7_Q2d__9" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:Vente de bien productifs]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V335" name="S7_Q2d__10" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:Aide d'un voisin]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V336" name="S7_Q2d__11" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:Mendicité]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V337" name="S7_Q2d__12" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:travail des enfants]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V338" name="S7_Q2d__13" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:Confiage]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V339" name="S7_Q2d__98" files="F5" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?:Autres stratégies]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.2d Quelles sont les trois principales stratégies adoptées par le ménage pour se relever du choc  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V340" name="interview__id" files="F5" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Unique 32-character long identifier of the interview]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V341" name="S9B_decesfemmes__id" files="F6" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Id in S9B_decesfemmes]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V342" name="interview__key" files="F6" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Interview key (identifier in XX-XX-XX-XX format)]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V343" name="S9B_Q0" files="F6" intrvl="contin">
+      <location RecSegNo="1" />
+      <labl><![CDATA[S9B_Q0]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[@rowindex]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V344" name="S9B_Q3" files="F6" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IX.B.3. Décès intervenu durant la grossesse ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IX.B.3. Décès intervenu durant la grossesse ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl><![CDATA[NSP]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V345" name="S9B_Q4" files="F6" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IX.B.4. Décès intervenu durant l'accouchement ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IX.B.4. Décès intervenu durant l'accouchement ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V346" name="S9B_Q5" files="F6" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IX.B.5. Décès intervenu durant les 42 jours suivant la fin d'une grossesse ou d'un accouchement?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IX.B.5. Décès intervenu durant les 42 jours suivant la fin d'une grossesse ou d'un accouchement?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V347" name="interview__id" files="F6" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Unique 32-character long identifier of the interview]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V348" name="S3_Q14_INFOS__id" files="F7" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Id in S3_Q14_INFOS]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V349" name="interview__key" files="F7" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Interview key (identifier in XX-XX-XX-XX format)]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V350" name="S3_Q14a" files="F7" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.14a. Quelle distance (en km) de votre logement se trouve  %rostertitle% ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.14a. Quelle distance (en km) de votre logement se trouve  %rostertitle% ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[[0-500m[]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[[500m-1km []]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[[1km-2km []]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[[2km-5km []]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[[5km-10km []]></labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl><![CDATA[[10km et plus[]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl><![CDATA[Ne sait pas]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V351" name="S3_Q14b" files="F7" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[III.14b. En moyenne combien de temps (en minute) faut-il pour y aller -  %rostertitle%  ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[III.14b. En moyenne combien de temps (en minute) faut-il pour y aller -  %rostertitle%  ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[[0-15mn[]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[[15mn-30mn []]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[[30mn-60mn []]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[[60mn et plus[]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl><![CDATA[Ne sait pas]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V352" name="interview__id" files="F7" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Unique 32-character long identifier of the interview]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V353" name="S4_Q5_TYPE_AGRI__id" files="F8" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Id in S4_Q5_TYPE_AGRI]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V354" name="interview__key" files="F8" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Interview key (identifier in XX-XX-XX-XX format)]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V355" name="S4_Q5a" files="F8" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV5.a Le ménage pratique-t-il  %rostertitle%  pendant la campagne 2019/2020?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV5.a Le ménage pratique-t-il  %rostertitle%  pendant la campagne 2019/2020?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V356" name="S4_Q5b" files="F8" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[IV5.b Préciser si  %rostertitle%  est pratiqué uniquement par le ménage ou en groupement de production]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[IV5.b Préciser si  %rostertitle%  est pratiqué uniquement par le ménage ou en groupement de production]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Par le chef du  ménage]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Au sein d’un groupement de production]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl><![CDATA[Les deux (Par le chef du  ménage et Au sein d’un groupement de production )]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl><![CDATA[Par un membre du ménage autre que le chef de ménage]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V357" name="interview__id" files="F8" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Unique 32-character long identifier of the interview]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V358" name="S7_ASSISTANCE__id" files="F9" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Id in S7_ASSISTANCE]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V359" name="interview__key" files="F9" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Interview key (identifier in XX-XX-XX-XX format)]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+    <var ID="V360" name="S7_Q4a" files="F9" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.4a Assistance gratuite reçue pour -  %rostertitle%  ?]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.4a Assistance gratuite reçue pour -  %rostertitle%  ?]]></qstnLit>
+      </qstn>
+      <catgry>
+        <catValu>1</catValu>
+        <labl><![CDATA[Oui]]></labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl><![CDATA[Non]]></labl>
+      </catgry>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V361" name="S7_Q4b__1" files="F9" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.4b Intervenant pour -  %rostertitle% :Etat]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.4b Intervenant pour -  %rostertitle% ]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V362" name="S7_Q4b__2" files="F9" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.4b Intervenant pour -  %rostertitle% :Organisme des nations unies (PAM, UNICEF, FAO, OMS ...)]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.4b Intervenant pour -  %rostertitle% ]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V363" name="S7_Q4b__3" files="F9" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.4b Intervenant pour -  %rostertitle% :ONG/Fondation]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.4b Intervenant pour -  %rostertitle% ]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V364" name="S7_Q4b__4" files="F9" intrvl="discrete">
+      <location RecSegNo="1" />
+      <labl><![CDATA[VII.4b Intervenant pour -  %rostertitle% :Particulier/bonnes volontés]]></labl>
+      <qstn>
+        <qstnLit><![CDATA[VII.4b Intervenant pour -  %rostertitle% ]]></qstnLit>
+      </qstn>
+      <varFormat type="numeric" schema="other" />
+    </var>
+    <var ID="V365" name="interview__id" files="F9" intrvl="discrete">
+      <location width="255" RecSegNo="1" />
+      <labl><![CDATA[Unique 32-character long identifier of the interview]]></labl>
+      <qstn />
+      <varFormat type="character" schema="other" />
+    </var>
+  </dataDscr>
+  <fileDscr ID="F1" URI="Temp#33.~esstar?Index=0&amp;Name=PUDC">
+    <fileTxt>
+      <fileName>PUDC.NSDstat</fileName>
+      <dimensns>
+        <caseQnty>0</caseQnty>
+        <varQnty>265</varQnty>
+      </dimensns>
+      <fileType>Nesstar 200801</fileType>
+    </fileTxt>
+  </fileDscr>
+  <fileDscr ID="F2" URI="Temp#33.~esstar?Index=1&amp;Name=S1_INFOS_MEMBRES">
+    <fileTxt>
+      <fileName>S1_INFOS_MEMBRES.NSDstat</fileName>
+      <dimensns>
+        <caseQnty>0</caseQnty>
+        <varQnty>44</varQnty>
+      </dimensns>
+      <fileType>Nesstar 200801</fileType>
+    </fileTxt>
+  </fileDscr>
+  <fileDscr ID="F3" URI="Temp#33.~esstar?Index=2&amp;Name=S4_Q9_NBR_TETE">
+    <fileTxt>
+      <fileName>S4_Q9_NBR_TETE.NSDstat</fileName>
+      <dimensns>
+        <caseQnty>0</caseQnty>
+        <varQnty>6</varQnty>
+      </dimensns>
+      <fileType>Nesstar 200801</fileType>
+    </fileTxt>
+  </fileDscr>
+  <fileDscr ID="F4" URI="Temp#33.~esstar?Index=3&amp;Name=S5_Q1_INFO_SOURCE">
+    <fileTxt>
+      <fileName>S5_Q1_INFO_SOURCE.NSDstat</fileName>
+      <dimensns>
+        <caseQnty>0</caseQnty>
+        <varQnty>6</varQnty>
+      </dimensns>
+      <fileType>Nesstar 200801</fileType>
+    </fileTxt>
+  </fileDscr>
+  <fileDscr ID="F5" URI="Temp#33.~esstar?Index=4&amp;Name=S7_INFOS_CHOCS">
+    <fileTxt>
+      <fileName>S7_INFOS_CHOCS.NSDstat</fileName>
+      <dimensns>
+        <caseQnty>0</caseQnty>
+        <varQnty>19</varQnty>
+      </dimensns>
+      <fileType>Nesstar 200801</fileType>
+    </fileTxt>
+  </fileDscr>
+  <fileDscr ID="F6" URI="Temp#33.~esstar?Index=5&amp;Name=S9B_decesfemmes">
+    <fileTxt>
+      <fileName>S9B_decesfemmes.NSDstat</fileName>
+      <dimensns>
+        <caseQnty>0</caseQnty>
+        <varQnty>7</varQnty>
+      </dimensns>
+      <fileType>Nesstar 200801</fileType>
+    </fileTxt>
+  </fileDscr>
+  <fileDscr ID="F7" URI="Temp#33.~esstar?Index=6&amp;Name=S3_Q14_INFOS">
+    <fileTxt>
+      <fileName>S3_Q14_INFOS.NSDstat</fileName>
+      <dimensns>
+        <caseQnty>0</caseQnty>
+        <varQnty>5</varQnty>
+      </dimensns>
+      <fileType>Nesstar 200801</fileType>
+    </fileTxt>
+  </fileDscr>
+  <fileDscr ID="F8" URI="Temp#33.~esstar?Index=7&amp;Name=S4_Q5_TYPE_AGRI">
+    <fileTxt>
+      <fileName>S4_Q5_TYPE_AGRI.NSDstat</fileName>
+      <dimensns>
+        <caseQnty>0</caseQnty>
+        <varQnty>5</varQnty>
+      </dimensns>
+      <fileType>Nesstar 200801</fileType>
+    </fileTxt>
+  </fileDscr>
+  <fileDscr ID="F9" URI="Temp#33.~esstar?Index=8&amp;Name=S7_ASSISTANCE">
+    <fileTxt>
+      <fileName>S7_ASSISTANCE.NSDstat</fileName>
+      <dimensns>
+        <caseQnty>0</caseQnty>
+        <varQnty>8</varQnty>
+      </dimensns>
+      <fileType>Nesstar 200801</fileType>
+    </fileTxt>
+  </fileDscr>
+</codeBook>
