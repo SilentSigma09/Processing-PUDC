@@ -1,0 +1,40 @@
+# ==============================================================================
+# MAPPING DES VARIABLES - PROJET PUDC
+# Ce fichier définit les sélections et renommages des variables.
+# Les lignes commençant par '#' sont ignorées lors du chargement.
+# ==============================================================================
+
+# === SECTION 1 : MODULE INDIVIDUS (S1_INFOS_MEMBRES) ===
+table,var_orig,var_new,keep,label_new
+S1_INFOS_MEMBRES,interview__key,interview__key,yes,Clé unique ménage
+S1_INFOS_MEMBRES,numero_ind,numero_ind,yes,Numéro d'ordre de l'individu
+S1_INFOS_MEMBRES,S1_Q2,sexe,yes,Genre de l'individu
+S1_INFOS_MEMBRES,AgeMembre,age,yes,Age de l'individu
+S1_INFOS_MEMBRES,S1_Q4,lien_cm,yes,Lien de parenté avec le chef de ménage
+S1_INFOS_MEMBRES,S1_Q5,statut_matri,yes,Situation matrimoniale
+S1_INFOS_MEMBRES,S1_Q6,scolarise,yes,Niveau d'études - a fréquenté l'école
+S1_INFOS_MEMBRES,S1_Q7,niveau_etudes,yes,Classe la plus élevée achevée
+S1_INFOS_MEMBRES,S1_Q11,occupation,yes,Situation d'occupation
+S1_INFOS_MEMBRES,AgeEnfant,age_enfant,yes,Age de l'enfant en mois
+S1_INFOS_MEMBRES,S8_Q6,poids_enfant,yes,Poids de l'enfant (kg)
+S1_INFOS_MEMBRES,S8_Q7,taille_enfant,yes,Taille de l'enfant (cm)
+S1_INFOS_MEMBRES,S8_Q9,pb_enfant,yes,Périmètre brachial de l'enfant (mm)
+S1_INFOS_MEMBRES,S8_Q10,oedeme_enfant,yes,Présence d'œdèmes
+
+# === SECTION 2 : MODULE MÉNAGES (PUDC) ===
+PUDC,interview__key,interview__key,yes,Clé unique ménage
+PUDC,S0_02,region,yes,Région
+PUDC,S0_03,departement,yes,Département
+PUDC,S0_08,milieu,yes,Milieu de résidence (1=Rural, 2=Urbain)
+PUDC,S2_Q1,materiau_toit,yes,Matériau dominant du toit
+PUDC,S2_Q2,materiau_murs,yes,Matériau dominant des murs
+PUDC,S2_Q3_conv,nb_pieces,yes,Nombre de pièces habitées
+PUDC,S2_Q4,statut_occup,yes,Statut d'occupation du logement
+PUDC,S3_Q1,source_eau,yes,Principale source d'eau potable
+PUDC,S3_Q6,type_toilettes,yes,Type de toilettes principales
+PUDC,S7_Q1,choc_subi,yes,Ménage confronté à un choc (1=Oui, 2=Non)
+
+# === SECTION 3 : MODULE CHOCS SPECIFIQUES (S7_INFOS_CHOCS) ===
+S7_INFOS_CHOCS,interview__key,interview__key,yes,Clé unique ménage
+S7_INFOS_CHOCS,S7_INFOS_CHOCS__id,choc_id,yes,ID du type de choc
+S7_INFOS_CHOCS,S7_Q2,choc_code,yes,Code du choc (ex: sécheresse, etc.)

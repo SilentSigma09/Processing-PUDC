@@ -1,0 +1,8 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+interview__key,interview__key,Interview key (identifier in XX-XX-XX-XX format),NA,,no,Interview key (identifier in XX-XX-XX-XX format),character
+interview__id,interview__id,Unique 32-character long identifier of the interview,NA,,no,Unique 32-character long identifier of the interview,character
+S9B_decesfemmes__id,S9B_decesfemmes__id,Id in S9B_decesfemmes,NA,,no,Id in S9B_decesfemmes,numeric
+S9B_Q0,S9B_Q0,IX.B.0.Numéro Femme décédée,NA,,no,IX.B.0.Numéro Femme décédée,numeric
+S9B_Q3,S9B_Q3,IX.B.3. Décès intervenu durant la grossesse ?,1=Oui | 2=Non | 9=NSP,,no,IX.B.3. Décès intervenu durant la grossesse ?,"haven_labelled, vctrs_vctr, double"
+S9B_Q4,S9B_Q4,IX.B.4. Décès intervenu durant l'accouchement ?,1=Oui | 2=Non,,no,IX.B.4. Décès intervenu durant l'accouchement ?,"haven_labelled, vctrs_vctr, double"
+S9B_Q5,S9B_Q5,IX.B.5. Décès intervenu durant les 42 jours suivant la fin d'une grossesse ou d',1=Oui | 2=Non,,no,IX.B.5. Décès intervenu durant les 42 jours suivant la fin d'une grossesse ou d',"haven_labelled, vctrs_vctr, double"

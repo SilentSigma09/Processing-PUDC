@@ -1,0 +1,32 @@
+=========================================================
+            RAPPORT QAQC - PROJET PUDC (OPTIMISÉ)        
+Date de génération : 2026-07-13 18:34:49.343898 
+=========================================================
+
+--- 1. STATISTIQUES GLOBALES ---
+Nombre total de ménages observés : 1686 
+Nombre total d'individus observés : 14609 
+Taille moyenne du ménage : 8.66 personnes
+Ménages orphelins (sans Chef de Ménage déclaré dans le roster) : 91 ( 5.4 %)
+
+--- 2. STRUCTURE DEMOGRAPHIQUE DE LA POPULATION ---
+Proportion de femmes : 51.08 %
+Age moyen des membres : 23.06 ans
+Proportion d'enfants de moins de 5 ans : 11.27 %
+
+--- 3. CARACTERISTIQUES DU LOGEMENT ET ACCES AUX SERVICES ---
+Ménages avec accès à une eau potable améliorée (Standard JMP) : 47.27 %
+Nombre moyen de pièces par ménage : 4.81 
+Nombre d'outliers détectés sur le nombre de pièces : 61 
+Score moyen de possession d'actifs (0-15, non pondéré) : 2.37 
+Index de richesse (ACP) - Min : -0.99 | Max : 14.39 | Ecart-Type : 1.62 
+
+--- 4. CHOCS ET VULNERABILITE ---
+Ménages déclarant avoir subi au moins un choc : 50.06 %
+Nombre moyen de chocs subis par ménage : 0.88 
+Enfants (6-59 mois) cibles pour la malnutrition : 1721 
+Mesures de Périmètre Brachial (MUAC) réelles/valides : 0 
+Taux de malnutrition aiguë détectée chez les enfants éligibles et mesurés : 1.75 %
+(Note : Si ce taux est NA ou s'il y a 0 mesure valide, cela indique l'absence de saisie MUAC dans l'enquête)
+
+=========================================================

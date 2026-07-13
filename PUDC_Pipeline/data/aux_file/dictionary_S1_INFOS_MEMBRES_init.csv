@@ -1,0 +1,45 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+interview__key,interview__key,Interview key (identifier in XX-XX-XX-XX format),NA,,no,Interview key (identifier in XX-XX-XX-XX format),character
+interview__id,interview__id,Unique 32-character long identifier of the interview,NA,,no,Unique 32-character long identifier of the interview,character
+S1_INFOS_MEMBRES__id,S1_INFOS_MEMBRES__id,Id in S1_INFOS_MEMBRES,NA,,no,Id in S1_INFOS_MEMBRES,numeric
+S1_Q1,S1_Q1,Roster list question,NA,,no,Roster list question,character
+numero_ind,numero_ind,Numero individu,NA,,no,Numero individu,numeric
+S1_Q2,S1_Q2,I.2 Sexe de  %rostertitle%,1=Masculin | 2=Féminin,,no,I.2 Sexe de  %rostertitle%,"haven_labelled, vctrs_vctr, double"
+S1_Q3,S1_Q3,I.3 Age de  %rostertitle%  en année révolue,NA,,no,I.3 Age de  %rostertitle%  en année révolue,character
+AgeMembre,AgeMembre,Age membre,NA,,no,Age membre,numeric
+S1_Q4,S1_Q4,I.4 Lien de parenté de  %rostertitle%  avec le chef du ménage,1=Chef de ménage | 2=Époux/épouse | 3=Fils/fille | 4=Père/mère | 5=Frère/Sœur | 6=Neveu/nièce | 7=Grands-parents | 8=Beaux-parents | 9=Beau-fils/Belle-fille | 10=Petits-enfants | 11=Autre parent | 12=Domestique | 13=Non apparentée,,no,I.4 Lien de parenté de  %rostertitle%  avec le chef du ménage,"haven_labelled, vctrs_vctr, double"
+S1_Q5,S1_Q5,I.5 Statut matrimonial de  %rostertitle%,"1=Marié (e)/Monogame, | 2=Marié (e)/Polygame, | 3=Divorcé (e)/Veuf (ve) | 4=Célibataire | 5=Autres à préciser",,no,I.5 Statut matrimonial de  %rostertitle%,"haven_labelled, vctrs_vctr, double"
+S1_Q5_autre,S1_Q5_autre,I.5 Préciser la situation matrimoniale,NA,,no,I.5 Préciser la situation matrimoniale,character
+S1_Q6,S1_Q6,"I.6 Avez-vous fréquenté à l’école,  %rostertitle%  ?",1=Oui | 2=Non,,no,"I.6 Avez-vous fréquenté à l’école,  %rostertitle%  ?","haven_labelled, vctrs_vctr, double"
+S1_Q7,S1_Q7,"I.7 Quel est la classe la plus élevée que vous avez achevée,  %rostertitle%  ?",1=Primaire | 2=Secondaire premier cycle | 3=Secondaire second cycle | 4=Supérieur | 5=Formation professionnelle,,no,"I.7 Quel est la classe la plus élevée que vous avez achevée,  %rostertitle%  ?","haven_labelled, vctrs_vctr, double"
+S1_Q8,S1_Q8,I.8 Nationalité de  %rostertitle%,1=Sénégalaise | 2=Nationalité autre que sénégalaise (à préciser),,no,I.8 Nationalité de  %rostertitle%,"haven_labelled, vctrs_vctr, double"
+S1_Q8_autre,S1_Q8_autre,I.8 Préciser la nationalité,NA,,no,I.8 Préciser la nationalité,character
+S1_Q9,S1_Q9,I.9 Quelle est l'ethnie du répondant  %rostertitle% ?,1=Wolof/Lébou | 2=Sérère | 3=Peulh/Toucouleur | 4=Soninké | 5=Manjack/Mankagne | 6=Manding/Socé | 7=Bambara | 8=Maure/Arabe | 9=Autres à préciser | 10=Diola,,no,I.9 Quelle est l'ethnie du répondant  %rostertitle% ?,"haven_labelled, vctrs_vctr, double"
+S1_Q9_autre,S1_Q9_autre,I.9 Préciser l'ethnie,NA,,no,I.9 Préciser l'ethnie,character
+S1_Q10__0,S1_Q10__0,I10. Est-ce que  %rostertitle%  a des handicaps ?:Aucun,NA,,no,I10. Est-ce que  %rostertitle%  a des handicaps ?:Aucun,numeric
+S1_Q10__1,S1_Q10__1,"I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap visuel (aveugle, malv",NA,,no,"I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap visuel (aveugle, malv",numeric
+S1_Q10__2,S1_Q10__2,"I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap de la parole (bègue,",NA,,no,"I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap de la parole (bègue,",numeric
+S1_Q10__3,S1_Q10__3,"I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap auditif (sourd, malen",NA,,no,"I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap auditif (sourd, malen",numeric
+S1_Q10__4,S1_Q10__4,"I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap mental (insensé, alié",NA,,no,"I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap mental (insensé, alié",numeric
+S1_Q10__5,S1_Q10__5,"I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap moteur (infirme, para",NA,,no,"I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap moteur (infirme, para",numeric
+S1_Q10__6,S1_Q10__6,I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap auditif et de la paro,NA,,no,I10. Est-ce que  %rostertitle%  a des handicaps ?:Handicap auditif et de la paro,numeric
+S1_Q10__7,S1_Q10__7,I10. Est-ce que  %rostertitle%  a des handicaps ?:Autre handicap (à préciser),NA,,no,I10. Est-ce que  %rostertitle%  a des handicaps ?:Autre handicap (à préciser),numeric
+S1_Q10_autre,S1_Q10_autre,I.10 Préciser l'autre handicap,NA,,no,I.10 Préciser l'autre handicap,character
+S1_Q11,S1_Q11,I.11 Durant les 12 derniers mois que faisait  %rostertitle%  comme occupation la,"0=Inactif | 1=A la recherche d'un emploi | 2=Cadre supérieur, ingénieur et assimile | 3=Cadre moyen, agent de maitrise | 4=Employé/ouvrier qualifie | 5=Employé/ouvrier semi qualifie | 6=Manœuvre | 7=Employeur | 8=Indépendant agricole | 9=Indépendant non agricole | 10=Aide-familial | 11=Apprenti rémunéré ou non | 12=Autre (à préciser)",,no,I.11 Durant les 12 derniers mois que faisait  %rostertitle%  comme occupation la,"haven_labelled, vctrs_vctr, double"
+S1_Q11_autre,S1_Q11_autre,I.11 Préciser l'occupation,NA,,no,I.11 Préciser l'occupation,character
+S8_Q3,S8_Q3,VIII.3 Age de  %rostertitle%  en mois révolus,NA,,no,VIII.3 Age de  %rostertitle%  en mois révolus,character
+AgeEnfant,AgeEnfant,Age enfant,NA,,no,Age enfant,numeric
+S8_Q4,S8_Q4,VIII.4. Date de naissance de  %rostertitle%,NA,,no,VIII.4. Date de naissance de  %rostertitle%,character
+S8_Q5,S8_Q5,VIII.5 Poids à la naissance de  %rostertitle%,1=2500g et plus | 2=Moins de 2500g | 3=Perdu,,no,VIII.5 Poids à la naissance de  %rostertitle%,"haven_labelled, vctrs_vctr, double"
+S8_Q6,S8_Q6,"VIII.6 Poids de  %rostertitle%  (en kg) ± 0,1 kg",NA,,no,"VIII.6 Poids de  %rostertitle%  (en kg) ± 0,1 kg",character
+S8_Q7,S8_Q7,"VIII.7 Taille de  %rostertitle%  (en cm) ± 0,1cm",NA,,no,"VIII.7 Taille de  %rostertitle%  (en cm) ± 0,1cm",character
+S8_Q8,S8_Q8,VIII.8 Taille debout ou couché -  %rostertitle%,1=Debout | 2=Couchée,,no,VIII.8 Taille debout ou couché -  %rostertitle%,"haven_labelled, vctrs_vctr, double"
+S8_Q9,S8_Q9,VIII.9 Périmètre brachial de  %rostertitle%  (en mm),NA,,no,VIII.9 Périmètre brachial de  %rostertitle%  (en mm),character
+S8_Q10,S8_Q10,VIII.10 Présence d’œdèmes -  %rostertitle%,1=Oui | 2=Non,,no,VIII.10 Présence d’œdèmes -  %rostertitle%,"haven_labelled, vctrs_vctr, double"
+S9A_Q1,S9A_Q1,"IX.A.1  %rostertitle% , avez-vous déjà donné naissance à des enfants ?",1=Oui | 2=Non,,no,"IX.A.1  %rostertitle% , avez-vous déjà donné naissance à des enfants ?","haven_labelled, vctrs_vctr, double"
+S9A_Q2,S9A_Q2,IX.A.2 Combien de naissances vivantes masculines a eues  %rostertitle% ?,NA,,no,IX.A.2 Combien de naissances vivantes masculines a eues  %rostertitle% ?,character
+S9A_Q3,S9A_Q3,IX.A.3 Combien de naissances vivantes féminines a eues  %rostertitle% ?,NA,,no,IX.A.3 Combien de naissances vivantes féminines a eues  %rostertitle% ?,character
+S9A_Q4,S9A_Q4,IX.A.4 Parmi les  %S9A_Q2% naissances vivantes masculines  déclarées combien son,NA,,no,IX.A.4 Parmi les  %S9A_Q2% naissances vivantes masculines  déclarées combien son,character
+S9A_Q5,S9A_Q5,IX.A.5 Parmi les  %S9A_Q3% naissances vivantes féminines  déclarées combien sont,NA,,no,IX.A.5 Parmi les  %S9A_Q3% naissances vivantes féminines  déclarées combien sont,character
+S9A_Q6,S9A_Q6,IX.A.6 Combien d'enfants masculins  de  %rostertitle%  sont nés vivants au cours,NA,,no,IX.A.6 Combien d'enfants masculins  de  %rostertitle%  sont nés vivants au cours,character
+S9A_Q7,S9A_Q7,IX.A.7 Combien d'enfants féminins  de  %rostertitle%  sont nés vivants au cours,NA,,no,IX.A.7 Combien d'enfants féminins  de  %rostertitle%  sont nés vivants au cours,character

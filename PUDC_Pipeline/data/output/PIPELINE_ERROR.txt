@@ -1,0 +1,15 @@
+=========================================================
+          RAPPORT D'ERREUR DU PIPELINE PUDC              
+Date/Heure : 2026-07-13 16:30:24.406109 
+=========================================================
+
+Script en échec : 1_run_qaqc.R 
+Chemin complet  : C:/Users/USER/Documents/ENSAE/ISE3/traitements des données statistiques/Projet_Traitement_Analyse/PUDC_Pipeline/cleansurvey/9_qaqc/1_survey_data_qaqc/1_run_qaqc.R 
+
+--- MESSAGE D'ERREUR DE R ---
+failed to copy rendered pandoc artefact to 'C:/Users/USER/Documents/ENSAE/ISE3/traitements des données statistiques/Projet_Traitement_Analyse/PUDC_Pipeline/data/output/QAQC_Report.docx' 
+
+---------------------------------------------------------
+CONSEIL : Vérifiez les valeurs aberrantes dans vos données
+brutes ou la syntaxe du fichier var_mapping.csv.
+=========================================================

@@ -1,0 +1,12 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+assignment__id,assignment__id,Assignment id (identifier in numeric format),NA,,no,Assignment id (identifier in numeric format),numeric
+date,date,Utc Date when the action was taken,NA,,no,Utc Date when the action was taken,character
+time,time,Utc Time when the action was taken,NA,,no,Utc Time when the action was taken,character
+action,action,Type of action taken,1=Created | 2=Deleted | 3=Reassigned | 4=ReceivedByTablet | 5=Archived | 6=Unarchived | 7=AudioRecordingChanged | 8=QuantityChanged | 9=WebModeChanged,,no,Type of action taken,"haven_labelled, vctrs_vctr, double"
+originator,originator,Login name of the person performing the action,NA,,no,Login name of the person performing the action,character
+role,role,System role of the person performing the action,0=<UNKNOWN ROLE> | 1=Interviewer | 2=Supervisor | 3=Headquarter | 4=Administrator | 5=API User,,no,System role of the person performing the action,"haven_labelled, vctrs_vctr, double"
+responsible__name,responsible__name,Login name of the person now responsible for the assignment,NA,,no,Login name of the person now responsible for the assignment,character
+responsible__role,responsible__role,System role of the person now responsible for the assignment,0=<UNKNOWN ROLE> | 1=Interviewer | 2=Supervisor | 3=Headquarter | 4=Administrator | 5=API User,,no,System role of the person now responsible for the assignment,"haven_labelled, vctrs_vctr, double"
+old__value,old__value,Value before changes,NA,,no,Value before changes,character
+new__value,new__value,Value after changes,NA,,no,Value after changes,character
+comment,comment,Text of the comment,NA,,no,Text of the comment,character

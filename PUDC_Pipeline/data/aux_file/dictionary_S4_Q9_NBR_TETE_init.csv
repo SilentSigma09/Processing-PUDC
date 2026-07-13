@@ -1,0 +1,7 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+interview__key,interview__key,Interview key (identifier in XX-XX-XX-XX format),NA,,no,Interview key (identifier in XX-XX-XX-XX format),character
+interview__id,interview__id,Unique 32-character long identifier of the interview,NA,,no,Unique 32-character long identifier of the interview,character
+S4_Q9_NBR_TETE__id,S4_Q9_NBR_TETE__id,Id in S4_Q9_NBR_TETE,"1=Bovins (Bœufs, Vaches) | 2=Caprins (Chèvres) | 3=Ovins (Moutons, brebis, etc.) | 4=Volailles (poulet, canard, etc.) | 5=Porcins (Porcs) | 6=Chevaux/Juments | 7=Anes | 8=Autre à préciser",,no,Id in S4_Q9_NBR_TETE,"haven_labelled, vctrs_vctr, double"
+S4_Q9_autre,S4_Q9_autre,IV.9. Précisez l'autre ESPECE,NA,,no,IV.9. Précisez l'autre ESPECE,character
+S4_Q9_nbTETE,S4_Q9_nbTETE,IV.9. Combien de têtes de  %rostertitle% - %S4_Q9_autre%  votre ménage possède-t,NA,,no,IV.9. Combien de têtes de  %rostertitle% - %S4_Q9_autre%  votre ménage possède-t,numeric
+S4_Q10,S4_Q10,IV.10 Est-ce que les femmes du ménage possèdent- %rostertitle% - %S4_Q9_autre%,1=Oui | 2=Non,,no,IV.10 Est-ce que les femmes du ménage possèdent- %rostertitle% - %S4_Q9_autre%,"haven_labelled, vctrs_vctr, double"

@@ -1,0 +1,37 @@
+# Paramètres métier et configuration du pipeline de nettoyage PUDC
+
+muac_threshold_mm: 125
+age_target_min_months: 6
+age_target_max_months: 59
+age_min: 0
+age_max: 120
+
+# Codes d'eau améliorée standard JMP (excluant bouteille/vendeur)
+jmp_improved_codes:
+  - 1  # Robinet intérieur
+  - 2  # Robinet public
+  - 3  # Robinet du voisin
+  - 4  # Puits protégé
+  - 6  # Forage motorisé
+  - 7  # Forage à pompe manuel
+  - 8  # Service de camion-citerne
+
+# Codes manquants Survey Solutions à intercepter
+ss_missing_codes:
+  - ""
+  - "##N/A##"
+  - "000"
+  - "999"
+  - "666"
+  - "990"
+  - "009"
+  - "998"
+  - "999999"
+  - "000000"
+  - "99,99"
+  - "000,00"
+
+# Codes JMP (Validation croisée avec codebook PUDC)
+improved_sanitation_codes: [3, 4, 5, 6]   # ex: dalle/VIP/septique/réseau (PAS 1=plein air, 2=trad.)
+improved_roof_codes:       [2, 3, 4, 5]
+improved_wall_codes:       [1, 2, 3]

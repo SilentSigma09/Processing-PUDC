@@ -1,0 +1,9 @@
+var_orig,var_new,label_new,modalities,type_new,keep,label_orig,type_orig
+interview__key,interview__key,Interview key (identifier in XX-XX-XX-XX format),NA,,no,Interview key (identifier in XX-XX-XX-XX format),character
+interview__id,interview__id,Unique 32-character long identifier of the interview,NA,,no,Unique 32-character long identifier of the interview,character
+S7_ASSISTANCE__id,S7_ASSISTANCE__id,Id in S7_ASSISTANCE,"1=Distribution de riz | 2=Distribution de bons d'achats alimentaires | 3=Bourse de sécurité familiale | 4=Distribution d'argent liquide | 5=Distribution d'intrants agricoles (engrais, semences, pesticides, etc.) | 6=Soins de santé gratuits",,no,Id in S7_ASSISTANCE,"haven_labelled, vctrs_vctr, double"
+S7_Q4a,S7_Q4a,VII.4a Assistance gratuite reçue pour -  %rostertitle%  ?,1=Oui | 2=Non,,no,VII.4a Assistance gratuite reçue pour -  %rostertitle%  ?,"haven_labelled, vctrs_vctr, double"
+S7_Q4b__1,S7_Q4b__1,VII.4b Intervenant pour -  %rostertitle% :Etat,NA,,no,VII.4b Intervenant pour -  %rostertitle% :Etat,numeric
+S7_Q4b__2,S7_Q4b__2,"VII.4b Intervenant pour -  %rostertitle% :Organisme des nations unies (PAM, UNIC",NA,,no,"VII.4b Intervenant pour -  %rostertitle% :Organisme des nations unies (PAM, UNIC",numeric
+S7_Q4b__3,S7_Q4b__3,VII.4b Intervenant pour -  %rostertitle% :ONG/Fondation,NA,,no,VII.4b Intervenant pour -  %rostertitle% :ONG/Fondation,numeric
+S7_Q4b__4,S7_Q4b__4,VII.4b Intervenant pour -  %rostertitle% :Particulier/bonnes volontés,NA,,no,VII.4b Intervenant pour -  %rostertitle% :Particulier/bonnes volontés,numeric
