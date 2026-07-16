@@ -102,3 +102,11 @@ sans toucher aux scripts.
 - **R 4.3.x** (testé avec R 4.3.3) ;
 - accès à CRAN (`https://cloud.r-project.org`) pour l'installation des packages ;
 - (optionnel) **pandoc** pour le rendu HTML/Word du rapport QAQC.
+
+## Auteurs 
+
+- Koffi Samson AWOUTO
+- Papa Abdourahmane CISSE
+- Yague DIOP
+- Maty NDIONE
+- Zoumana ZERBO
