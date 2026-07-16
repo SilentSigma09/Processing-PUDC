@@ -1,11 +1,9 @@
 # Script pour extraire les métadonnées et générer les dictionnaires initiaux
 # Pour chaque fichier .dta dans data/input, on crée un dictionnaire CSV dans data/aux_file
 
-if (!require(pacman)) install.packages("pacman")
-pacman::p_load(here, dplyr, haven, readr, purrr, cli)
-
 # Charger la configuration
-source(here::here("cleansurvey", "config.R"))
+source(file.path("cleansurvey", "config.R"))
+load_required_packages(c("dplyr", "haven", "readr", "purrr", "labelled", "cli"))
 
 cli::cli_h1("Génération des Dictionnaires Initiaux")
 
@@ -23,56 +21,55 @@ if (!dir.exists(AUX_FILE_PATH)) {
 
 # Fonction pour traiter un fichier et exporter son dictionnaire
 generate_dict <- function(file_path) {
-  file_name <- basename(file_path)
+  file_name  <- basename(file_path)
   table_name <- tools::file_path_sans_ext(file_name)
-  
+
   cli::cli_alert_info("Traitement de {file_name}...")
-  
+
   # Lecture de la base (on ne charge que quelques lignes pour aller très vite)
   df <- haven::read_dta(file_path, n_max = 5)
-  
-  # Extraction des métadonnées
+
   var_orig <- names(df)
-  
+
   # Récupérer les labels
-  label_orig <- map_chr(var_orig, function(v) {
+  label_orig <- purrr::map_chr(var_orig, function(v) {
     lbl <- attr(df[[v]], "label")
     if (is.null(lbl)) return(NA_character_)
-    return(as.character(lbl))
+    as.character(lbl)
   })
-  
+
   # Récupérer les types (classes)
-  type_orig <- map_chr(var_orig, function(v) {
+  type_orig <- purrr::map_chr(var_orig, function(v) {
     paste(class(df[[v]]), collapse = ", ")
   })
-  
+
   # Récupérer les value labels (modalités) de manière robuste
-  val_lbl <- map_chr(var_orig, function(v) {
+  val_lbl <- purrr::map_chr(var_orig, function(v) {
     vl <- labelled::val_labels(df[[v]])
     if (length(vl) == 0) return(NA_character_)
     paste(paste0(vl, "=", names(vl)), collapse = " | ")
   })
-  
+
   # Création du dictionnaire
-  dict <- tibble(
+  dict <- tibble::tibble(
     var_orig   = var_orig,
-    var_new    = var_orig,   # Valeur par défaut
-    label_new  = label_orig, # Valeur par défaut
-    modalities = val_lbl,    # Nouvelle colonne modalities
-    type_new   = "",         # Laisser vide pour saisie utilisateur
-    keep       = "no",       # Par défaut "no"
+    var_new    = var_orig,    # Valeur par défaut
+    label_new  = label_orig,  # Valeur par défaut
+    modalities = val_lbl,     # Modalités textuelles
+    type_new   = "",          # Laisser vide pour saisie utilisateur
+    keep       = "no",        # Par défaut "no"
     label_orig = label_orig,
     type_orig  = type_orig
   )
-  
+
   # Sauvegarde du dictionnaire
   out_path <- file.path(AUX_FILE_PATH, paste0("dictionary_", table_name, "_init.csv"))
   readr::write_csv(dict, out_path)
-  
+
   cli::cli_alert_success("Dictionnaire sauvegardé : {basename(out_path)}")
 }
 
 # Traiter tous les fichiers
-walk(dta_files, generate_dict)
+purrr::walk(dta_files, generate_dict)
 
 cli::cli_h1("Génération terminée !")

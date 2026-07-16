@@ -19,6 +19,9 @@
 *.log
 run_all_log.txt
 
+# Local R library (installed packages, not version-controlled)
+PUDC_Pipeline/renv_lib/
+
 # OS generated files
 .DS_Store
 Thumbs.db

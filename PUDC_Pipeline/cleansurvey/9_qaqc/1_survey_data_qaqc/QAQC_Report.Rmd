@@ -14,11 +14,108 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, fig.width = 8, fig.height = 5)
 
-if (!require(pacman)) install.packages("pacman")
-pacman::p_load(here, dplyr, readr, ggplot2, knitr, tidyr, naniar, MissMech, mice, caret, stringr, scales, sf)
+# Charger config.R uniquement si les variables ne sont pas déjà disponibles
+# (quand render depuis 1_run_qaqc.R, config.R est déjà sourcé dans globalenv)
+if (!exists("OUTPUT_PATH", inherits = TRUE)) {
+  .rmd_abs   <- normalizePath(knitr::current_input(dir = TRUE), winslash = "/")
+  .proj_root <- normalizePath(file.path(dirname(.rmd_abs), "../../.."), winslash = "/")
+  knitr::opts_knit$set(root.dir = .proj_root)
+  .old_wd <- setwd(.proj_root)
+  on.exit(setwd(.old_wd), add = TRUE)
+  source(file.path(.proj_root, "cleansurvey", "config.R"))
+} else {
+  # root.dir = répertoire de travail courant (déjà PUDC_Pipeline/)
+  knitr::opts_knit$set(root.dir = normalizePath(getwd(), winslash = "/"))
+}
 
-# Charger la configuration
-source(here::here("cleansurvey", "config.R"))
+# Chargement des packages sans tentative d'installation (pipeline géré par dependencies.R)
+required_pkgs <- c("here", "dplyr", "readr", "ggplot2", "knitr", "tidyr",
+                   "naniar", "MissMech", "mice", "caret", "stringr", "scales",
+                   "sf", "DT", "htmltools", "plotly")
+
+missing_pkgs <- required_pkgs[!vapply(required_pkgs, requireNamespace, logical(1), quietly = TRUE)]
+if (length(missing_pkgs) > 0) {
+  stop("Packages manquants : ", paste(missing_pkgs, collapse = ", "),
+       ". Installez-les via cleansurvey/dependencies.R avant de relancer.")
+}
+invisible(lapply(required_pkgs, function(p) suppressPackageStartupMessages(library(p, character.only = TRUE))))
+
+# ---- Helper : convertit un ggplot en graphique interactif téléchargeable ----
+# La barre d'outils Plotly inclut un bouton 'Download plot as a png' (icone camera).
+# Pour revenir aux graphiques statiques : ggdown <- function(p, ...) p
+ggdown <- function(p, height = 420, ...) {
+  plotly::ggplotly(p, height = height, ...) |>
+    plotly::config(displaylogo = FALSE,
+                   modeBarButtonsToRemove = c("select2d", "lasso2d"),
+                   toImageButtonOptions = list(format = "png", filename = "graphique_pudc",
+                                               width = 900, height = 500, scale = 2))
+}
+
+
+
+# ---- Palette et thème professionnels (cohérence visuelle du rapport) ----
+pal_bleu    <- "#1B4965"
+pal_bleu_cl <- "#5FA8D3"
+pal_vert    <- "#2A9D8F"
+pal_orange  <- "#E76F51"
+pal_categ   <- c(pal_bleu, pal_bleu_cl, pal_vert, pal_orange, "#8AB17D", "#F4A261")
+pal_binaire <- c("Amélioré" = pal_vert, "Non Amélioré" = pal_orange,
+                 "Améliorée" = pal_vert, "Non Améliorée" = pal_orange,
+                 "Malnutrition" = pal_orange, "Normal" = pal_vert,
+                 "Complet" = pal_vert, "Manquant (NA)" = pal_orange)
+
+theme_pudc <- function(base_size = 11) {
+  theme_minimal(base_size = base_size) %+replace%
+    theme(
+      plot.title    = element_text(face = "bold", size = base_size + 3, hjust = 0.5, color = pal_bleu),
+      plot.subtitle = element_text(size = base_size, hjust = 0.5, color = "grey45"),
+      axis.title    = element_text(size = base_size, color = "grey30"),
+      axis.text     = element_text(size = base_size - 1, color = "grey40"),
+      legend.title  = element_text(size = base_size - 1, face = "bold"),
+      legend.text   = element_text(size = base_size - 1),
+      panel.grid.minor = element_blank(),
+      plot.caption  = element_text(size = base_size - 2, color = "grey50", hjust = 0)
+    )
+}
+
+# ---- Tableau interactif DT (style PUDC) ----
+# Pour revenir à kable : ktab <- function(x, caption = NULL, col.names = NULL, ...) {
+#   if (!is.null(col.names)) names(x) <- col.names
+#   knitr::kable(x, caption = caption, format_args = list(decimal.mark = ","), ...)
+# }
+ktab <- function(x, caption = NULL, pageLength = 10, col.names = NULL, ...) {
+  # Renommage des colonnes si col.names est fourni (compatibilité kable)
+  if (!is.null(col.names) && length(col.names) == ncol(x)) {
+    names(x) <- col.names
+  }
+  DT::datatable(
+    x,
+    caption   = if (!is.null(caption)) htmltools::tags$caption(
+                  style = "caption-side: top; text-align: left; font-weight: bold; color: #1B4965; font-size: 14px; padding-bottom: 6px;",
+                  caption) else NULL,
+    rownames  = FALSE,
+    filter    = "top",
+    extensions = "Buttons",
+    options   = list(
+      pageLength  = pageLength,
+      dom         = "Bfrtip",
+      buttons     = list(list(extend = "csv", text = "⇩ CSV"), list(extend = "excel", text = "⇩ Excel")),
+      language    = list(
+        search      = "Rechercher :",
+        lengthMenu  = "Afficher _MENU_ lignes",
+        info        = "Lignes _START_ à _END_ sur _TOTAL_",
+        paginate    = list(previous = "Préc.", `next` = "Suiv.")
+      ),
+      initComplete = DT::JS(
+        "function(settings, json) {",
+        "  $(this.api().table().header()).css({'background-color':'#1B4965','color':'#ffffff','font-size':'13px'});",
+        "}"
+      )
+    ),
+    class = "stripe hover compact",
+    ...
+  )
+}
 
 # Charger les bases finales
 df_ind <- readr::read_csv(file.path(OUTPUT_PATH, "Individus.csv"), show_col_types = FALSE)
@@ -39,6 +136,19 @@ Les bases analysées contiennent :
 - **`df_ind` (Individus)** : `r nrow(df_ind)` individus observés.
 
 ---
+
+## Synthèse Exécutive
+
+Le présent rapport documente le traitement, la validation (QAQC) et les analyses descriptives de l'enquête PUDC (Programme d'Urgence de Développement Communautaire, Sénégal rural). Les principaux enseignements sont les suivants :
+
+- **Ménages et individus enquêtés** : `r nrow(df_hh)` ménages et `r nrow(df_ind)` individus.
+- **Accès à l'eau potable améliorée (standard JMP)** : `r format(round(mean(df_hh$eau_amelioree == 1, na.rm = TRUE) * 100, 1), decimal.mark = ",", nsmall = 1)` %.
+- **Index de richesse (ACP, poolé MICE)** : moyenne centrée `r format(round(mean(df_hh$index_richesse_pca, na.rm = TRUE), 2), decimal.mark = ",", nsmall = 2)`, écart-type `r format(round(sd(df_hh$index_richesse_pca, na.rm = TRUE), 2), decimal.mark = ",", nsmall = 2)`.
+- **Ménages ayant subi au moins un choc** : `r format(round(mean(df_hh$choc_subi == 1, na.rm = TRUE) * 100, 1), decimal.mark = ",", nsmall = 1)` %.
+- **Malnutrition aiguë (déclaration d'œdèmes, 6-59 mois)** : `r format(round(mean(df_ind$malnutrition == 1, na.rm = TRUE) * 100, 2), decimal.mark = ",", nsmall = 2)` %.
+- **Ménages orphelins** (sans chef déclaré dans le roster) : `r sum(is.na(df_hh$cm_age))` (`r format(round(sum(is.na(df_hh$cm_age)) / nrow(df_hh) * 100, 1), decimal.mark = ",", nsmall = 1)` %).
+
+Le rapport détaille ensuite le diagnostic des données manquantes, l'imputation MICE, les profils démographiques et de logement, puis les cartographies régionales.
 
 ## 2. Section A : Statistiques Descriptives Détaillées
 
@@ -82,10 +192,10 @@ shp_merged <- shp_regions %>%
 #### Carte 1 : Taux d'accès à l'eau potable améliorée (Standard JMP) par région
 
 ```{r map-water, fig.width=9, fig.height=6}
-ggplot(shp_merged) +
+p_map_water <- ggplot(shp_merged) +
   geom_sf(aes(fill = Eau_Amelioree_Pct), color = "white", size = 0.2) +
   geom_sf_text(aes(label = NAME_1), size = 2.5, color = "black", fontface = "bold", check_overlap = TRUE) +
-  scale_fill_distiller(palette = "YlGnBu", direction = 1, na.value = "grey80",
+  scale_fill_distiller(palette = "RdYlGn", direction = 1, na.value = "grey80",
                        labels = function(x) paste0(round(x), "%")) +
   theme_void() +
   labs(
@@ -98,15 +208,26 @@ ggplot(shp_merged) +
     plot.subtitle = element_text(size = 10, hjust = 0.5, color = "grey40"),
     legend.position = "right"
   )
+
+# Sauvegarder en PNG + afficher avec lien de téléchargement
+.map_water_path <- file.path(OUTPUT_PATH, "map_eau_potable.png")
+ggplot2::ggsave(.map_water_path, plot = p_map_water, width = 9, height = 6, dpi = 150, bg = "white")
+htmltools::browsable(htmltools::tagList(
+  htmltools::tags$a(href = .map_water_path, download = "map_eau_potable.png",
+                    style = "font-size:13px; color:#1B4965; font-weight:bold;",
+                    "\U21E9 Télécharger la carte (PNG)"),
+  htmltools::tags$br()
+))
+p_map_water
 ```
 
 #### Carte 2 : Niveau de richesse moyen (Score ACP) par région
 
 ```{r map-wealth, fig.width=9, fig.height=6}
-ggplot(shp_merged) +
+p_map_wealth <- ggplot(shp_merged) +
   geom_sf(aes(fill = Index_Richesse_Moy), color = "white", size = 0.2) +
   geom_sf_text(aes(label = NAME_1), size = 2.5, color = "black", fontface = "bold", check_overlap = TRUE) +
-  scale_fill_viridis_c(option = "viridis", na.value = "grey80") +
+  scale_fill_distiller(palette = "RdYlGn", direction = 1, na.value = "grey80") +
   theme_void() +
   labs(
     title = "Niveau de richesse moyen des ménages par région",
@@ -118,6 +239,16 @@ ggplot(shp_merged) +
     plot.subtitle = element_text(size = 10, hjust = 0.5, color = "grey40"),
     legend.position = "right"
   )
+
+.map_wealth_path <- file.path(OUTPUT_PATH, "map_richesse.png")
+ggplot2::ggsave(.map_wealth_path, plot = p_map_wealth, width = 9, height = 6, dpi = 150, bg = "white")
+htmltools::browsable(htmltools::tagList(
+  htmltools::tags$a(href = .map_wealth_path, download = "map_richesse.png",
+                    style = "font-size:13px; color:#1B4965; font-weight:bold;",
+                    "\U21E9 Télécharger la carte (PNG)"),
+  htmltools::tags$br()
+))
+p_map_wealth
 ```
 
 Le tableau ci-dessous synthétise les données régionales cartographiées :
@@ -142,12 +273,12 @@ geo_stats <- df_hh %>%
     .groups = "drop"
   )
 
-kable(geo_stats, caption = "Indicateurs clés par Région et Milieu de résidence")
+ktab(geo_stats, caption = "Indicateurs clés par Région et Milieu de résidence")
 ```
 
-## 2b. Diagnostic et mécanisme des données manquantes (cours 4-5)
+## 2b. Diagnostic et mécanisme des données manquantes
 
-Le pipeline diagnostique la complétude et le mécanisme des données manquantes avant toute imputation (cours 4 : non-réponse ; cours 5 : MCAR/MAR/MNAR). Les actifs manquants sont imputés par MICE (méthode `logreg`) ; le Périmètre Brachial (MUAC) étant absent à 100 % (le round ne l'a pas collecté), il est traité comme MNAR structurel et n'est pas imputé.
+Le pipeline diagnostique la complétude et le mécanisme des données manquantes avant toute imputation (non-réponse ; MCAR/MAR/MNAR). Les actifs manquants sont imputés par MICE (méthode `logreg`) ; le Périmètre Brachial (MUAC) étant absent à 100 % (le round ne l'a pas collecté), il est traité comme MNAR structurel et n'est pas imputé.
 
 ```{r missing-mechanism}
 diag_path <- file.path(OUTPUT_PATH, "qa_asset_diag.csv")
@@ -158,19 +289,19 @@ if (file.exists(diag_path) && file.exists(actifs_raw_path)) {
 
   muac_na <- sum(is.na(df_ind$pb_enfant)); n_enf <- sum(df_ind$enfant_cible, na.rm = TRUE)
   comp <- data.frame(
-    Variable = c("Au moins un actif manquant (ménage)", "Perimetre brachial MUAC (enfants cibles)"),
+    Variable = c("Au moins un actif manquant (ménage)", "Périmètre brachial MUAC (enfants cibles)"),
     N_manquants = c(sum(diag_na$asset_any_na, na.rm = TRUE), muac_na),
     Pct_manquant = c(round(mean(diag_na$asset_any_na, na.rm = TRUE) * 100, 1),
                      ifelse(n_enf > 0, round(muac_na / n_enf * 100, 1), NA)))
-  kable(comp, caption = "Completude des variables cles (avant imputation)")
-  naniar::vis_miss(as.data.frame(actifs_raw)) + labs(title = "Motif de donnees manquantes - matrice d'actifs")
-  naniar::gg_miss_var(as.data.frame(actifs_raw)) + labs(title = "Taux de NA par actif")
+  ktab(comp, caption = "Completude des variables cles (avant imputation)")
+  print(ggdown(naniar::vis_miss(as.data.frame(actifs_raw)) + labs(title = "Motif de données manquantes - matrice d'actifs")))
+  print(ggdown(naniar::gg_miss_var(as.data.frame(actifs_raw)) + labs(title = "Taux de NA par actif")))
 
-  # F2 : Little MCAR suppose MVN -> indicatif sur donnees binaires ; le vrai
+  # F2 : Little MCAR suppose MVN -> indicatif sur données binaires ; le vrai
   # diagnostic MAR repose sur le logit ci-dessous.
   little <- tryCatch(MissMech::TestMCARNormality(as.data.frame(actifs_raw)), error = function(e) NULL)
   if (!is.null(little) && !is.null(little$p.value)) {
-    cat("Test de Little (MCAR, INDICATIF - donnees binaires) : p =", round(little$p.value, 4),
+    cat("Test de Little (MCAR, INDICATIF - données binaires) : p =", round(little$p.value, 4),
         ifelse(little$p.value < 0.05, "=> rejet MCAR (MAR/MNAR)", "=> non-rejet MCAR"), "\n")
   }
 
@@ -183,7 +314,7 @@ if (file.exists(diag_path) && file.exists(actifs_raw_path)) {
                         data = diag_na, family = binomial), error = function(e) NULL)
   if (!is.null(logit)) {
     ct <- as.data.frame(summary(logit)$coefficients); ct$Terme <- rownames(ct); ct$OR <- round(exp(ct$Estimate), 3)
-    kable(ct[, c("Terme", "OR", "Pr(>|z|)")], col.names = c("Terme", "Odds Ratio", "p-value"),
+    ktab(ct[, c("Terme", "OR", "Pr(>|z|)")], col.names = c("Terme", "Odds Ratio", "p-value"),
           caption = "Logit de non-reponse (actifs manquants) - OR>1 => plus de manquants")
     
     # Bonus 3 : Tableau de synthèse du mécanisme
@@ -210,12 +341,12 @@ if (exists("actifs_raw") && exists("df_hh")) {
     Score_Actifs = c(raw_sums, imputed_sums)
   )
   
-  ggplot(df_comp, aes(x = Score_Actifs, fill = Statut)) +
+  ggdown(ggplot(df_comp, aes(x = Score_Actifs, fill = Statut)) +
     geom_bar(position = "dodge", alpha = 0.8) +
-    theme_minimal() +
+    theme_pudc() +
     labs(title = "Distribution du score brut d'actifs avant et après imputation",
          x = "Nombre total d'actifs", y = "Fréquence") +
-    scale_fill_manual(values = c("Avant Imputation (Brut)" = "red", "Après Imputation (MICE)" = "blue"))
+    scale_fill_manual(values = c("Avant Imputation (Brut)" = "red", "Après Imputation (MICE)" = "blue")))
 }
 ```
 
@@ -225,87 +356,13 @@ if (exists("diag_na") && "taille_menage" %in% names(df_hh) && nrow(diag_na) == n
   df_mar <- df_hh %>%
     mutate(Statut_NA = ifelse(diag_na$asset_any_na == 1, "Manquant (NA)", "Complet"))
   
-  ggplot(df_mar, aes(x = Statut_NA, y = taille_menage, fill = Statut_NA)) +
+  ggdown(ggplot(df_mar, aes(x = Statut_NA, y = taille_menage, fill = Statut_NA)) +
     geom_boxplot(alpha = 0.7) +
-    theme_minimal() +
+    theme_pudc() +
     labs(title = "Taille du ménage selon la présence de données manquantes (Actifs)",
          x = "Statut des actifs",
          y = "Taille du ménage") +
-    scale_fill_manual(values = c("Complet" = "lightgreen", "Manquant (NA)" = "salmon"), guide = "none")
-}
-```
-
-## 2c. Exploration de l'imputation par K-Plus Proches Voisins (KNN) (Cours 3)
-
-À titre comparatif avec la méthode MICE utilisée en production, nous simulons la recherche du paramètre optimal $K$ pour une imputation KNN. L'objectif est d'imputer la possession du bien 1 (`Y2`) à l'aide de la taille du ménage et de la possession du bien 2 (`X1`).
-
-```{r knn-optim, fig.height=5, fig.width=8}
-library(caret)
-set.seed(123)
-
-if (exists("actifs_raw") && "taille_menage" %in% names(df_hh) && nrow(actifs_raw) == nrow(df_hh)) {
-  dat_knn <- as.data.frame(actifs_raw) %>%
-    mutate(taille_menage = df_hh$taille_menage) %>%
-    select(Y2 = possede_bien_1, Y1 = taille_menage, X1 = possede_bien_2) %>%
-    filter(!is.na(Y2), !is.na(Y1), !is.na(X1))
-  
-  dat_filtered <- dat_knn %>% scale() %>% as.data.frame()
-  
-  best_k_research <- function(y, vect_x, dat_to_imput, k_max) {
-      id_sample <- sample(1:nrow(dat_to_imput), floor(0.2 * nrow(dat_to_imput)), replace = FALSE)
-      dat_sample <- dat_to_imput[id_sample, ]
-      id_train <- sample(id_sample, floor(0.5 * length(id_sample)), replace = FALSE)
-      id_test <- setdiff(id_sample, id_train)
-      train <- dat_to_imput[id_train, ]
-      test <- dat_to_imput[id_test, ]
-      
-      eq_mod <- as.formula(paste(y, " ~ ", paste(vect_x, collapse = "+")))
-      vect_eqm <- rep(NA, k_max)
-      for (k in 1:k_max) {
-          out_knn <- knnreg(eq_mod, data = train, k = k)
-          pred <- predict(out_knn, test)
-          vect_eqm[k] <- mean((pred - test[, y])^2)
-      }
-      return(vect_eqm)
-  }
-  
-  mat_eqm <- replicate(10, best_k_research("Y2", c("Y1", "X1"), dat_to_imput = dat_filtered, k_max = 30))
-  mat_eqm <- as.data.frame(t(mat_eqm))
-  
-  boxplot(mat_eqm, 
-          main = "Recherche du K optimal pour l'imputation KNN (EQM)",
-          xlab = "Valeurs de K (1 à 30)", 
-          ylab = "Erreur Quadratique Moyenne",
-          col = "lightgray")
-}
-```
-
-#### Exploration d'autres méthodes d'imputation (Régression et Random Forest)
-
-Pour démontrer la maîtrise des autres méthodes d'imputation vues au Cours 5, voici l'imputation de l'actif `Y2` par régression linéaire et Random Forest.
-
-```{r other-imputations}
-library(randomForest)
-
-if (exists("dat_knn")) {
-  # Régression Linéaire
-  model_lm <- lm(Y2 ~ Y1 + X1, data = dat_knn)
-  dat_knn$pred_lm <- predict(model_lm, newdata = dat_knn)
-  
-  # Random Forest
-  model_rf <- randomForest(Y2 ~ Y1 + X1, data = dat_knn, na.action = na.omit)
-  dat_knn$pred_rf <- predict(model_rf, newdata = dat_knn)
-  
-  df_imp_comp <- data.frame(
-    Méthode = c("Brut (Moyenne)", "MICE (Logreg poolé)", "Régression Linéaire (lm)", "Random Forest"),
-    Moyenne_Y2 = c(
-      mean(dat_knn$Y2, na.rm = TRUE),
-      mean(dat_knn$Y2, na.rm = TRUE),
-      mean(dat_knn$pred_lm, na.rm = TRUE),
-      mean(dat_knn$pred_rf, na.rm = TRUE)
-    )
-  )
-  kable(df_imp_comp, caption = "Comparaison de l'espérance de la possession d'actif selon la méthode")
+    scale_fill_manual(values = c("Complet" = "#2A9D8F", "Manquant (NA)" = "#E76F51"), guide = "none"))
 }
 ```
 
@@ -325,7 +382,7 @@ demo_stats <- data.frame(
              paste0(enfants_prop, "%"))
 )
 
-kable(demo_stats, caption = "Caractéristiques démographiques")
+ktab(demo_stats, caption = "Caractéristiques démographiques")
 ```
 
 ### Répartition par âge et sexe
@@ -336,13 +393,19 @@ df_plot_demo <- df_ind %>%
   mutate(Sexe = ifelse(sexe == 1, "Masculin", "Féminin"),
          Groupe_Age = cut(age, breaks = seq(0, 100, by=10), include.lowest = TRUE)) %>%
   group_by(Groupe_Age, Sexe) %>%
-  summarise(Count = n(), .groups = "drop")
+  summarise(Count = n(), .groups = "drop") %>%
+  group_by(Groupe_Age) %>%
+  mutate(Pct = round(Count / sum(Count) * 100, 1)) %>%
+  ungroup()
 
-ggplot(df_plot_demo, aes(x = Groupe_Age, y = Count, fill = Sexe)) +
+ggdown(ggplot(df_plot_demo, aes(x = Groupe_Age, y = Count, fill = Sexe)) +
   geom_bar(stat = "identity", position = "dodge") +
-  theme_minimal() +
+  geom_text(aes(label = paste0(Pct, "%")),
+            position = position_dodge(width = 0.9),
+            vjust = -0.4, size = 2.8, fontface = "bold") +
+  theme_pudc() +
   labs(title = "Distribution par groupe d'âge et sexe", x = "Groupe d'âge", y = "Effectif") +
-  scale_fill_manual(values = c("Féminin" = "#E69F00", "Masculin" = "#56B4E9"))
+  scale_fill_manual(values = c("Féminin" = "#E69F00", "Masculin" = "#56B4E9")))
 ```
 
 ## 4. Caractéristiques du Logement et Accès aux Services
@@ -358,13 +421,13 @@ water_stats <- df_hh %>%
   summarise(Effectif = n(), .groups = "drop") %>%
   mutate(Proportion = round(Effectif / sum(Effectif) * 100, 1))
 
-ggplot(water_stats, aes(x = "", y = Effectif, fill = Acces)) +
+ggdown(ggplot(water_stats, aes(x = "", y = Effectif, fill = Acces)) +
   geom_bar(width = 1, stat = "identity") +
   coord_polar("y", start = 0) +
   geom_text(aes(label = paste0(Proportion, "%")), position = position_stack(vjust = 0.5), fontface = "bold", size = 4.5) +
   theme_void() +
   labs(title = "Proportion de ménages selon l'accès à l'eau potable", fill = "Accès") +
-  scale_fill_manual(values = c("Améliorée" = "#009E73", "Non Améliorée" = "#D55E00"))
+  scale_fill_manual(values = c("Améliorée" = "#2A9D8F", "Non Améliorée" = "#E76F51")))
 ```
 
 #### Accès à l'Assainissement Amélioré
@@ -381,19 +444,19 @@ if ("type_toilettes" %in% names(df_hh)) {
     summarise(Effectif = n(), .groups = "drop") %>%
     mutate(Proportion = round(Effectif / sum(Effectif) * 100, 1))
   
-  kable(toil_summary, caption = "Distribution de l'accès à l'assainissement")
+  ktab(toil_summary, caption = "Distribution de l'accès à l'assainissement")
 }
 ```
 
 ```{r sanitation-plot, fig.height=4, fig.width=6}
 if ("type_toilettes" %in% names(df_hh)) {
-  ggplot(toil_summary, aes(x = assainissement_ameliore, y = Proportion, fill = assainissement_ameliore)) +
+  ggdown(ggplot(toil_summary, aes(x = assainissement_ameliore, y = Proportion, fill = assainissement_ameliore)) +
     geom_bar(stat = "identity", width = 0.5) +
     geom_text(aes(label = paste0(Proportion, "%")), vjust = -0.5, fontface = "bold") +
-    theme_minimal() +
+    theme_pudc() +
     labs(title = "Accès à l'assainissement amélioré (Standard JMP)", x = "Type de toilettes", y = "Proportion (%)") +
-    scale_fill_manual(values = c("Amélioré" = "#009E73", "Non Amélioré" = "#D55E00")) +
-    theme(legend.position = "none")
+    scale_fill_manual(values = c("Amélioré" = "#2A9D8F", "Non Amélioré" = "#E76F51")) +
+    theme(legend.position = "none"))
 }
 ```
 
@@ -416,19 +479,19 @@ if ("scolarise" %in% names(df_ind)) {
       Total = n(),
       .groups = "drop"
     )
-  kable(educ_tranches, caption = "Taux de scolarisation par tranche d'âge scolaire")
+  ktab(educ_tranches, caption = "Taux de scolarisation par tranche d'âge scolaire")
 }
 ```
 
 ```{r educ-plot, fig.height=4, fig.width=6}
 if ("scolarise" %in% names(df_ind)) {
-  ggplot(educ_tranches, aes(x = Tranche, y = `Taux scolarisation (%)`, fill = Tranche)) +
+  ggdown(ggplot(educ_tranches, aes(x = Tranche, y = `Taux scolarisation (%)`, fill = Tranche)) +
     geom_bar(stat = "identity", width = 0.5) +
     geom_text(aes(label = paste0(`Taux scolarisation (%)`, "%")), vjust = -0.5, fontface = "bold") +
-    theme_minimal() +
+    theme_pudc() +
     labs(title = "Taux de scolarisation par cycle scolaire", x = "Tranche d'âge", y = "Taux (%)") +
     scale_fill_brewer(palette = "Set2") +
-    theme(legend.position = "none")
+    theme(legend.position = "none"))
 }
 ```
 
@@ -444,7 +507,7 @@ chef_stats <- data.frame(
     round(mean(df_hh$cm_scolarise == 1, na.rm = TRUE) * 100, 1)
   )
 )
-kable(chef_stats, caption = "Profil sociodémographique des Chefs de Ménage")
+ktab(chef_stats, caption = "Profil sociodémographique des Chefs de Ménage")
 ```
 
 ### Caractéristiques du Logement et Emploi
@@ -459,7 +522,7 @@ if ("materiau_toit" %in% names(df_hh) && "materiau_murs" %in% names(df_hh)) {
       round(mean(df_hh$materiau_murs %in% PARAMS$improved_wall_codes, na.rm = TRUE) * 100, 1)
     )
   )
-  kable(logement_df, caption = "Qualité de construction du logement")
+  ktab(logement_df, caption = "Qualité de construction du logement")
 }
 ```
 
@@ -471,7 +534,7 @@ if ("occupation" %in% names(df_ind)) {
     group_by(occupation) %>%
     summarise(Effectif = n(), .groups = "drop") %>%
     mutate(Proportion = round(Effectif / sum(Effectif) * 100, 1))
-  kable(occ_summary, caption = "Répartition de la population par statut d'occupation")
+  ktab(occ_summary, caption = "Répartition de la population par statut d'occupation")
 }
 ```
 
@@ -487,12 +550,12 @@ if (length(assets_cols) > 0) {
     Taux = round((assets_sums / nrow(df_hh)) * 100, 2)
   ) %>% arrange(desc(Taux))
   
-  ggplot(assets_df, aes(x = reorder(Actif, Taux), y = Taux)) +
+  ggdown(ggplot(assets_df, aes(x = reorder(Actif, Taux), y = Taux)) +
     geom_bar(stat = "identity", fill = "#E69F00") +
     geom_text(aes(label = paste0(round(Taux, 1), "%")), hjust = -0.1, size = 3, fontface = "bold") +
     coord_flip() +
-    theme_minimal() +
-    labs(title = "Taux de possession des actifs par les ménages", x = "Actifs", y = "Taux de possession (%)")
+    theme_pudc() +
+    labs(title = "Taux de possession des actifs par les ménages", x = "Actifs", y = "Taux de possession (%)"), height = 500)
 }
 ```
 
@@ -522,26 +585,26 @@ pca_stats <- data.frame(
   )
 )
 
-kable(pca_stats, caption = "Indicateurs de richesse et conditions de logement")
+ktab(pca_stats, caption = "Indicateurs de richesse et conditions de logement")
 ```
 
 ```{r pca-plot}
-ggplot(df_hh, aes(x = index_richesse_pca)) +
+ggdown(ggplot(df_hh, aes(x = index_richesse_pca)) +
   geom_histogram(bins = 30, fill = "#0072B2", color = "white") +
-  theme_minimal() +
-  labs(title = "Distribution de l'Index de Richesse (ACP)", x = "Index de Richesse (Score ACP)", y = "Nombre de ménages")
+  theme_pudc() +
+  labs(title = "Distribution de l'Index de Richesse (ACP)", x = "Index de Richesse (Score ACP)", y = "Nombre de ménages"))
 ```
 
-#### Relation bivariée : Taille du ménage vs Score ACP (Cours 3)
+#### Relation bivariée : Taille du ménage vs Score ACP
 
 ```{r pca-scatter, fig.height=4, fig.width=6}
-ggplot(df_hh, aes(x = taille_menage, y = index_richesse_pca)) +
+ggdown(ggplot(df_hh, aes(x = taille_menage, y = index_richesse_pca)) +
   geom_point(alpha = 0.5, color = "darkblue") +
   geom_smooth(method = "lm", color = "red", se = FALSE) +
-  theme_minimal() +
+  theme_pudc() +
   labs(title = "Relation entre Taille du ménage et Score de richesse",
        x = "Taille du ménage",
-       y = "Index de Richesse (ACP)")
+       y = "Index de Richesse (ACP)"))
 ```
 
 ### Quintiles de richesse (méthode DHS)
@@ -551,19 +614,33 @@ Les quintiles sont calculés à l'intérieur de chaque milieu (Rural/Urbain) afi
 ```{r quintile-plot}
 df_hh <- df_hh %>% mutate(milieu_lbl = ifelse(milieu == 1, "Rural", "Urbain"),
                           quintile_lbl = paste0("Q", quintile_richesse))
-ggplot(df_hh, aes(x = quintile_lbl, fill = milieu_lbl)) +
-  geom_bar(position = "fill") + scale_y_continuous(labels = scales::percent) +
+
+df_quintile_pct <- df_hh %>%
+  filter(!is.na(quintile_lbl), !is.na(milieu_lbl)) %>%
+  group_by(quintile_lbl, milieu_lbl) %>%
+  summarise(n = n(), .groups = "drop") %>%
+  group_by(quintile_lbl) %>%
+  mutate(pct = n / sum(n),
+         pct_label = paste0(round(pct * 100, 1), "%")) %>%
+  ungroup()
+
+ggdown(ggplot(df_quintile_pct, aes(x = quintile_lbl, y = pct, fill = milieu_lbl)) +
+  geom_bar(stat = "identity", position = "stack") +
+  geom_text(aes(label = pct_label),
+            position = position_stack(vjust = 0.5),
+            size = 3, fontface = "bold", color = "white") +
+  scale_y_continuous(labels = scales::percent) +
   scale_fill_manual(values = c("Rural" = "#28B463", "Urbain" = "#2E86C1")) +
   labs(x = "Quintile de richesse", y = "Proportion", fill = "Milieu",
-       title = "Repartition des menages par quintile de richesse et milieu") + theme_minimal()
+       title = "Répartition des ménages par quintile de richesse et milieu") + theme_pudc())
 ```
 
 ### Index de richesse par région
 
 ```{r pca-region-box}
-ggplot(df_hh, aes(x = reorder(region, index_richesse_pca, median), y = index_richesse_pca, fill = region)) +
+ggdown(ggplot(df_hh, aes(x = reorder(region, index_richesse_pca, median), y = index_richesse_pca, fill = region)) +
   geom_boxplot(show.legend = FALSE, outlier.size = 0.5, outlier.color = "grey40") + coord_flip() +
-  labs(title = "Distribution de l'index de richesse par region", x = NULL, y = "Index de richesse (ACP)") + theme_minimal()
+  labs(title = "Distribution de l'index de richesse par region", x = NULL, y = "Index de richesse (ACP)") + theme_pudc())
 ```
 
 ## 5. Chocs, Vulnérabilité et Malnutrition
@@ -579,12 +656,12 @@ chocs_stats <- data.frame(
   Valeur = c(paste0(chocs_prop, "%"), as.character(chocs_moy))
 )
 
-kable(chocs_stats, caption = "Chocs subis par les ménages")
+ktab(chocs_stats, caption = "Chocs subis par les ménages")
 ```
 
 ### Malnutrition Infantile (Enfants de 6 à 59 mois)
 
-L'indicateur de malnutrition a été calculé en se basant uniquement sur la tranche d'âge cible (6-59 mois) avec des mesures valides du Périmètre Brachial (MUAC).
+L'indicateur de malnutrition a été calculé sur la tranche d'âge cible (6-59 mois) ; comme le Périmètre Brachial (MUAC) est absent à 100 % de la collecte, il repose **uniquement sur la déclaration d'œdèmes**.
 
 ```{r malnutrition-stats}
 valid_muac <- sum(!is.na(df_ind$pb_enfant))
@@ -598,7 +675,7 @@ malnut_stats <- data.frame(
   Valeur = c(as.character(enfants_cibles), as.character(valid_muac), paste0(malnut_prop, "%"))
 )
 
-kable(malnut_stats, caption = "Indicateurs de Malnutrition")
+ktab(malnut_stats, caption = "Indicateurs de Malnutrition")
 ```
 
 ```{r malnutrition-plot}
@@ -607,13 +684,16 @@ if(valid_muac > 0) {
     filter(!is.na(malnutrition)) %>%
     mutate(Statut = ifelse(malnutrition == 1, "Malnutrition", "Normal")) %>%
     group_by(Statut) %>%
-    summarise(Effectif = n(), .groups = "drop")
+    summarise(Effectif = n(), .groups = "drop") %>%
+    mutate(Pct = round(Effectif / sum(Effectif) * 100, 1))
   
-  ggplot(df_malnut, aes(x = Statut, y = Effectif, fill = Statut)) +
+  ggdown(ggplot(df_malnut, aes(x = Statut, y = Effectif, fill = Statut)) +
     geom_bar(stat = "identity", width = 0.5) +
-    theme_minimal() +
+    geom_text(aes(label = paste0(Pct, "%")), vjust = -0.5, fontface = "bold", size = 4) +
+    theme_pudc() +
     labs(title = "Statut Nutritionnel des enfants mesurés (6-59 mois)", y = "Nombre d'enfants", x = "") +
-    scale_fill_manual(values = c("Malnutrition" = "#D55E00", "Normal" = "#009E73"))
+    scale_fill_manual(values = c("Malnutrition" = "#E76F51", "Normal" = "#2A9D8F")) +
+    theme(legend.position = "none"))
 } else {
   cat("**Note :** Aucune mesure MUAC valide n'a été trouvée pour permettre la visualisation de la malnutrition.")
 }

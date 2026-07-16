@@ -1,0 +1,246 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="2600" height="980" viewBox="0 0 2600 980">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#9ca3af"/>
+    </marker>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .page { fill: #050505; }
+      .phase { fill: #444746; stroke: #6b7280; stroke-width: 1.4; }
+      .phase-title { font: 700 13px Arial, sans-serif; fill: #f3f4f6; }
+      .phase-subtitle { font: 400 10px Arial, sans-serif; fill: #d1d5db; }
+      .source-title { font: 700 11px Arial, sans-serif; fill: #e5e7eb; }
+      .node-blue { fill: #d8ecff; stroke: #88bde8; stroke-width: 1.3; }
+      .node-green { fill: #dff7dd; stroke: #9ad28f; stroke-width: 1.3; }
+      .node-purple { fill: #edd8ff; stroke: #c084fc; stroke-width: 1.3; }
+      .node-orange { fill: #fff4df; stroke: #fb923c; stroke-width: 2; }
+      .node-dark { fill: #24333a; stroke: #4b6470; stroke-width: 1.2; }
+      .node-text { font: 700 10.5px Arial, sans-serif; fill: #0f172a; }
+      .node-text-small { font: 400 9.5px Arial, sans-serif; fill: #1f2937; }
+      .dark-text { font: 700 10px Arial, sans-serif; fill: #dbeafe; }
+      .dark-small { font: 400 9px Arial, sans-serif; fill: #cbd5e1; }
+      .edge { fill: none; stroke: #9ca3af; stroke-width: 1.25; marker-end: url(#arrow); }
+      .edge-soft { fill: none; stroke: #6b7280; stroke-width: 1; stroke-dasharray: 5 5; marker-end: url(#arrow); }
+      .thin { fill: none; stroke: #6b7280; stroke-width: 0.8; }
+      .branch { font: 400 9.5px Arial, sans-serif; fill: #e5e7eb; }
+      .repo-line { fill: none; stroke: #6b7280; stroke-width: 1; }
+      .main-title { font: 700 18px Arial, sans-serif; fill: #f9fafb; }
+      .caption { font: 400 11px Arial, sans-serif; fill: #d1d5db; }
+    </style>
+  </defs>
+
+  <rect class="page" width="2600" height="980"/>
+  <text class="main-title" x="22" y="28">Pipeline de traitement PUDC - architecture data</text>
+  <text class="caption" x="22" y="48">Workflow horizontal : phases grises, sources cylindriques, traitements bleus, bases cylindriques violettes, controles orange.</text>
+
+  <!-- ===================== PHASE 1 ===================== -->
+  <rect class="phase" x="8" y="70" width="620" height="560" rx="0"/>
+  <text class="phase-title" x="286" y="91">1. Sources + ETL Stata</text>
+  <text class="phase-subtitle" x="288" y="106">Extraction - transformation - chargement</text>
+
+  <text class="source-title" x="58" y="92">Sources de donnees</text>
+  <g filter="url(#softShadow)">
+    <path class="node-green" d="M58 115 C58 105 138 105 138 115 L138 166 C138 176 58 176 58 166 Z"/>
+    <ellipse class="node-green" cx="98" cy="115" rx="40" ry="10"/>
+    <text class="node-text" x="75" y="136">Menage</text>
+    <text class="node-text-small" x="70" y="151">PUDC.dta</text>
+
+    <path class="node-green" d="M58 207 C58 197 138 197 138 207 L138 258 C138 268 58 268 58 258 Z"/>
+    <ellipse class="node-green" cx="98" cy="207" rx="40" ry="10"/>
+    <text class="node-text" x="74" y="228">Individus</text>
+    <text class="node-text-small" x="55" y="243">S1_INFOS_MEMBRES</text>
+
+    <path class="node-green" d="M178 161 C178 151 258 151 258 161 L258 212 C258 222 178 222 178 212 Z"/>
+    <ellipse class="node-green" cx="218" cy="161" rx="40" ry="10"/>
+    <text class="node-text" x="190" y="182">Modules</text>
+    <text class="node-text-small" x="188" y="197">S3/S4/S5/S7</text>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect class="node-blue" x="320" y="155" width="95" height="45"/>
+    <text class="node-text" x="342" y="175">Import</text>
+    <text class="node-text-small" x="332" y="190">read_dta()</text>
+
+    <rect class="node-blue" x="470" y="155" width="112" height="45"/>
+    <text class="node-text" x="489" y="175">data/input</text>
+    <text class="node-text-small" x="482" y="190">copie de travail</text>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect class="node-dark" x="136" y="348" width="116" height="48"/>
+    <text class="dark-text" x="165" y="369">Git repo</text>
+    <text class="dark-small" x="151" y="384">Scripts + docs</text>
+  </g>
+  <g filter="url(#softShadow)">
+    <rect class="node-dark" x="23" y="482" width="122" height="54"/>
+    <text class="dark-text" x="45" y="503">run_all.R</text>
+    <text class="dark-small" x="34" y="518">orchestrateur</text>
+  </g>
+
+  <!-- ===================== PHASE 2 ===================== -->
+  <rect class="phase" x="642" y="155" width="612" height="300" rx="0"/>
+  <text class="phase-title" x="845" y="176">2. Dictionnaires &amp; mapping</text>
+  <text class="phase-subtitle" x="855" y="191">Approche metadata-driven</text>
+
+  <g filter="url(#softShadow)">
+    <rect class="node-blue" x="680" y="242" width="130" height="48"/>
+    <text class="node-text" x="700" y="263">Extraction</text>
+    <text class="node-text-small" x="694" y="278">dictionnaires init</text>
+
+    <rect class="node-blue" x="865" y="242" width="130" height="48"/>
+    <text class="node-text" x="884" y="263">Prefill</text>
+    <text class="node-text-small" x="881" y="278">labels + modalities</text>
+
+    <polygon class="node-orange" points="1075,232 1130,266 1075,300 1020,266"/>
+    <text class="node-text" x="1049" y="263">Mapping</text>
+    <text class="node-text-small" x="1047" y="278">valide ?</text>
+
+    <path class="node-purple" d="M1148 240 C1148 230 1232 230 1232 240 L1232 292 C1232 302 1148 302 1148 292 Z"/>
+    <ellipse class="node-purple" cx="1190" cy="240" rx="42" ry="10"/>
+    <text class="node-text" x="1160" y="263">Dictionnaires</text>
+    <text class="node-text-small" x="1162" y="278">filled + mapping</text>
+  </g>
+
+  <!-- ===================== PHASE 3 ===================== -->
+  <rect class="phase" x="1270" y="215" width="560" height="620" rx="0"/>
+  <text class="phase-title" x="1356" y="236">3. Nettoyage metier</text>
+  <text class="phase-subtitle" x="1366" y="251">Menages &amp; individus</text>
+
+  <g filter="url(#softShadow)">
+    <rect class="node-blue" x="1305" y="305" width="118" height="48"/>
+    <text class="node-text" x="1326" y="326">Menages</text>
+    <text class="node-text-small" x="1320" y="341">clean + recodes</text>
+
+    <rect class="node-blue" x="1450" y="305" width="118" height="48"/>
+    <text class="node-text" x="1472" y="326">Individus</text>
+    <text class="node-text-small" x="1464" y="341">age, sexe, CM</text>
+
+    <rect class="node-blue" x="1376" y="390" width="124" height="48"/>
+    <text class="node-text" x="1397" y="411">Indicateurs</text>
+    <text class="node-text-small" x="1382" y="426">eau, nutrition</text>
+
+    <!-- NOUVEAU : Imputation MICE + ACP richesse -->
+    <rect class="node-blue" x="1305" y="475" width="178" height="84"/>
+    <text class="node-text" x="1322" y="498">Imputation MICE</text>
+    <text class="node-text-small" x="1322" y="516">mice() logreg m=5</text>
+    <text class="node-text-small" x="1322" y="533">score_actifs -&gt;</text>
+    <text class="node-text-small" x="1322" y="550">index_richesse_pca</text>
+    <text class="node-text-small" x="1322" y="564">+ quintile_richesse</text>
+
+    <!-- NOUVEAU : Diagnostics actifs (sortie QAQC) -->
+    <path class="node-purple" d="M1500 560 C1500 550 1672 550 1672 560 L1672 626 C1672 636 1500 636 1500 626 Z"/>
+    <ellipse class="node-purple" cx="1596" cy="560" rx="42" ry="10"/>
+    <text class="node-text" x="1510" y="582">Diagnostics actifs</text>
+    <text class="node-text-small" x="1510" y="600">qa_asset_diag.csv</text>
+    <text class="node-text-small" x="1510" y="616">qa_actifs_raw.rds</text>
+  </g>
+
+  <!-- ===================== PHASE 4 ===================== -->
+  <rect class="phase" x="1842" y="215" width="410" height="620" rx="0"/>
+  <text class="phase-title" x="1930" y="236">4. Fusion &amp; validation</text>
+  <text class="phase-subtitle" x="1937" y="251">Controle d'integrite</text>
+
+  <g filter="url(#softShadow)">
+    <rect class="node-blue" x="1879" y="302" width="135" height="48"/>
+    <text class="node-text" x="1906" y="323">Fusion</text>
+    <text class="node-text-small" x="1894" y="338">interview__key</text>
+
+    <polygon class="node-orange" points="2084,292 2139,326 2084,360 2029,326"/>
+    <text class="node-text" x="2061" y="323">Assertions</text>
+    <text class="node-text-small" x="2070" y="338">OK ?</text>
+
+    <rect class="node-blue" x="1879" y="397" width="135" height="48"/>
+    <text class="node-text" x="1909" y="418">Rapport</text>
+    <text class="node-text-small" x="1888" y="433">PIPELINE_ERROR</text>
+
+    <path class="node-purple" d="M2084 397 C2084 387 2242 387 2242 397 L2242 445 C2242 455 2084 455 2084 445 Z"/>
+    <ellipse class="node-purple" cx="2163" cy="397" rx="42" ry="10"/>
+    <text class="node-text" x="2100" y="419">Bases finales</text>
+    <text class="node-text-small" x="2103" y="437">CSV propres</text>
+
+    <!-- NOUVEAU : Agregation chocs -->
+    <rect class="node-blue" x="1879" y="500" width="175" height="66"/>
+    <text class="node-text" x="1896" y="524">Agregation chocs</text>
+    <text class="node-text-small" x="1896" y="542">nb_chocs (S7_INFOS</text>
+    <text class="node-text-small" x="1896" y="557">_CHOCS_renamed)</text>
+  </g>
+
+  <!-- ===================== PHASE 5 ===================== -->
+  <rect class="phase" x="2266" y="300" width="326" height="620" rx="0"/>
+  <text class="phase-title" x="2340" y="321">5. QAQC &amp; production</text>
+  <text class="phase-subtitle" x="2355" y="336">Restitution finale</text>
+
+  <g filter="url(#softShadow)">
+    <rect class="node-blue" x="2302" y="385" width="118" height="48"/>
+    <text class="node-text" x="2333" y="406">QAQC</text>
+    <text class="node-text-small" x="2316" y="421">Rmd + cartes</text>
+
+    <rect class="node-blue" x="2457" y="385" width="118" height="48"/>
+    <text class="node-text" x="2482" y="406">Exports</text>
+    <text class="node-text-small" x="2470" y="421">html / docx / txt</text>
+
+    <path class="node-purple" d="M2300 470 C2300 460 2460 460 2460 470 L2460 536 C2460 546 2300 546 2300 536 Z"/>
+    <ellipse class="node-purple" cx="2380" cy="470" rx="60" ry="13"/>
+    <text class="node-text" x="2350" y="495">Livrables</text>
+    <text class="node-text-small" x="2328" y="512">Menages / Individus</text>
+    <text class="node-text-small" x="2343" y="526">QAQC report</text>
+
+    <!-- NOUVEAU : Shapefile GADM (entree cartes) -->
+    <path class="node-green" d="M2302 580 C2302 570 2466 570 2466 580 L2466 642 C2466 652 2302 652 2302 642 Z"/>
+    <ellipse class="node-green" cx="2366" cy="580" rx="40" ry="10"/>
+    <text class="node-text" x="2316" y="605">Shapefile GADM</text>
+    <text class="node-text-small" x="2320" y="622">gadm41_SEN (regions)</text>
+  </g>
+
+  <!-- ===================== EDGES ===================== -->
+  <path class="edge" d="M138 142 C210 142 235 178 320 178"/>
+  <path class="edge" d="M138 234 C210 234 235 178 320 178"/>
+  <path class="edge" d="M258 188 C282 188 294 178 320 178"/>
+  <path class="edge" d="M415 178 L470 178"/>
+  <path class="edge" d="M582 178 C620 178 630 266 680 266"/>
+
+  <path class="edge" d="M810 266 L865 266"/>
+  <path class="edge" d="M995 266 L1020 266"/>
+  <path class="edge" d="M1130 266 L1148 266"/>
+  <path class="edge" d="M1232 266 C1260 266 1270 329 1305 329"/>
+  <path class="edge" d="M1232 266 C1275 266 1405 267 1450 329"/>
+
+  <path class="edge" d="M1364 353 C1364 374 1395 378 1418 390"/>
+  <path class="edge" d="M1509 353 C1509 374 1479 378 1455 390"/>
+  <path class="edge" d="M1364 353 C1364 430 1394 440 1394 475"/>
+  <path class="edge" d="M1483 520 C1520 520 1495 585 1500 592"/>
+  <path class="edge" d="M1500 414 C1700 414 1800 326 1879 326"/>
+  <path class="edge" d="M1483 557 C1650 557 1800 360 1879 360"/>
+
+  <path class="edge" d="M2014 326 L2029 326"/>
+  <path class="edge" d="M2084 360 L2084 397"/>
+  <path class="edge" d="M2049 326 C2010 340 1960 370 1943 397"/>
+  <path class="edge-soft" d="M258 200 C700 230 1600 500 1879 532"/>
+  <path class="edge" d="M2054 532 C2070 480 2030 350 2014 350"/>
+  <path class="edge" d="M2242 421 C2280 421 2280 409 2302 409"/>
+  <path class="edge-soft" d="M1672 592 C1950 600 2150 440 2302 433"/>
+  <path class="edge-soft" d="M2366 642 C2366 600 2366 470 2302 433"/>
+  <path class="edge" d="M2420 409 L2457 409"/>
+  <path class="edge" d="M2515 409 C2530 409 2530 470 2460 470"/>
+
+  <!-- Error branch labels -->
+  <text class="branch" x="2100" y="352">Oui</text>
+  <text class="branch" x="1980" y="360">Non</text>
+  <text class="branch" x="1088" y="218">Oui</text>
+  <path class="edge-soft" d="M1075 300 C1075 338 930 340 930 290"/>
+  <text class="branch" x="1008" y="330">Non : correction manuelle</text>
+
+  <!-- Orchestration lines -->
+  <path class="repo-line" d="M84 482 C84 415 110 378 136 372"/>
+  <path class="repo-line" d="M145 509 C330 445 505 432 680 266"/>
+  <path class="repo-line" d="M145 516 C560 525 870 514 1305 329"/>
+  <path class="repo-line" d="M145 523 C790 560 1320 555 1879 326"/>
+  <path class="repo-line" d="M145 530 C1120 610 1730 600 2302 409"/>
+
+  <!-- Output labels -->
+  <text class="caption" x="2030" y="900">Sorties principales : PUDC_clean.csv, S1_INFOS_MEMBRES_clean.csv, Menages.csv, Individus.csv, QAQC_Report.html/docx/txt</text>
+  <text class="caption" x="22" y="940">Controle qualite : unicite interview__key, individus orphelins, bornes logiques, alerte malnutrition, eau/JMP, richesse ACP (MICE poolee), diagnostics actifs, agregation chocs.</text>
+</svg>
+

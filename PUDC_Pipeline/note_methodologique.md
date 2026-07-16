@@ -1,77 +1,119 @@
-# Note Méthodologique — Pipeline de Données PUDC
+# Note methodologique - Pipeline de donnees PUDC
 
-**Auteur :** Groupe de Projet (ENSAE Paris)  
-**Date :** 13 juillet 2026  
-**Version du Pipeline :** v1.2 (Optimisée, Metadata-Driven & Validée)
+**Projet :** Traitement et analyse des donnees PUDC  
+**Perimetre actif :** bases Menages et Individus  
+**Derniere mise a jour :** 15 juillet 2026
 
----
+## 1. Objectif
 
-## 1. Contexte et Source des Données
-Cette note méthodologique documente le traitement de la base de données de l'enquête du **Programme d'Urgence de Développement Communautaire (PUDC)** au Sénégal (milieu rural). 
-La base brute est issue d'une collecte réalisée sous l'outil **Survey Solutions**, exportée sous le format Stata (`PUDC_6_STATA_ApprovedByHeadquarters`). Elle est constituée de deux modules principaux représentant :
-*   **1 686 ménages** observés (base `PUDC.dta`).
-*   **14 609 membres/individus** (base `S1_INFOS_MEMBRES.dta`).
+Le pipeline R `cleansurvey/` automatise la transformation des exports Survey Solutions du PUDC en deux bases analytiques finales :
 
-L'objectif du pipeline R (`cleansurvey/`) est d'automatiser le renommage, le nettoyage des non-réponses, le recodage des indicateurs clés (accès à l'eau, statut nutritionnel, indice de richesse), la fusion robuste des tables, et le contrôle qualité des fichiers finaux.
+- `data/output/Menages.csv`
+- `data/output/Individus.csv`
 
----
+Il produit aussi un rapport de controle qualite et des diagnostics intermediaires pour documenter la qualite des donnees.
 
-## 2. Architecture Technique et Reproductibilité
+## 2. Architecture
 
-Le pipeline adopte une approche **metadata-driven** basée sur une configuration externe. Cela évite d'éditer le code R lors des changements de rounds d'enquête ou d'évolution des normes :
-*   **Dictionnaires et Mapping externe** : Les sélections et renommages des variables cibles sont entièrement déclarés dans le fichier [var_mapping.csv](file:///c:/Users/USER/Documents/ENSAE/ISE3/traitements%20des%20donn%C3%A9es%20statistiques/Projet_Traitement_Analyse/PUDC_Pipeline/data/aux_file/var_mapping.csv). Le pipeline s'y réfère dynamiquement pour harmoniser et renommer les tables.
-*   **Paramètres centralisés** : Les constantes, les codes de valeurs manquantes, et les classifications métier sont stockés dans le fichier de configuration [params.yaml](file:///c:/Users/USER/Documents/ENSAE/ISE3/traitements%20des%20donn%C3%A9es%20statistiques/Projet_Traitement_Analyse/PUDC_Pipeline/cleansurvey/params.yaml).
-*   **Protocole de reproduction (un clic)** : Pour reproduire intégralement et de zéro le pipeline, il suffit d'exécuter le script maître [run_all.R](file:///c:/Users/USER/Documents/ENSAE/ISE3/traitements%20des%20donn%C3%A9es%20statistiques/Projet_Traitement_Analyse/PUDC_Pipeline/cleansurvey/run_all.R). Ce script orchestre la génération et le pré-remplissage des dictionnaires de variables, l'application des mappings, le nettoyage des fichiers bruts, la fusion, et le contrôle d'assertions de qualité.
+Le pipeline suit une logique metadata-driven :
 
----
+- `cleansurvey/run_all.R` orchestre toutes les etapes.
+- `cleansurvey/config.R` centralise les chemins.
+- `cleansurvey/params.yaml` centralise les seuils, codes manquants et classifications metier.
+- `data/aux_file/var_mapping.csv` definit les variables a conserver, renommer et harmoniser.
+- `cleansurvey/utils.R` contient les fonctions reutilisables.
 
-## 3. Conventions de Codage de la Base
-Pour faciliter l'exploitation ultérieure des tables finales [Individus.csv](file:///c:/Users/USER/Documents/ENSAE/ISE3/traitements%20des%20donn%C3%A9es%20statistiques/Projet_Traitement_Analyse/PUDC_Pipeline/data/output/Individus.csv) et [Menages.csv](file:///c:/Users/USER/Documents/ENSAE/ISE3/traitements%20des%20donn%C3%A9es%20statistiques/Projet_Traitement_Analyse/PUDC_Pipeline/data/output/Menages.csv), les conventions suivantes sont appliquées :
-*   **Clé de jointure unique** : `interview__key` identifie le ménage de manière unique dans les deux bases.
-*   **Chef de Ménage (CM)** : Identifié au niveau individuel par `lien_cm == 1` dans le roster des membres.
-*   **Genre de l'individu** : Variable `sexe` codée en binaire (`1 = Masculin`, `2 = Féminin`).
-*   **Milieu de résidence** : Variable `milieu` codée en binaire (`1 = Rural`, `2 = Urbain`).
-*   **Cible nutritionnelle (MUAC)** : La cible officielle d'évaluation du Périmètre Brachial est restreinte aux enfants âgés de **6 à 59 mois**.
+Cette structure permet de modifier le mapping ou les parametres sans reecrire le coeur du code R.
 
----
+## 3. Donnees utilisees
 
-## 4. Choix Méthodologiques de Traitement des Données
+Les donnees brutes sont des exports Survey Solutions au format Stata (`.dta`). Le pipeline actif utilise principalement :
 
-### A. Gestion des Non-Réponses Survey Solutions
-Les codes par défaut de non-réponse de l'outil de collecte (`"000"`, `"999"`, `"##N/A##"`, etc.) ont été interceptés et recodés en valeurs manquantes standard (`NA`). Cette étape évite les biais de calcul (ex: traiter un code `"000"` comme une mesure de 0 mm pour un enfant).
+- `PUDC.dta` : base menages ;
+- `S1_INFOS_MEMBRES.dta` : roster individus ;
+- `S7_INFOS_CHOCS.dta` : chocs, lorsque disponible ;
+- les autres modules lorsque le mapping les mobilise.
 
-### B. Indicateur d'Accès à l'Eau Potable (Standard JMP UNICEF/OMS)
-Conformément aux directives du *Joint Monitoring Programme* (JMP) de l'UNICEF et de l'OMS :
-*   **Inclusion** des sources dites améliorées : Robinets (intérieurs, publics, voisins), puits protégés, ainsi que les forages motorisés et à pompe manuelle (très fréquents au Sénégal rural).
-*   **Exclusion** des eaux en bouteille (code `9`) et des vendeurs d'eau (code `10`) par manque d'information sur la qualité de leur source secondaire. 
-*   *Note de robustesse* : Ces codes exclus (9 et 10) comptent 0 observation dans cette base de données, le taux d'accès s'établit de manière exacte et vérifiée à **47,27 %** (797 ménages desservis sur 1 686).
+Les sources Commune/PUDCCOM et les shapefiles sont conservees dans le dossier, mais ne sont pas integrees au coeur du nettoyage menages-individus. Les shapefiles sont toutefois mobilises dans le rapport RMarkdown pour les cartes regionales.
 
-### C. Construction du Wealth Index par ACP (Méthodologie DHS)
-En complément du score d'actifs linéaire et non pondéré (`score_actifs` allant de 0 à 15), un **Index de Richesse par Analyse en Composantes Principales (ACP)** a été calculé (colonne `index_richesse_pca`) conformément aux méthodologies des *Demographic and Health Surveys* (DHS) :
-*   L'indice est extrait sur la première composante principale de la matrice de possession de 15 biens d'équipements. 
-*   Il présente une forte corrélation positive avec le score d'actifs linéaire ($r = 0,88$).
-*   L'axe factoriel est mathématiquement centré (moyenne égale à 0) avec une distribution s'étendant de $-1,3$ à $11,92$ ($\sigma = 1,56$).
-*   Les 87 ménages sans données d'actifs ont été imputés à 0 (owns = 0) par défaut afin d'assurer le calcul de l'ACP pour toute la base.
+## 4. Nettoyage des valeurs manquantes
 
-### D. Contrôle des Valeurs Aberrantes (Outliers)
-*   **Nombre de pièces** : La détection statistique par écart interquartile (IQR) a mis en évidence **61 ménages atypiques** possédant entre 11 et 22 pièces (pouvant être des concessions familiales ou des erreurs de saisie). Ces enregistrements sont conservés dans la base mais flaggués dans la colonne `nb_pieces_outlier`.
-*   **Âge** : Aucun filtre IQR n'a été appliqué sur l'âge pour éviter de faux positifs sur les personnes âgées valides (76 à 95 ans). Seule la borne métier logique (`age > 120` ans) est utilisée pour invalider une saisie.
+Les codes Survey Solutions de non-reponse ou de valeur invalide sont recodes en `NA` a partir de `params.yaml`. Cela concerne notamment les codes tels que `000`, `999`, `##N/A##` et autres codes reserves.
 
----
+Cette etape est essentielle pour eviter de transformer des codes de non-reponse en valeurs numeriques reelles, par exemple un perimetre brachial `000` interprete comme une mesure valide.
 
-## 5. Contrôle Qualité Automatisé (QA Assertions Gate)
-Le script [3_validate.R](file:///c:/Users/USER/Documents/ENSAE/ISE3/traitements%20des%20donn%C3%A9es%20statistiques/Projet_Traitement_Analyse/PUDC_Pipeline/cleansurvey/2_clean_and_merge/3_validate.R) agit comme une barrière de validation automatique. Le pipeline est stoppé (`stop`) si l'une des assertions de cohérence structurelle échoue :
-*   **Unicité** de l'identifiant ménage `interview__key` dans la base Ménages.
-*   **Intégrité référentielle** : Tous les individus de la base Roster doivent être rattachés à un ménage existant.
-*   **Plages logiques** : Le taux d'accès à l'eau potable améliorée doit être compris dans l'intervalle `[5% - 99%]`.
-*   **Garde anti-bug sur la malnutrition** : Si le taux de malnutrition aiguë calculé dépasse le seuil critique de 30 %, le pipeline avorte automatiquement (ce qui évite de propager en production le biais de codage `"000" -> 0` initialement présent).
+## 5. Indicateurs construits
 
----
+### Eau potable amelioree
 
-## 6. Limites et Qualité des Données
-Lors des analyses secondaires ou de la restitution orale, les réserves suivantes doivent être prises en compte :
-1.  **Absence de saisie MUAC (Périmètre Brachial)** : Aucune mesure physique de MUAC n'est renseignée dans la base d'origine (100 % de valeurs manquantes `"000"`/`"999"`). Le taux de malnutrition calculé de **1,75 %** (30 cas sur 1 721 enfants de 6 à 59 mois) repose uniquement sur la déclaration d'œdèmes et n'est pas assimilable à une mesure GAM/SAM globale.
-2.  **Imputation de l'ACP** : L'imputation par `0` des actifs manquants pour 87 ménages induit un biais en les classant artificiellement au bas de l'index de richesse.
-3.  **Problèmes d'intégrité de l'enquête** :
-    *   **91 ménages orphelins** (5,4 % de l'échantillon) ne disposent d'aucun chef de ménage déclaré dans le roster des membres.
-    *   **88 ménages** présents dans la base `PUDC` ne possèdent aucun individu répertorié dans le roster des membres (`S1_INFOS_MEMBRES`).
+L'indicateur `eau_amelioree` est construit selon les codes definis dans `params.yaml`, en s'inspirant du standard JMP OMS/UNICEF.
+
+### Malnutrition
+
+La cible nutritionnelle est definie sur les enfants de 6 a 59 mois. Le pipeline controle la disponibilite du MUAC (`pb_enfant`). Dans cette base, les mesures MUAC exploitables sont absentes ; l'indicateur de malnutrition repose donc principalement sur la declaration d'oedemes et doit etre interprete avec prudence.
+
+### Richesse et actifs
+
+Le pipeline construit :
+
+- un score simple de possession d'actifs ;
+- un diagnostic de completude des actifs ;
+- une imputation MICE des actifs manquants ;
+- un index de richesse par ACP ;
+- des quintiles de richesse par milieu.
+
+Les fichiers `qa_asset_diag.csv` et `qa_actifs_raw.rds` sont conserves pour le QAQC et la tracabilite.
+
+### Chocs
+
+Lorsque `S7_INFOS_CHOCS_renamed.csv` existe, les chocs sont agreges au niveau menage afin de calculer `nb_chocs`.
+
+## 6. Validation automatique
+
+Le script `2_clean_and_merge/3_validate.R` agit comme une barriere de qualite. Il verifie notamment :
+
+- la presence des colonnes essentielles ;
+- l'unicite de `interview__key` dans la base menages ;
+- le rattachement des individus a un menage ;
+- les menages sans roster individu ;
+- les chefs de menage absents ou multiples ;
+- les modalites attendues de `sexe` et `milieu` ;
+- les bornes d'age ;
+- le taux d'acces a l'eau potable ;
+- un taux de malnutrition anormalement eleve ;
+- l'existence et la variance de l'index de richesse ACP ;
+- la presence des diagnostics d'actifs.
+
+Les erreurs critiques interrompent le pipeline.
+
+## 7. Rapports et sorties
+
+Les sorties principales sont :
+
+- `Menages.csv`
+- `Individus.csv`
+- `QAQC_Report.txt`
+- `QAQC_Report.html`
+- `QAQC_Report.docx`
+- `qa_asset_diag.csv`
+- `qa_actifs_raw.rds`
+
+Le rapport QAQC decrit les statistiques globales, les variables demographiques, les conditions de logement, les services, les actifs, les chocs, la malnutrition et les fichiers produits.
+
+## 8. Limites
+
+Les principales limites actuelles sont :
+
+- absence de poids d'echantillonnage dans les traitements ;
+- MUAC non exploitable ;
+- bases Commune/PUDCCOM non integrees aux sorties finales ;
+- environnement R pas encore fige par `renv.lock`, meme si les dependances sont documentees dans `cleansurvey/dependencies.R`.
+
+## 9. Recommandations
+
+Pour une version totalement reproductible :
+
+1. Executer le pipeline depuis `PUDC_Pipeline/`.
+2. Verifier que `PIPELINE_ERROR.txt` n'existe pas apres l'execution.
+3. Initialiser `renv` et enregistrer un `renv.lock`.
+4. Completer le mapping si les modules Commune ou shapefiles doivent entrer dans les bases finales.
