@@ -25,7 +25,7 @@ seuils métier) pour limiter les modifications de code.
 ## Structure du dépôt
 
 ```
-Projet_Traitement_Analyse/
+Processing-PUDC/
 ├── BASES BRUTES/            # Fichiers .dta Survey Solutions d'origine
 └── PUDC_Pipeline/          # Cœur du pipeline
     ├── cleansurvey/        # Scripts R et configuration
